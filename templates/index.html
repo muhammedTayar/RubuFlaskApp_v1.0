@@ -35,6 +35,23 @@
     * Author: BootstrapMade.com
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
+    <style>
+    .item{
+    background-color:#ccc;
+    display:block;
+    }
+
+    .carousel-caption{
+    color:#000;
+    position:static;
+    }
+
+
+
+
+
+
+    </style>
 </head>
 
 <body>
@@ -153,7 +170,8 @@
                         <li data-filter=".filter-app" class="filter-active">Beschreibung</li>
                         <!-- with Tooltip <li id="tipTop" data-filter=".filter-web">Spezifikation</li> -->
                         <li data-filter=".filter-web">Spezifikation</li>
-                        <li data-filter=".filter-card">GitHub</li>
+                        <!--<li data-filter=".filter-card">GitHub</li>-->
+                        <!--<a href="dokumentation.html"><li data-filter=".filter-dok">API</li></a>-->
                         <li data-filter=".filter-dok">API</li>
                     </ul>
                 </div>
@@ -173,25 +191,57 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active" data-bs-interval="10000">
-                                        <img src="static/assets/img/deepmind-LIlsk-UFVxk-unsplash.jpg"
-                                             class="d-block w-100" alt="...">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>First slide label</h5>
-                                            <p>Some representative placeholder content for the first slide.</p>
+                                        <div class="carousel-caption">
+                                            <h5>Produktbeschreibung</h5>
+                                            <p>Das Produkt Temas ist ein Mini-Gimbal mit mehreren Funktionalitäten,
+                                                welche anhand der eingebauten Komponenten ermöglicht werden können. Eine
+                                                Kamera, ein Lidar-Laser und zwei Motoren können über eine
+                                                Wifi-Schnittstelle angesteuert werden. Eine mitgelieferte Software
+                                                erlaubt die Verwendung folgender Funktionen:
+                                            <p>
+                                                Bewegung der Motoren,
+                                            </p>
+                                            <p>
+                                                Live-Stream Kamera ,
+                                            </p>
+                                            <p>
+                                                Entfernungsmessung,
+                                            </p>
+                                            <p>
+                                                3D-Ansicht,
+                                            </p>
+                                            <p>
+                                                Point-Cloud,
+                                            </p>
+                                            <p>
+                                                Objektverfolgung,
+                                            </p>
+                                            <p>
+                                                Positionskontrolle von Objekten und
+                                            </p>
+                                            <p>
+                                                das Scannen von QR-Codes.
+                                            </p>
+                                            Des Weiteren wird eine API freigegeben um eigene Ideen im Bereich der
+                                            künstlichen Intelligenz bzw. maschinelles Sehen und Deep Learning
+                                            umzusetzen. Die Objektverfolgung ermöglicht eine 3D Trajektorie mit dem
+                                            physikalische Experimente dem Digitalen Zeitalter entsprechend
+                                            aufgezeichnet und ausgewertet können. In eine Prozessoptimierung im
+                                            neuen Standard der Industrie 4.0 lässt sich das Produkt Temas leicht
+                                            integrieren. All diese Eigenschaften und vieles mehr sind in dem Produkt
+                                            Temas vereint!</p>
                                         </div>
                                     </div>
                                     <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="static/assets/img/glenn-carstens-peters-P1qyEf1g0HU-unsplash.jpg"
-                                             class="d-block w-100" alt="...">
-                                        <div class="carousel-caption d-none d-md-block">
+                                        <img src="http://placehold.it/1200x480" alt=""/>
+                                        <div class="carousel-caption">
                                             <h5>Second slide label</h5>
                                             <p>Some representative placeholder content for the second slide.</p>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="static/assets/img/jj-ying-7JX0-bfiuxQ-unsplash.jpg"
-                                             class="d-block w-75" alt="...">
-                                        <div class="carousel-caption d-none d-md-block">
+                                        <img src="http://placehold.it/1200x480" alt=""/>
+                                        <div class="carousel-caption">
                                             <h5>Third slide label</h5>
                                             <p>Some representative placeholder content for the third slide.</p>
                                         </div>
@@ -211,79 +261,117 @@
                         </div>
 
                         <!-- Spezifikation -->
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <p>Produkt</p>
-                            <ul>
-                                <li><i class="bx bx-check"></i> Mini Gimbal</li>
-                                <li><i class="bx bx-check"></i> Elevation</li>
-                                <li><i class="bx bx-check"></i> Azimutal</li>
-                                <li><i class="bx bx-check"></i> Stromversorgung</li>
-                                <li><i class="bx bx-check"></i> Stellzeit bei 4.8 V</li>
-                                <li><i class="bx bx-check"></i> Gewicht</li>
-                                <li><i class="bx bx-check"></i> Betriebstemperatur</li>
-                                <li><i class="bx bx-check"></i> Konnektivität</li>
-                            </ul>
-                            <p>Kamera Beschreibung</p>
-                            <ul>
-                                <li><i class="bx bx-check"></i> Kamera Sensor</li>
-                                <li><i class="bx bx-check"></i> Auflösung</li>
-                                <li><i class="bx bx-check"></i> Video modes</li>
-                                <li><i class="bx bx-check"></i> Pitch</li>
-                                <li><i class="bx bx-check"></i> Brennweite</li>
-                                <li><i class="bx bx-check"></i> Horizintal FOV</li>
-                                <li><i class="bx bx-check"></i> Vertikal FOV</li>
-                            </ul>
-                            <p>Laser Beschreibung</p>
-                            <ul>
-                                <li><i class="bx bx-check"></i> Laserklasse</li>
-                                <li><i class="bx bx-check"></i> Reichweite</li>
-                                <li><i class="bx bx-check"></i> Auflösung</li>
-                                <li><i class="bx bx-check"></i> Genauigkeit</li>
-                                <li><i class="bx bx-check"></i> Wellenlänge</li>
-                                <li><i class="bx bx-check"></i> Spitzenleistung</li>
-                                <li><i class="bx bx-check"></i> Aktualisierungsrate</li>
-                                <li><i class="bx bx-check"></i> Strahldivergenz</li>
-                            </ul>
-                        </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <p>Temas</p>
-                            <ul>
-                                <li></i> -80° bis 80°</li>
-                                <li></i> -70° bis 80°</li>
-                                <li></i> 5V/3A DC (USB Type C)</li>
-                                <li></i> 0.09 s/60°</li>
-                                <li></i> Stellzeit bei</li>
-                                <li></i> ?</li>
-                                <li></i> -20°C bis 60°C (Servo HAT?)</li>
-                                <li></i> Wireless LAN 2.4 GHz 802.11 b/g/n</li>
-                            </ul>
-                            <ul>
-                                </br>
-                                <li></i> Sony IMX219</li>
-                                <li></i> 8 MP</li>
-                                <li></i> 1080p30</li>
-                                <li></i> 1.12 µm</li>
-                                <li></i> 3.04 mm</li>
-                                <li></i> 62.2°</li>
-                                <li></i> 48.8°</li>
-                            </ul>
-                            <ul>
-                                </br></br>
-                                <li></i> 1</li>
-                                <li></i> 1 m bis 40 m</li>
-                                <li></i> +/- 1 cm</li>
-                                <li></i> +/- 2.5 cm</li>
-                                <li></i> 905 nm</li>
-                                <li></i> 1.3W</li>
-                                <li></i> 500 Hz</li>
-                                <li></i> 8 m Radian</li>
-                            </ul>
+                        <div class="portfolio-item filter-web">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th scope="col"><b>Parameter</b></th>
+                                    <th scope="col"><b>Wert</b></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">Elevation</th>
+                                    <td>-80° bis 80°</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Azimutal</th>
+                                    <td>-70° bis 90°</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Stromversorgung</th>
+                                    <td>5 V/3 A DC (USB Type C)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Stellzeit bei 4.8 V</th>
+                                    <td>0.09 s/60°</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Getriebe</th>
+                                    <td>Titan</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Gewicht</th>
+                                    <td>xxxx</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Betriebstemperatur</th>
+                                    <td>Raumtemperatur</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Kamera Sensor</th>
+                                    <td>Sony IMX219</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Auflösung Bildaufnahme</th>
+                                    <td>3208 x 2465 Pixel (8 MP)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Auflösung Videoaufnahme</th>
+                                    <td>1080p30, 720p60</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Auflösung Live-Übertragung (mitgelieferte Software)</th>
+                                    <td>320 x 240 Pixel</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Pixel Pitch</th>
+                                    <td>1.12 µm</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Brennweite</th>
+                                    <td>3.04 mm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sehfeldgröße Horizontal</th>
+                                    <td>62.2°</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sehfeldgröße Vertikal</th>
+                                    <td>48.8°</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Laserklasse</th>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Reichweite</th>
+                                    <td>1 m bis 40 m</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Auflösung</th>
+                                    <td>+/- 1 cm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Genauigkeit</th>
+                                    <td>+/- 2.5 cm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Wellenlänge</th>
+                                    <td>905 nm</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Spitzenleistung</th>
+                                    <td>1.3 W</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Aktualisierungsrate</th>
+                                    <td>500 Hz</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Strahldivergenz</th>
+                                    <td>8 mrad</td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <!-- Dokumentation -->
                         <div class="col-lg-4 col-md-6 portfolio-item filter-dok">
-                            <p>Dokumentation</p>
-                            <h1><a href="dokumentation.html">Dokumentation</a></h1>
+                            <ul>
+                                <li><a href="dokumentation.html">Dokumentation</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
