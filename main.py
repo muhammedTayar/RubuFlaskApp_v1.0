@@ -36,6 +36,7 @@ app.config.update(
     ReCaptcha_secret_key=app.config["RECAPTCHA_SECRET_KEY"],
     SECRET_KEY=app.config["SECRET_KEY"]
 )
+# get random email address
 
 # Set the secret Site Key an Secret Key for the reCaptcha
 #app.config['RECAPTCHA_SITE_KEY'] = RECAPTCHA_SITE_KEY
