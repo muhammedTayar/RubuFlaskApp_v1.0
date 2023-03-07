@@ -826,7 +826,7 @@ section {
 }
 .portfolio #portfolio-flters li {
   cursor: pointer;
-  /*display: inline-block;*/
+  display: inline-block;
   margin: 10px 5px;
   font-size: 15px;
   font-weight: 500;

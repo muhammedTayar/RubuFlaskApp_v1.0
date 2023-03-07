@@ -36,15 +36,34 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
     <style>
-    .item{
-    background-color:#ccc;
-    display:block;
+    .carousel-caption {
+    position: unset;
     }
 
-    .carousel-caption{
-    color:#000;
-    position:static;
+    .carousel .carousel-item {
+    height: 40em;
     }
+
+    .carousel-item{
+     position: static;
+     top: 0;
+     left: 0;
+     min-height: 40em;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -156,224 +175,214 @@
     </section><!-- End Clients Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio" style="margin-bottom: 25px">
+    <section id="portfolio" class="portfolio">
         <div class="container" data-aos="fade-up">
-
             <div class="section-title">
                 <h2>Produkt</h2>
             </div>
-            <div class="row portfolio-container">
-                <div class="col-md-2">
-                    <!--<ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">-->
-                    <ul id="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
-                        <!-- Button Filters !-->
-                        <li data-filter=".filter-app" class="filter-active">Beschreibung</li>
-                        <!-- with Tooltip <li id="tipTop" data-filter=".filter-web">Spezifikation</li> -->
-                        <li data-filter=".filter-web">Spezifikation</li>
-                        <!--<li data-filter=".filter-card">GitHub</li>-->
-                        <!--<a href="dokumentation.html"><li data-filter=".filter-dok">API</li></a>-->
-                        <li data-filter=".filter-dok">API</li>
-                    </ul>
-                </div>
-                <div class="col-md-8">
-                    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <!--<ul id="portfolio-flters" data-aos="fade-up" data-aos-delay="100">-->
+                <!-- Button Filters !-->
+                <li data-filter=".filter-app" class="filter-active">Beschreibung</li>
+                <li data-filter=".filter-web">Spezifikation</li>
+                <li data-filter=".filter-dok">API</li>
+            </ul>
+            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-                        <!-- Produktbeschreibung -->
-                        <div class="portfolio-item filter-app">
-                            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
-                                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                                            aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                                            aria-label="Slide 3"></button>
+                <!-- Produktbeschreibung -->
+                <div class="portfolio-item filter-app">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <div class="carousel-caption" style="margin-top: 3em">
+                                    <h5>Produktbeschreibung</h5>
+                                    <p>Das Produkt Temas ist ein Mini-Gimbal mit mehreren Funktionalitäten,
+                                        welche anhand der eingebauten Komponenten ermöglicht werden können. Eine
+                                        Kamera, ein Lidar-Laser und zwei Motoren können über eine
+                                        Wifi-Schnittstelle angesteuert werden. Eine mitgelieferte Software
+                                        erlaubt die Verwendung folgender Funktionen:
+                                    <p>
+                                        Bewegung der Motoren,
+                                    </p>
+                                    <p>
+                                        Live-Stream Kamera ,
+                                    </p>
+                                    <p>
+                                        Entfernungsmessung,
+                                    </p>
+                                    <p>
+                                        3D-Ansicht,
+                                    </p>
+                                    <p>
+                                        Point-Cloud,
+                                    </p>
+                                    <p>
+                                        Objektverfolgung,
+                                    </p>
+                                    <p>
+                                        Positionskontrolle von Objekten und
+                                    </p>
+                                    <p>
+                                        das Scannen von QR-Codes.
+                                    </p>
+                                    Des Weiteren wird eine API freigegeben um eigene Ideen im Bereich der
+                                    künstlichen Intelligenz bzw. maschinelles Sehen und Deep Learning
+                                    umzusetzen. Die Objektverfolgung ermöglicht eine 3D Trajektorie mit dem
+                                    physikalische Experimente dem Digitalen Zeitalter entsprechend
+                                    aufgezeichnet und ausgewertet können. In eine Prozessoptimierung im
+                                    neuen Standard der Industrie 4.0 lässt sich das Produkt Temas leicht
+                                    integrieren. All diese Eigenschaften und vieles mehr sind in dem Produkt
+                                    Temas vereint!</p>
                                 </div>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active" data-bs-interval="10000">
-                                        <div class="carousel-caption">
-                                            <h5>Produktbeschreibung</h5>
-                                            <p>Das Produkt Temas ist ein Mini-Gimbal mit mehreren Funktionalitäten,
-                                                welche anhand der eingebauten Komponenten ermöglicht werden können. Eine
-                                                Kamera, ein Lidar-Laser und zwei Motoren können über eine
-                                                Wifi-Schnittstelle angesteuert werden. Eine mitgelieferte Software
-                                                erlaubt die Verwendung folgender Funktionen:
-                                            <p>
-                                                Bewegung der Motoren,
-                                            </p>
-                                            <p>
-                                                Live-Stream Kamera ,
-                                            </p>
-                                            <p>
-                                                Entfernungsmessung,
-                                            </p>
-                                            <p>
-                                                3D-Ansicht,
-                                            </p>
-                                            <p>
-                                                Point-Cloud,
-                                            </p>
-                                            <p>
-                                                Objektverfolgung,
-                                            </p>
-                                            <p>
-                                                Positionskontrolle von Objekten und
-                                            </p>
-                                            <p>
-                                                das Scannen von QR-Codes.
-                                            </p>
-                                            Des Weiteren wird eine API freigegeben um eigene Ideen im Bereich der
-                                            künstlichen Intelligenz bzw. maschinelles Sehen und Deep Learning
-                                            umzusetzen. Die Objektverfolgung ermöglicht eine 3D Trajektorie mit dem
-                                            physikalische Experimente dem Digitalen Zeitalter entsprechend
-                                            aufgezeichnet und ausgewertet können. In eine Prozessoptimierung im
-                                            neuen Standard der Industrie 4.0 lässt sich das Produkt Temas leicht
-                                            integrieren. All diese Eigenschaften und vieles mehr sind in dem Produkt
-                                            Temas vereint!</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="http://placehold.it/1200x480" alt=""/>
-                                        <div class="carousel-caption">
-                                            <h5>Second slide label</h5>
-                                            <p>Some representative placeholder content for the second slide.</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="http://placehold.it/1200x480" alt=""/>
-                                        <div class="carousel-caption">
-                                            <h5>Third slide label</h5>
-                                            <p>Some representative placeholder content for the third slide.</p>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="10000">
+                                <video class="img-fluid" autoplay loop muted>
+                                    <source src="static/assets/video/rubu_classroom_tennis.mp4" type="video/mp4"/>
+                                </video>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="http://placehold.it/1200x480" alt=""/>
+                                <div class="carousel-caption">
+                                    <h5>Third slide label</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
                                 </div>
-                                <button class="carousel-control-prev" type="button"
-                                        data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button"
-                                        data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
                             </div>
                         </div>
-
-                        <!-- Spezifikation -->
-
-                        <div class="portfolio-item filter-web">
-                            <table class="table table-hover">
-                                <thead>
-                                <tr>
-                                    <th scope="col"><b>Parameter</b></th>
-                                    <th scope="col"><b>Wert</b></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th scope="row">Elevation</th>
-                                    <td>-80° bis 80°</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Azimutal</th>
-                                    <td>-70° bis 90°</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Stromversorgung</th>
-                                    <td>5 V/3 A DC (USB Type C)</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Stellzeit bei 4.8 V</th>
-                                    <td>0.09 s/60°</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Getriebe</th>
-                                    <td>Titan</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Gewicht</th>
-                                    <td>xxxx</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Betriebstemperatur</th>
-                                    <td>Raumtemperatur</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Kamera Sensor</th>
-                                    <td>Sony IMX219</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Auflösung Bildaufnahme</th>
-                                    <td>3208 x 2465 Pixel (8 MP)</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Auflösung Videoaufnahme</th>
-                                    <td>1080p30, 720p60</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Auflösung Live-Übertragung (mitgelieferte Software)</th>
-                                    <td>320 x 240 Pixel</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Pixel Pitch</th>
-                                    <td>1.12 µm</td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">Brennweite</th>
-                                    <td>3.04 mm</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Sehfeldgröße Horizontal</th>
-                                    <td>62.2°</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Sehfeldgröße Vertikal</th>
-                                    <td>48.8°</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Laserklasse</th>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Reichweite</th>
-                                    <td>1 m bis 40 m</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Auflösung</th>
-                                    <td>+/- 1 cm</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Genauigkeit</th>
-                                    <td>+/- 2.5 cm</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Wellenlänge</th>
-                                    <td>905 nm</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Spitzenleistung</th>
-                                    <td>1.3 W</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Aktualisierungsrate</th>
-                                    <td>500 Hz</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Strahldivergenz</th>
-                                    <td>8 mrad</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- Dokumentation -->
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-dok">
-                            <ul>
-                                <li><a href="dokumentation.html">Dokumentation</a></li>
-                            </ul>
-                        </div>
+                        <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
+                </div>
+
+                <!-- Spezifikation -->
+                <div class="portfolio-item filter-web">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col"><b>Parameter</b></th>
+                            <th scope="col"><b>Wert</b></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Elevation</th>
+                            <td>-80° bis 80°</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Azimutal</th>
+                            <td>-70° bis 90°</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Stromversorgung</th>
+                            <td>5 V/3 A DC (USB Type C)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Stellzeit bei 4.8 V</th>
+                            <td>0.09 s/60°</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Getriebe</th>
+                            <td>Titan</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Gewicht</th>
+                            <td>xxxx</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Betriebstemperatur</th>
+                            <td>Raumtemperatur</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Kamera Sensor</th>
+                            <td>Sony IMX219</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Auflösung Bildaufnahme</th>
+                            <td>3208 x 2465 Pixel (8 MP)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Auflösung Videoaufnahme</th>
+                            <td>1080p30, 720p60</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Auflösung Live-Übertragung (mitgelieferte Software)</th>
+                            <td>320 x 240 Pixel</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Pixel Pitch</th>
+                            <td>1.12 µm</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Brennweite</th>
+                            <td>3.04 mm</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sehfeldgröße Horizontal</th>
+                            <td>62.2°</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sehfeldgröße Vertikal</th>
+                            <td>48.8°</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Laserklasse</th>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Reichweite</th>
+                            <td>1 m bis 40 m</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Auflösung</th>
+                            <td>+/- 1 cm</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Genauigkeit</th>
+                            <td>+/- 2.5 cm</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Wellenlänge</th>
+                            <td>905 nm</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Spitzenleistung</th>
+                            <td>1.3 W</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Aktualisierungsrate</th>
+                            <td>500 Hz</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Strahldivergenz</th>
+                            <td>8 mrad</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Dokumentation -->
+                <div class="portfolio-item filter-dok">
+                    <p> Die API bietet die Dokumentation der technischen Inhalte mit klaren Anweisungen zur
+                        Funktionsweise von Teams.
+
+                        Zur Dokumentation von Temas gelangen Sie unter folgendem Link
+                        <a href="dokumentation.html">Dokumentation</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -500,11 +509,14 @@
                                     <p>
                                         Temas kann die Mechanische-Schwingung bestimmen.
                                         In der App kann man die relevanten Messdaten analysieren.
-
+                                    </p>
                                     <p>Bewegungsgleichung:
 
                                     </p>
-                                    </p>
+                                    <video class="img-fluid" autoplay loop muted>
+                                        <source src="static/assets/video/rubu_classroom_tennis.mp4" type="video/mp4"/>
+                                    </video>
+
                                 </div>
                             </li>
                             <li>
@@ -581,15 +593,36 @@
 
                             <li>
                                 <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>
-                                    Beschleunigte Bewegungen <i
+                                    Dreidimensionale Bewegung <i
                                             class="bx bx-chevron-down icon-show"></i><i
                                             class="bx bx-chevron-up icon-close"></i></a>
                                 <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                                     <p>
-                                        Mit dem Gravimeter von Temas gibt es eine weitere Funktionalität fungiert als
-                                        Beschleunigungsmeter.
-                                        Dieser ermittelt die Beschleunigung aus der Bewegung.
+                                        Dreidimensionale Bewegung ist eine Bewegung in einem dreidimensionalen Raum. Im
+                                        Gegensatz zu einer zweidimensionalen Bewegung, die sich auf eine Ebene
+                                        beschränkt, kann eine dreidimensionale Bewegung sich in alle drei Dimensionen -
+                                        vorwärts/rückwärts, seitwärts und auf/ab - ausdehnen.
                                     </p>
+                                    <p>
+                                        Dreidimensionale Bewegung wird in vielen Bereichen eingesetzt, wie zum Beispiel
+                                        in der Robotik, der virtuellen Realität und der Luft- und Raumfahrt. In der
+                                        Robotik ermöglicht die dreidimensionale Bewegung, dass Roboterobjekte in einem
+                                        Raum greifen und bewegen können, während in der virtuellen Realität die
+                                        dreidimensionale Bewegung ein immersiveres Erlebnis für den Benutzer schafft. In
+                                        der Luft- und Raumfahrt kann die dreidimensionale Bewegung ein Flugzeug oder
+                                        Raumschiff in alle Richtungen bewegen.
+                                    </p>
+                                        Dreidimensionale Bewegung wird oft durch den Einsatz von speziellen Sensoren und
+                                        Antriebssystemen erreicht. In der virtuellen Realität können Tracking-Sensoren
+                                        die Bewegungen des Benutzers erfassen und in der virtuellen Welt widerspiegeln.
+                                        In der Luft- und Raumfahrt werden Antriebssysteme wie Raketen- und Triebwerke
+                                        eingesetzt, um Bewegung im Raum zu ermöglichen.
+                                    <p>
+                                        Insgesamt bietet dreidimensionale Bewegung eine spannende Möglichkeit, Objekte
+                                        in einem Raum zu bewegen und zu kontrollieren, was eine breite Anwendungspalette
+                                        in verschiedenen Branchen ermöglicht.
+                                    </p>
+                                    <p>Dreidimensionale Bewegungsgleichung: a = (d²x/dt², d²y/dt², d²z/dt²)</p>
                                 </div>
                             </li>
 
@@ -777,86 +810,149 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Frequently Asked Questions</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                    fugiat sit in iste officiis commodi quidem hic quas.</p>
+                <h2>Häufig gestellte Fragen zu Temas. </br> FAQ</h2>
+                <p>Hier finden Sie Antworten auf häufig gestellte Fragen zu Temas.</p>
             </div>
 
             <div class="faq-list">
                 <ul>
                     <li data-aos="fade-up" data-aos-delay="100">
                         <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                                                                       data-bs-target="#faq-list-1">Non consectetur a
-                        erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i
+                                                                       data-bs-target="#faq-list-1">Was ist Temas und
+                        wofür kann ich es verwenden? <i class="bx bx-chevron-down icon-show"></i><i
                                 class="bx bx-chevron-up icon-close"></i></a>
                         <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                             <p>
-                                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
-                                curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus
-                                non.
+                                Temas ist ein Mini-Gimbal, der mit verschiedenen Komponenten wie Kamera, Lidar-Laser und
+                                Motoren ausgestattet ist.
+                                Mit Temas können Sie verschiedene Funktionen wie Bewegung der Motoren, Live-Stream der
+                                Kamera, Entfernungsmessung, 3D-Ansicht, Point-Cloud, Objektverfolgung,
+                                Positionskontrolle von
+                                Objekten und Scannen von QR-Codes ausführen.
+                                Das Produkt eignet sich für die Verwendung in verschiedenen Anwendungsbereichen,
+                                wie z.B. Physikexperimente, industrielle Prozessoptimierung, maschinelles Sehen, Deep
+                                Learning und Industrie 4.0.
                             </p>
                         </div>
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="200">
                         <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                                                       data-bs-target="#faq-list-2" class="collapsed">Feugiat
-                        scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i
+                                                                       data-bs-target="#faq-list-2" class="collapsed">Welche
+                        Komponenten sind in Temas integriert? <i class="bx bx-chevron-down icon-show"></i><i
                                 class="bx bx-chevron-up icon-close"></i></a>
                         <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                             <p>
-                                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                                velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
-                                pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus
-                                turpis massa tincidunt dui.
+                                Temas enthält eine Kamera, einen Lidar-Laser und zwei Motoren, die über eine
+                                Wifi-Schnittstelle gesteuert werden können. Die Kamera kann Live-Streams aufnehmen und
+                                die Objektverfolgungsfunktion unterstützt die Verfolgung von Objekten in Echtzeit. Die
+                                Lidar-Technologie ermöglicht es, die Entfernung zwischen dem Gimbal und Objekten zu
+                                messen und Point-Cloud-Informationen zu generieren.
                             </p>
                         </div>
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="300">
                         <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                                                       data-bs-target="#faq-list-3" class="collapsed">Dolor
-                        sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i
+                                                                       data-bs-target="#faq-list-3" class="collapsed">Wie
+                        kann ich Temas steuern? <i class="bx bx-chevron-down icon-show"></i><i
                                 class="bx bx-chevron-up icon-close"></i></a>
                         <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                             <p>
-                                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
-                                pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
-                                tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna
-                                molestie at elementum eu facilisis sed odio morbi quis
+                                Temas wird über eine Wifi-Schnittstelle gesteuert. Eine mitgelieferte Software
+                                ermöglicht die Steuerung der verschiedenen Funktionen. Sie können auch eine API nutzen,
+                                um eigene Ideen im Bereich der künstlichen Intelligenz und des maschinellen Sehens
+                                umzusetzen.
                             </p>
                         </div>
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="400">
                         <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                                                       data-bs-target="#faq-list-4" class="collapsed">Tempus
-                        quam pellentesque nec nam aliquam sem et tortor consequat? <i
+                                                                       data-bs-target="#faq-list-4" class="collapsed">Was
+                        ist die Objektverfolgungsfunktion von Temas? <i
                                 class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                         <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                             <p>
-                                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est
-                                ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit
-                                adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                                Die Objektverfolgungsfunktion von Temas ermöglicht die Verfolgung von Objekten in
+                                Echtzeit. Diese Funktion kann für verschiedene Anwendungen wie z.B. Überwachungssysteme,
+                                Inspektion von Anlagen und Prozessoptimierung in der Industrie eingesetzt werden. Die
+                                3D-Trajektorie der verfolgten Objekte kann aufgezeichnet und ausgewertet werden.
                             </p>
                         </div>
                     </li>
 
                     <li data-aos="fade-up" data-aos-delay="500">
                         <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                                                       data-bs-target="#faq-list-5" class="collapsed">Tortor
-                        vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i
+                                                                       data-bs-target="#faq-list-5" class="collapsed">Kann
+                        ich Temas in meine Industrie 4.0-Prozesse integrieren? <i
                                 class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                         <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                             <p>
-                                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
-                                integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc
-                                eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                                Ja, Temas lässt sich leicht in die Prozessoptimierung im neuen Standard der Industrie
+                                4.0 integrieren. Mit den verschiedenen Funktionen von Temas können Sie Ihre
+                                industriellen Prozesse optimieren und automatisieren.
                             </p>
                         </div>
                     </li>
 
+                    <li data-aos="fade-up" data-aos-delay="600">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-6" class="collapsed">Ist
+                        Temas für den Einsatz in der Forschung geeignet? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Ja, Temas eignet sich für den Einsatz in der Forschung. Mit den verschiedenen Funktionen
+                                von Temas können Sie physikalische Experimente digital aufzeichnen und auswerten. Die
+                                Point-Cloud-Informationen und die 3D-Trajektorie von Objekten können für die Forschung
+                                nützlich sein.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="700">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-7" class="collapsed">Ist
+                        Temas einfach zu bedienen? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-7" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Ja, Temas ist einfach zu bedienen. Eine mitgelieferte Software ermöglicht die Steuerung
+                                der verschiedenen Funktionen von Temas. Außerdem gibt es eine API, die es ermöglicht,
+                                eigene Ideen im Bereich der künstlichen Intelligenz und des maschinellen Sehens
+                                umzusetzen.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="800">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-8" class="collapsed">Kann
+                        ich meine eigenen Ideen für künstliche Intelligenz und maschinelles Sehen mit Temas umsetzen? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-8" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Ja, Temas bietet eine API, die es Ihnen ermöglicht, eigene Ideen für künstliche
+                                Intelligenz und maschinelles Sehen umzusetzen. Mit der Objektverfolgung können Sie
+                                beispielsweise 3D-Trajektorien aufzeichnen und physikalische Experimente im digitalen
+                                Zeitalter auswerten.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="900">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-9" class="collapsed">Wie
+                        wird Temas mit Strom versorgt? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-9" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Temas wird über einen eingebauten Akku mit Strom versorgt. Der Akku kann über USB
+                                aufgeladen werden.
+                            </p>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
@@ -1063,6 +1159,47 @@
 
 <!-- Template MathMl -->
 <script src="http://fred-wang.github.io/mathml.css/mspace.js"></script>
+
+<script>
+// select the carousel container
+  var myelement = document.getElementById("myCarousel");
+
+  function makeItSo() {
+    // this is where you tell it to go to the next slide
+    $('.carousel').carousel('next')
+  }
+
+  myelement.addEventListener('wheel', function(e) {
+        makeItSo();
+  });
+
+  // start your carousel on page load
+  $('.carousel').carousel({
+    interval: 90000
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
 
 </body>
 
