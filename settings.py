@@ -1,20 +1,45 @@
+# settings.py
 import os
+from dotenv import load_dotenv
+
+load_dotenv()                      # .env in den Prozess laden
 
 class BaseConfig:
-    """Base configuration"""
-    DEBUG = False
-    TESTING = False
-    SECRET_KEY = os.urandom(24)
-    MAIL_SERVER = 'smtp.gmail.com'
-    MAIL_PORT = 465
-    MAIL_USE_SSL = True
-    MAIL_USERNAME = 'm.tayyar61@gmail.com'
-    MAIL_PASSWORD = 'Trabzonspor_61'
-    RECAPTCHA_ENABLED = True
-    RECAPTCHA_SITE_KEY = '6LeEzTAeAAAAAGwXrZQdJ4Vz_H60yB9FaOg8auSU'
-    RECAPTCHA_SECRET_KEY = '6LeEzTAeAAAAAColEEDt6AV_PnB1JO0OSqRH_j_y'
+    """Gemeinsame Konfiguration (alle Umgebungen)"""
+
+    # Flask
+    SECRET_KEY = os.getenv("SECRET_KEY", "change-me")
+
+    # Google Analytics
+    GA_MEASUREMENT_ID = os.getenv("GA_MEASUREMENT_ID", "")
+
+    # reCAPTCHA v2
+    RECAPTCHA_SITE_KEY   = os.getenv("RECAPTCHA_SITE_KEY", "")
+    RECAPTCHA_SECRET_KEY = os.getenv("RECAPTCHA_SECRET_KEY", "")
+    RECAPTCHA_ENABLED    = os.getenv("RECAPTCHA_ENABLED", "false").lower() in ("true", "1", "yes")
+
+    # Mail
+    MAIL_SERVER   = os.getenv("MAIL_SERVER")
+    MAIL_PORT     = int(os.getenv("MAIL_PORT", 0))
+    MAIL_USE_TLS  = os.getenv("MAIL_USE_TLS",  "false").lower() in ("true", "1", "yes")
+    MAIL_USE_SSL  = os.getenv("MAIL_USE_SSL",  "false").lower() in ("true", "1", "yes")
+    MAIL_USERNAME = os.getenv("MAIL_USERNAME")
+    MAIL_PASSWORD = os.getenv("MAIL_PASSWORD")
+
+    # Sonstiges
+    PDF_PATH = os.getenv("PDF_PATH")
 
 class DevelopmentConfig(BaseConfig):
-    """Development configuration"""
     DEBUG = True
-    ENV = 'development'
+    ENV   = "development"
+
+class ProductionConfig(BaseConfig):
+    DEBUG = False
+    ENV   = "production"
+
+# Mapping für create_app()
+config = {
+    "development": DevelopmentConfig,
+    "production":  ProductionConfig,
+    "default":     DevelopmentConfig,
+}
