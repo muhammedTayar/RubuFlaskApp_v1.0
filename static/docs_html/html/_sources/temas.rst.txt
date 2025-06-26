@@ -1,0 +1,7 @@
+temas module
+============
+
+.. automodule:: rubu.temas
+   :members:
+   :undoc-members:
+   :show-inheritance:

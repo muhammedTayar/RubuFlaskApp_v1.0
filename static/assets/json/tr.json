@@ -1,0 +1,703 @@
+{
+  "header": {
+    "home": "Ana Sayfa",
+    "product": "Ürün",
+    "application_areas": "Kullanım Alanları",
+    "downloads": "İndirilenler",
+    "about": "Hakkımızda",
+    "team": "Ekip",
+    "contact": "İletişim",
+    "get_started": "Hemen Başla",
+    "flag": "DE"
+  },
+  "hero_section": {
+    "technologies": "TEMAS: Bir robotun gözünden dünyaya bakın.",
+    "future_science": [
+      "Hızlı ve hassas motor kontrolü",
+      "ToF teknolojisiyle 3D algılama",
+      "Görsel kamera ile net gerçek zamanlı görüntüler",
+      "Yüksek frekanslı lazer teknolojisi"
+    ],
+    "optimal_tool": "API arayüzlü bir optoelektronik ürün sunuyoruz",
+    "application_areas": "Robotik, eğitim, laboratuvar ve yenilikçi uygulamalarda çok yönlü kullanım.",
+    "get_started": "Başla",
+    "watch_video": "Videoyu İzle"
+  },
+  "portfolio_section": {
+    "title": "Ürün",
+    "filters": {
+      "description": "Açıklama",
+      "specification": "Teknik Özellikler",
+      "gallery": "Galeri",
+      "view": "3D Görünüm",
+      "api": "API",
+      "manual": "Kılavuz",
+      "download": "İndirilenler"
+    },
+    "items": [
+      {
+        "caption": {
+          "title": "Ürün Açıklaması",
+          "description": "Robotik, eğitim, laboratuvar ve yenilikçi uygulamalar için modüler 3D sensör platformu.\n\nRobotik tutkunları, eğitim kurumları, laboratuvarlar ve geleceğe yön veren geliştiriciler için tasarlanmış çok yönlü platformumuzla 3D algılamanın geleceğini keşfedin. Bu sistem, gelişmiş sensör teknolojilerini güçlü yerleşik işlemciyle birleştirerek gerçek zamanlı, hassas 3D veri toplama ve analiz imkânı sunar.",
+          "features": {
+            "mainFeaturesTitle": "Başlıca Özellikler",
+            "applicationAreasTitle": "Kullanım Alanları",
+            "benefitsTitle": "Avantajlar",
+            "targetGroupsTitle": "Hedef Kitleler",
+            "mainFeatures": [
+              {
+                "title": "Entegre Çoklu Sensör Mimarisi ve Motor Kontrolü",
+                "points": [
+                  "Ayrıntılı görsel veri için yüksek çözünürlüklü RGB kamera",
+                  "Derinlik algılama için Time-of-Flight (ToF) kamera",
+                  "Geniş alan 3D haritalama için güçlü LiDAR sensörü",
+                  "Hassas ve hızlı motor kontrolü"
+                ]
+              },
+              {
+                "title": "Kullanıcı Dostu Yazılım ve Açık API",
+                "points": [
+                  "Windows ve macOS için sezgisel yazılım",
+                  "Robotik, makine görüşü, yapay zeka ve laboratuvar veri analizi için kapsamlı API",
+                  "Tek kabloda güç, kontrol ve video iletimi için Power over Ethernet (PoE)"
+                ]
+              },
+              {
+                "title": "Esnek ve Dayanıklı Tasarım",
+                "points": [
+                  "Dinamik sensör konumlandırma için 120° dönüş açısı",
+                  "Mobil robotik platformlar ve tripodlar için montaj seçeneği",
+                  "100°C’ye kadar formunu koruyan, UV’ye dayanıklı, darbelere karşı sağlam 3D baskı malzemesi"
+                ]
+              },
+              {
+                "title": "Yerleşik Tek Kart Bilgisayar ile İşlem",
+                "points": [
+                  "Yeni nesil tek kart çözümü: Raspberry Pi 5",
+                  "Gerçek zamanlı veri işleme ve nokta bulutu oluşturma",
+                  "Renkli nokta bulutu dışa aktarımı"
+                ]
+              }
+            ],
+            "applicationAreas": [
+              "Robotik: Navigasyon, nesne tanıma, insan-robot etkileşimi",
+              "Eğitim ve öğretim: Robotik, bilgisayar bilimi ve mühendislikte uygulamalı öğrenme",
+              "Laboratuvar ve deneyler: Hareket verisi toplama ve analiz (ör. titreşim analizi)",
+              "Yenilikçi projeler: 3D modelleme, çevre gözlemi, yaratıcı uygulamalar",
+              "Endüstriyel prototipler: Otomasyon ve denetim uygulamaları için hızlı prototipleme"
+            ],
+            "benefits": [
+              "Geniş uygulama alanları için çok yönlü sensör platformu",
+              "Gerçek zamanlı veri işleme ve renkli nokta bulutu dışa aktarımı",
+              "Açık API ile kolay entegrasyon ve özelleştirme",
+              "Robotik meraklıları, eğitim kurumları ve laboratuvarlar için ideal"
+            ],
+            "targetGroups": [
+              "Robotik araştırmacıları ve geliştiricileri",
+              "Teknik alanlarda öğretmenler ve öğrenciler",
+              "Araştırma laboratuvarlarında bilim insanları ve teknisyenler",
+              "Maker’lar ve hobi robotikçileri",
+              "Endüstriyel uygulamalar için prototip geliştiren firmalar"
+            ]
+          },
+          "api": "Modüler 3D sensör platformumuz hakkında daha fazla bilgi almak ve projelerinize nasıl katkı sunabileceğimizi öğrenmek için bizimle iletişime geçin!"
+        },
+        "specification": {
+          "table_headings": {
+            "parameter": "Parametre",
+            "value": "Değer"
+          },
+          "table_rows": [
+            {
+              "parameter": "3D Baskı Malzemesi",
+              "value": "ASA"
+            },
+            {
+              "parameter": "Dönüş Açısı",
+              "value": "-60° ile 60°"
+            },
+            {
+              "parameter": "Eğilme Açısı",
+              "value": "-30° ile 90°"
+            },
+            {
+              "parameter": "Minimum Motor Adım Boyutu",
+              "value": "0.5°"
+            },
+            {
+              "parameter": "İletişim Arayüzü",
+              "value": "Ethernet"
+            },
+            {
+              "parameter": "Güç Kaynağı",
+              "value": "Power over Ethernet: 37V - 57V (DC)"
+            },
+            {
+              "parameter": "Ağ Standardı",
+              "value": "IEEE 802.3af/at PoE"
+            },
+            {
+              "parameter": "Ethernet Hızı",
+              "value": "2.5 Gbit/s"
+            },
+            {
+              "parameter": "Motor Hareket Süresi",
+              "value": "0.33 s/60°"
+            },
+            {
+              "parameter": "Dişli",
+              "value": "Metal"
+            },
+            {
+              "parameter": "Ağırlık",
+              "value": "1 kg ±%5"
+            },
+            {
+              "parameter": "Çalışma Sıcaklığı",
+              "value": "0°C - 50°C"
+            },
+            {
+              "parameter": "Kamera Sensörü",
+              "value": "Sony IMX708"
+            },
+            {
+              "parameter": "Video Modları (Görsel)",
+              "value": "1280x720@30fps"
+            },
+            {
+              "parameter": "IR Filtresi (Görsel)",
+              "value": "Evet"
+            },
+            {
+              "parameter": "Piksel Boyutu (Görsel)",
+              "value": "1.4 µm x 1.4 µm"
+            },
+            {
+              "parameter": "Yatay Görüş Açısı",
+              "value": "73°"
+            },
+            {
+              "parameter": "Dikey Görüş Açısı",
+              "value": "45°"
+            },
+            {
+              "parameter": "Işık Kaynağı (ToF)",
+              "value": "940 nm VCSEL"
+            },
+            {
+              "parameter": "ToF Ölçüm Menzili",
+              "value": "3.9 m"
+            },
+            {
+              "parameter": "Video Modları (ToF)",
+              "value": "180x180@30fps"
+            },
+            {
+              "parameter": "IR Filtresi (ToF)",
+              "value": "Hayır"
+            },
+            {
+              "parameter": "Piksel Boyutu (ToF)",
+              "value": "14.3 µm x 14.3 µm"
+            },
+            {
+              "parameter": "Yatay Görüş Açısı (ToF)",
+              "value": "45°"
+            },
+            {
+              "parameter": "Dikey Görüş Açısı (ToF)",
+              "value": "45°"
+            },
+            {
+              "parameter": "Lazer Sınıfı",
+              "value": "1"
+            },
+            {
+              "parameter": "Menzil",
+              "value": "40 m"
+            },
+            {
+              "parameter": "Çözünürlük",
+              "value": "±1 cm"
+            },
+            {
+              "parameter": "Hassasiyet",
+              "value": "±2.5 cm"
+            },
+            {
+              "parameter": "Dalga Boyu",
+              "value": "905 nm"
+            },
+            {
+              "parameter": "Tepe Güç",
+              "value": "1.3 W"
+            },
+            {
+              "parameter": "Güncelleme Hızı",
+              "value": "180 Hz"
+            },
+            {
+              "parameter": "Işın Sapması",
+              "value": "8 mrad"
+            }
+          ],
+          "gallery_section": {
+            "media": [
+              {
+                "src": "static/assets/img/DSC00016.JPG",
+                "alt": "Temas 3D Modeli"
+              },
+              {
+                "src": "static/assets/img/DSC00022.JPG",
+                "alt": "Temas 3D Modeli"
+              }
+            ]
+          },
+          "view": {},
+          "api": {
+            "description": "Temas’ın çalışma mantığına dair detaylı API dokümantasyonunu burada bulabilirsiniz.",
+            "button_text": "Dokümantasyon"
+          },
+          "pypi": {
+            "button_text": "PyPI"
+          },
+          "manual": {
+            "description": "Daha fazla bilgi için lütfen kılavuzumuzu indirin.",
+            "button_text": "İndir"
+          }
+        }
+      }
+    ]
+  },
+  "services_section": {
+    "title": "Kullanım Alanları",
+    "description": "Temas, entegre çoklu sensör mimarisi, motor kontrolü, açık API ve mekanik arayüz ile farklı uygulamalara – robotik sistemlerden akıllı ev projelerine kadar – kolayca entegre edilebilir.",
+    "sub_description": "",
+    "services": [
+      {
+        "title": "Robotik",
+        "icon": "bi-robot",
+        "description": "Temas; mekanik arayüz, görsel kamera, ToF kamera ve lazerden oluşan çoklu sensör mimarisi ile hızlı ve hassas motorları bir araya getirir. Tek kablolu PoE çözümü, enerji ve veri iletimini kolaylaştırır. Açık API sayesinde mobil robotlar ve işbirlikçi robotlara kolayca entegre edilir."
+      },
+      {
+        "title": "3D Haritalama & Ölçüm",
+        "icon": "bi-map",
+        "description": "Hassas haritalama için iki güçlü seçenek: Geniş alan uygulamaları için lazer, yakın alan için ToF kamera ile canlı ve detaylı nokta bulutları."
+      },
+      {
+        "title": "Araştırma & Eğitim",
+        "icon": "bi-mortarboard",
+        "description": "Dijital eğitimi deneyimleyin: Canlı deneyler görselleştirilebilir, ölçüm verileri kolayca uygulamalara veya derslere entegre edilir ve fiziksel olaylar (ör. serbest düşme, sarkaç, hız deneyleri) etkileşimli ve dijital olarak sunulur."
+      },
+      {
+        "title": "Yapay Zeka",
+        "icon": "static/assets/img/AI.png",
+        "description": "Çoklu sensör kurulumu, RGB görüntü, derinlik verisi ve geometriyi birleştirerek zengin eğitim verileri oluşturur. Özellikle ToF ve lazer verisinin görsel kamera ile birleştirilmesi algılama hassasiyetini büyük oranda artırır."
+      },
+      {
+        "title": "Sanal Gerçeklik",
+        "icon": "bi-badge-vr",
+        "description": "Bir VR gözlüğüyle birleştiğinde, sensör sistemimiz karmaşık ortamları gerçek zamanlı olarak sürükleyici bir deneyime dönüştürür – interaktif görselleştirme, uygulamalı eğitim ve uzaktan işbirliği için idealdir."
+      },
+      {
+        "title": "Akıllı Ev & IoT",
+        "icon": "bi-house-door",
+        "description": "Sensör sistemimiz, akıllı evde alanları, nesneleri ve hareketleri 3D ve gerçek zamanlı olarak hassas şekilde algılar. Değişiklikleri tespit ederek akıllı otomasyon, uyarlanabilir güvenlik ve daha yüksek yaşam konforu sağlar. Enerji ve veri iletimi entegre PoE ile tek kablo üzerinden yapılır."
+      }
+    ]
+  },
+  "detail_sections": [
+    {
+      "id": "robotics-detection",
+      "title": "Robotik",
+      "icon": "bi-robot",
+      "intro": "Robotik sistemler, çoklu sensör mimarisi, hassas ve hızlı motor kontrolü, açık donanım entegrasyonu ve PoE ile açık API üzerinden kesintisiz bağlantıdan faydalanır.",
+      "features": [
+        "Açık donanım entegrasyonu: STL dosyası ile 3D model sunarak sensör sistemimizin projelere mekanik olarak kolayca entegre edilmesini sağlıyoruz.",
+        "Hassas çevre algılama: Entegre çoklu sensör mimarisi, çevrenin gerçek zamanlı detaylı 3D algılanmasını mümkün kılar – bu da navigasyon ve nesne tanıma için çok önemlidir.",
+        "Kolay entegrasyon: Açık API ve PoE tek kablo teknolojisi sayesinde.",
+        "Hızlı tepki: Hızlı veri işleme ve hassas motor kontrolünün birleşimi, çevredeki değişikliklere anında tepki verilmesini sağlar."
+      ],
+      "media": [
+        {
+          "src": "static/assets/img/temas_without_bottom_cover.glb",
+          "alt": "Temas 3D Modeli"
+        },
+        {
+          "src": "static/assets/img/robotic_car.png",
+          "alt": "robotik araba"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Mobil Robotik Sistemler",
+          "description": "Mobil robotik sistemler; ToF derinlik verisi, görsel kamera ve lazer kombinasyonuyla, hızlı motor kontrolü sayesinde engelleri güvenli bir şekilde algılayıp, gerçek zamanlı olarak güvenli ve otonom navigasyon sağlar."
+        },
+        {
+          "title": "İşbirlikçi Robotlar",
+          "description": "İşbirlikçi robotlar, ToF, görsel kamera ve lazer teknolojisi ile hassas motor kontrolünün sunduğu güvenli, esnek ve hızlı insan-robot işbirliğinden faydalanır."
+        }
+      ]
+    },
+    {
+      "id": "mapping",
+      "title": "3D Haritalama & Ölçüm",
+      "icon": "bi-map",
+      "intro": "3D haritalama için iki esnek seçenek: Geniş alan uygulamaları için lazer, detaylı canlı nokta bulutları için ToF kamera.",
+      "features": [
+        "Renkli .ply dosyası olarak doğrudan dışa aktarma",
+        "Lazer menzili 40 metreye kadar",
+        "ToF kamera ile 3,9 metreye kadar dinamik menzil"
+      ],
+      "media": [
+        {
+          "src": "static/assets/video/laser.mp4",
+          "alt": "video lazer",
+          "caption": "Renkli nokta bulutu (Lazer)"
+        },
+        {
+          "src": "static/assets/video/tof.mp4",
+          "alt": "video tof",
+          "caption": "Gerçek zamanlı renkli nokta bulutu (ToF)"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Yüksek Menzilli Geniş Alan 3D Haritalama",
+          "description": "Lazer ile geniş alan haritalama yapılabilir ve görsel kamera ile birleştirildiğinde canlı ve detaylı renkli görselleştirme elde edilir."
+        },
+        {
+          "title": "Yakın Alan Detaylı 3D Haritalama",
+          "description": "ToF kamera ile yakın alanlar detaylı şekilde, renkli ve gerçek zamanlı olarak görsel kamera ile üst üste bindirilerek haritalanır."
+        }
+      ]
+    },
+    {
+      "id": "research-education",
+      "title": "Araştırma & Eğitim",
+      "icon": "bi-mortarboard",
+      "intro": "Canlı deneylerin interaktif görselleştirilmesiyle dijital eğitim deneyimi.",
+      "features": [
+        "Küre koordinatlarında (r, θ, φ) pozisyon okuma ile hassas mekânsal konumlandırma",
+        "Yüksek frekanslı lazer ile kapsamlı ölçüm verisi",
+        "3D hareket analizi ile ileri düzey öğrenme ve pratik deneyler"
+      ],
+      "media": [
+        {
+          "src": "static/assets/video/animation_ball.mp4",
+          "alt": "video lazer",
+          "caption": "Animasyon"
+        },
+        {
+          "src": "static/assets/video/falling_ball.mp4",
+          "alt": "video tof",
+          "caption": "Düşen tenis topu"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Robotik ve Bilişim",
+          "description": "Az kod, büyük etki: Açık API’miz ile doğrudan görsel geri bildirimle programlama çok daha keyifli – özellikle yaratıcı ve meraklı başlangıçlar için ideal."
+        },
+        {
+          "title": "Fiziksel Deneyler",
+          "description": "Okuldan araştırmaya kadar çok yönlü kullanım: Basit doğrusal hareket ölçümleri ve CSV çıktısı veya karmaşık 3D hareket analizleri için bilgisayarlı görü (ör. arka plan çıkarımı, özellik eşleştirme)."
+        }
+      ]
+    },
+    {
+      "id": "ai-vision",
+      "title": "Yapay Zeka",
+      "icon": "static/assets/img/AI.png",
+      "intro": "Görsel kamera, ToF teknolojisi ve mesafe sensörüyle donatılmış akıllı çoklu sensör platformumuz, açık API ve yaygın yapay zeka kütüphaneleriyle kolayca entegre edilerek gerçek zamanlı nesne tanıma sağlar.",
+      "features": [
+        "Görsel kamera, ToF sensörü ve mesafe ölçümünün birleşimiyle artırılmış algılama doğruluğu",
+        "Açık API ile popüler yapay zeka çatıları ve kütüphaneleriyle kolayca entegre edilebilir",
+        "Dinamik sahneler için hızlı ve güvenilir gerçek zamanlı nesne tanıma"
+      ],
+      "media": [
+        {
+          "src": "static/assets/video/pose.mp4",
+          "alt": "poz",
+          "caption": "Temas ile Yapay Zeka"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Gerçek Zamanlı Akıllı Vücut ve Hareket Tanıma",
+          "description": "Otomatik nesne takibi ve akıllı motor kontrolü ile popüler yapay zeka altyapılarına kolay entegrasyon."
+        },
+        {
+          "title": "Sesli Komut Kontrolü",
+          "description": "Sistemlerinizi ve uygulamalarınızı hızlı ve hassas sesli komutlarla yönetin – açık API’miz ve modern yapay zeka altyapısı sayesinde esnek ve akıllı kullanıcı etkileşimi."
+        }
+      ]
+    },
+    {
+      "id": "rapid-prototyping",
+      "title": "Sanal Gerçeklik",
+      "icon": "bi-badge-vr",
+      "intro": "Akıllı telefonunuzla sanal gerçekliğe dalın – entegre, açık API sayesinde tamamen kontrol sizde.",
+      "features": [
+        "Akıllı telefonda sürükleyici sanal gerçeklik",
+        "Python tabanlı mobil uygulamalarla da kolayca kullanılabilen entegre, açık API",
+        "Hassas kontrol ve yönlendirme"
+      ],
+      "media": [
+        {
+          "src": "static/assets/video/vr.mp4",
+          "alt": "video vr",
+          "caption": "Temas ile Sanal Gerçeklik"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Etkileşimli Eğitim",
+          "description": "Karmaşık senaryoları gerçekçi şekilde yansıtan sanal ortamlarda uygulamalı eğitimler."
+        },
+        {
+          "title": "Uzaktan İşbirliği",
+          "description": "Farklı lokasyonlardaki ekiplerin birlikte çalışmasını sağlayan sanal toplantı ve ortak çalışma ortamları."
+        }
+      ]
+    },
+    {
+      "id": "smart-home",
+      "title": "Akıllı Ev & IoT",
+      "icon": "bi-house-door",
+      "intro": "Temas, akıllı ev projelerinde akıllı alan algılama, sezgisel hareketle kontrol ve güvenli PoE otomasyonu ile konfor ve enerji verimliliği sağlar.",
+      "features": [
+        "Akıllı alan algılama ile aydınlatma, iklimlendirme ve enerji için otomatik ve hassas kontrol",
+        "Sezgisel hareketle kontrol, akıllı ev cihazlarını temassız ve hijyenik şekilde yönetme",
+        "Temas, Power-over-Ethernet (PoE) ile enerji tasarruflu ve güvenilir kontrol sunar"
+      ],
+      "media": [
+        {
+          "src": "static/assets/img/smart_home.jpeg",
+          "alt": "Akıllı Ev"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Akıllı Alan Algılama",
+          "description": "Işık, iklim ve enerji için alan kullanımını otomatik olarak tespit eder ve analiz eder."
+        },
+        {
+          "title": "PoE ile Kontrol",
+          "description": "Açık API’mizi kullanarak PoE ile çalışan esnek ve sorunsuz akıllı ev çözümleri geliştirin."
+        }
+      ]
+    }
+  ],
+  "about_section": {
+    "title": "Hakkımızda",
+    "content": [
+      {
+        "text": "Teknolojimizin temeli 2019 yılında atıldı: Dr. Emre Gürdal ve Muhammed Tayar olarak dijital ortam algılama vizyonumuzla bir araya geldik. 2025’te şirketimizi resmen kurduk – hedefimiz; hassasiyet, açıklık ve kullanım çeşitliliğini kompakt bir sistemde buluşturmak. Teknolojimiz; görsel kamera, ToF kamera ve lazerden oluşan entegre çoklu sensör mimarisi ile hızlı ve hassas motor hareketini birleştirir. Sistem; hem mekanik hem de yazılım (API) tarafında açık arayüzlerle tamamlanır ve böylece hassas 3D haritalama ve çok farklı uygulamalara sorunsuz entegrasyon sağlar. İster robotikte, ister akıllı evde, ister mobil platformlarda veya eğitimde olsun; sistemimiz gerçek zamanlı nokta bulutları üretir, .ply formatında dışa aktarır ve hem canlı görselleştirme hem de anında veri işleme imkanı sunar. Bir optoelektronik bileşen olarak sistemimiz, robotik uygulamalar için idealdir ve yüksek hassasiyetli, gerçek zamanlı ortam algılama ile güvenli ve verimli navigasyon sağlar."
+      }
+    ],
+    "button_text": "Daha Fazla Bilgi"
+  },
+  "why_us_section": {
+    "title": "Temas - Dijitalleşmeye Giriş Noktanız!",
+    "content": "Verileri değerli dijital kaynaklara dönüştürüyoruz. Nesne tanıma yolculuğunda bize katılın.",
+    "accordion_list": [
+      {
+        "title": "Yay Sarkaç/İp Sarkaç - Mekanik Salınımlar",
+        "content": "Temas, mekanik salınımları ölçebilir.",
+        "formula_federpendel": "Yay sarkacının salınım süresi:",
+        "formula_fadenpendel": "İp sarkacının salınım süresi:"
+      },
+      {
+        "title": "Serbest Düşme",
+        "content": "LiDAR sensörü ile serbest düşme ivmesi ölçülebilir.",
+        "formula_freier_fall": "Yol-zaman bağıntısı:"
+      },
+      {
+        "title": "Üç Boyutlu Hareket",
+        "content": "Üç boyutlu hareket tüm eksenlere yayılır.",
+        "formula_dreidimensionale": "Üç boyutlu hareket denklemi:"
+      }
+    ]
+  },
+  "skills_section": {
+    "title": "Hangi Programlama Dilleri Kullanıldı?",
+    "subtitle": "Farklı teknikler Temas’ı benzersiz kılıyor.",
+    "skills": [
+      {
+        "name": "Python",
+        "percentage": "100"
+      },
+      {
+        "name": "Swift",
+        "percentage": "90"
+      },
+      {
+        "name": "Windows",
+        "percentage": "90"
+      },
+      {
+        "name": "Pandas",
+        "percentage": "55"
+      }
+    ]
+  },
+  "cta_section": {
+    "title": "Daha Fazla Bilgi Almak İster misiniz?",
+    "description": "Detaylı bilgi almak veya bir web sunumu için randevu ayarlamak ister misiniz?",
+    "cta_button_text": "Ücretsiz Dene"
+  },
+  "faq_section": {
+    "title": "Sıkça Sorulan Sorular",
+    "description": "Temas hakkında sıkça sorulan soruların yanıtlarını burada bulabilirsiniz.",
+    "faqs": [
+      {
+        "question": "Cihazda hangi sensörler bulunuyor?",
+        "answer": "Cihazda görsel kamera, ToF kamera, LiDAR lazer ve iki hassas kontrollü motor bulunur."
+      },
+      {
+        "question": "Temas’ı nasıl kontrol edebilirim?",
+        "answer": "Temas, Ethernet arayüzü üzerinden hassas şekilde kontrol edilebilir ve mevcut ağlara entegre edilebilir."
+      },
+      {
+        "question": "API için örnek kodlar mevcut mu?",
+        "answer": "Evet, API kullanımına dair örnek kodları GitHub depomuzda bulabilirsiniz."
+      },
+      {
+        "question": "Temas yapay zeka destekli mi?",
+        "answer": "Temas, açık API sayesinde yaygın yapay zeka altyapılarıyla entegre çalışabilir. Örnek kodlarımızı ve uygulamalarımızı doğrudan GitHub’da bulabilir, hızlıca başlayabilirsiniz."
+      },
+      {
+        "question": "Cihaz mevcut akıllı ev sistemleriyle uyumlu mu?",
+        "answer": "Evet, açık API ile cihaz yaygın akıllı ev platformlarına esnek biçimde entegre edilebilir."
+      },
+      {
+        "question": "Cihaz nasıl kontrol edilebilir?",
+        "answer": "Temas; Windows ve macOS için yazılımımız ya da açık API aracılığıyla esnek şekilde yönetilebilir."
+      },
+      {
+        "question": "Cihaz nasıl enerji alıyor?",
+        "answer": "Temas, Power-over-Ethernet (PoE) ile çalışır – bu da kurulumu kolaylaştırır ve ek kablolama ihtiyacını ortadan kaldırır."
+      },
+      {
+        "question": "Cihazla birlikte adaptör geliyor mu?",
+        "answer": "Adaptör kutu içeriğine dahil değildir. Şu modeli öneriyoruz: Üretici TP-Link, Model PoE260S."
+      }
+    ]
+  },
+  "contact_section": {
+    "title": "Rubu ile İletişime Geçin",
+    "address": {
+      "icon": "bi bi-geo-alt",
+      "heading": "Adres:",
+      "content": "Felix-Wankel-Strasse 1, Aalen, 73431"
+    },
+    "email": {
+      "icon": "bi bi-envelope",
+      "heading": "E-posta:",
+      "content": "info@rubu-tech.de"
+    },
+    "phone": {
+      "icon": "bi bi-phone",
+      "heading": "Telefon:",
+      "content": "+1 5589 55488 55s"
+    },
+    "customer": {
+      "lastname": "Soyadı*",
+      "name": "Adı*",
+      "organisation": "Kurum",
+      "email": "İş E-postası*",
+      "telefon": "Telefon*",
+      "country": "Ülke*",
+      "subject": "Konu",
+      "message": "Mesaj*",
+      "info": "* zorunlu alanları gösterir",
+      "button_text": "Gönder"
+    },
+    "form": {
+      "required_fields_message": "* zorunlu alanları gösterir",
+      "submit_button_text": "Gönder"
+    }
+  },
+  "team_section": {
+    "title": "Gelecek Hedeflerimiz ve Takım Çalışması",
+    "content": [
+      {
+        "text": "Vizyonumuz ve takım kültürümüz."
+      },
+      {
+        "text": "Araştırma iş birlikleri\n\nEnstitüler ve firmalarla ortaklıklar."
+      },
+      {
+        "text": "Yeni kullanım alanları\n\nHedef: Uygulama çeşitliliğini artırmak."
+      },
+      {
+        "text": "Yenilikçi düşünce\n\nYaratıcı fikirleri önemsiyoruz."
+      },
+      {
+        "text": "Gelişime tutku\n\nTeknolojiye ortak tutku ile yaklaşım."
+      }
+    ]
+  },
+  "timeline_section": {
+    "title": "Proje Zaman Çizelgesi",
+    "events": [
+      {
+        "year": "2018",
+        "title": "Ekibin Kuruluşu",
+        "description": [
+          "Üç kişilik ekibin bir araya gelmesi."
+        ]
+      },
+      {
+        "year": "2020",
+        "title": "Ar-Ge Aşaması",
+        "description": [
+          "Deneysel ortamda araştırma ve geliştirme faaliyetleri."
+        ]
+      },
+      {
+        "year": "2021",
+        "title": "Değerlerin Belirlenmesi",
+        "description": [
+          "İnsani değerlerin öneminin vurgulanması."
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "Kültürün Güçlendirilmesi",
+        "description": [
+          "Tüm ekibin yetkinliklerinin artırılması."
+        ]
+      },
+      {
+        "year": "2024",
+        "title": "Gelişimin Devamı",
+        "description": [
+          "Geliştirilen değerlere odaklanılması."
+        ]
+      }
+    ]
+  },
+  "klaro": {
+    "privacyPolicyUrl": "/datenschutz",
+    "consentModal": {
+      "title": "Çerezler & Servisler",
+      "description": "İçerik ve reklamları kişiselleştirmek için çerezler kullanıyoruz. Daha fazla bilgi için <a href='/datenschutz' target='_blank'>Gizlilik Politikamızı</a> okuyabilirsiniz."
+    },
+    "consentNotice": {
+      "description": "Bu web sitesi çerezler kullanır – neye izin vereceğinize siz karar verebilirsiniz.",
+      "learnMore": "Daha fazla bilgi"
+    },
+    "purposes": {
+      "maps": "Google Haritalar",
+      "security": "Güvenlik servisleri (ör. reCAPTCHA)"
+    },
+    "buttons": {
+      "ok": "Tamam",
+      "acceptAll": "Hepsini kabul et",
+      "acceptSelected": "Seçilenleri kabul et",
+      "decline": "Reddet"
+    }
+  }
+}

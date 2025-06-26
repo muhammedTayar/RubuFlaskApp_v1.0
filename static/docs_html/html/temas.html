@@ -1,0 +1,788 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>temas module &mdash; TEMAS 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fa5ea642" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fa5ea642" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="src" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgba(0,50,100,1)" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            TEMAS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modules.html">src</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">temas module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rubu.temas.Connect"><code class="docutils literal notranslate"><span class="pre">Connect</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Connect.get_ip_from_hostname"><code class="docutils literal notranslate"><span class="pre">Connect.get_ip_from_hostname()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rubu.temas.Socket"><code class="docutils literal notranslate"><span class="pre">Socket</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Socket.send_cmd"><code class="docutils literal notranslate"><span class="pre">Socket.send_cmd()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rubu.temas.Camera"><code class="docutils literal notranslate"><span class="pre">Camera</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Camera.update"><code class="docutils literal notranslate"><span class="pre">Camera.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Camera.start_thread"><code class="docutils literal notranslate"><span class="pre">Camera.start_thread()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Camera.stop_thread"><code class="docutils literal notranslate"><span class="pre">Camera.stop_thread()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Camera.get_frame"><code class="docutils literal notranslate"><span class="pre">Camera.get_frame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Camera.set_exposure_time"><code class="docutils literal notranslate"><span class="pre">Camera.set_exposure_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Camera.set_brightness"><code class="docutils literal notranslate"><span class="pre">Camera.set_brightness()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Camera.set_saturation"><code class="docutils literal notranslate"><span class="pre">Camera.set_saturation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Camera.set_contrast"><code class="docutils literal notranslate"><span class="pre">Camera.set_contrast()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Camera.set_lens_position"><code class="docutils literal notranslate"><span class="pre">Camera.set_lens_position()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Camera.set_gain"><code class="docutils literal notranslate"><span class="pre">Camera.set_gain()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rubu.temas.Control"><code class="docutils literal notranslate"><span class="pre">Control</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.get_pcl"><code class="docutils literal notranslate"><span class="pre">Control.get_pcl()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.distance"><code class="docutils literal notranslate"><span class="pre">Control.distance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.mean_distance"><code class="docutils literal notranslate"><span class="pre">Control.mean_distance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.get_focus_position"><code class="docutils literal notranslate"><span class="pre">Control.get_focus_position()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.set_focus_position"><code class="docutils literal notranslate"><span class="pre">Control.set_focus_position()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.get_laser_los"><code class="docutils literal notranslate"><span class="pre">Control.get_laser_los()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.set_laser_los"><code class="docutils literal notranslate"><span class="pre">Control.set_laser_los()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.move_pos"><code class="docutils literal notranslate"><span class="pre">Control.move_pos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.get_pos"><code class="docutils literal notranslate"><span class="pre">Control.get_pos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.move_home"><code class="docutils literal notranslate"><span class="pre">Control.move_home()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.move"><code class="docutils literal notranslate"><span class="pre">Control.move()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.move_threaded"><code class="docutils literal notranslate"><span class="pre">Control.move_threaded()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.move_right"><code class="docutils literal notranslate"><span class="pre">Control.move_right()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.move_left"><code class="docutils literal notranslate"><span class="pre">Control.move_left()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.move_up"><code class="docutils literal notranslate"><span class="pre">Control.move_up()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.move_down"><code class="docutils literal notranslate"><span class="pre">Control.move_down()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.move_right_fine"><code class="docutils literal notranslate"><span class="pre">Control.move_right_fine()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.move_left_fine"><code class="docutils literal notranslate"><span class="pre">Control.move_left_fine()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.move_up_fine"><code class="docutils literal notranslate"><span class="pre">Control.move_up_fine()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.move_down_fine"><code class="docutils literal notranslate"><span class="pre">Control.move_down_fine()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.start_point_cloud_scan"><code class="docutils literal notranslate"><span class="pre">Control.start_point_cloud_scan()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.stop_point_cloud_scan"><code class="docutils literal notranslate"><span class="pre">Control.stop_point_cloud_scan()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Control.get_point_cloud_scan_percent"><code class="docutils literal notranslate"><span class="pre">Control.get_point_cloud_scan_percent()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rubu.temas.Common"><code class="docutils literal notranslate"><span class="pre">Common</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.shutdown"><code class="docutils literal notranslate"><span class="pre">Common.shutdown()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.restart"><code class="docutils literal notranslate"><span class="pre">Common.restart()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_temperature"><code class="docutils literal notranslate"><span class="pre">Common.get_temperature()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_ip"><code class="docutils literal notranslate"><span class="pre">Common.get_ip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_sn"><code class="docutils literal notranslate"><span class="pre">Common.get_sn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_fw_version"><code class="docutils literal notranslate"><span class="pre">Common.get_fw_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_hostname"><code class="docutils literal notranslate"><span class="pre">Common.get_hostname()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.set_hostname"><code class="docutils literal notranslate"><span class="pre">Common.set_hostname()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_port_camera"><code class="docutils literal notranslate"><span class="pre">Common.get_port_camera()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_port_tof_camera"><code class="docutils literal notranslate"><span class="pre">Common.get_port_tof_camera()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_port_common"><code class="docutils literal notranslate"><span class="pre">Common.get_port_common()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_port_control"><code class="docutils literal notranslate"><span class="pre">Common.get_port_control()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_ip_hosts"><code class="docutils literal notranslate"><span class="pre">Common.get_ip_hosts()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_mac"><code class="docutils literal notranslate"><span class="pre">Common.get_mac()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_laser_x_los"><code class="docutils literal notranslate"><span class="pre">Common.get_laser_x_los()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.get_laser_y_los"><code class="docutils literal notranslate"><span class="pre">Common.get_laser_y_los()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.set_static_ip"><code class="docutils literal notranslate"><span class="pre">Common.set_static_ip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.set_direct_static_ip"><code class="docutils literal notranslate"><span class="pre">Common.set_direct_static_ip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.near_mode_on"><code class="docutils literal notranslate"><span class="pre">Common.near_mode_on()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.near_mode_off"><code class="docutils literal notranslate"><span class="pre">Common.near_mode_off()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rubu.temas.Common.set_temas_serialnumber"><code class="docutils literal notranslate"><span class="pre">Common.set_temas_serialnumber()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: rgba(0,50,100,1)" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TEMAS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">temas module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/temas.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-rubu.temas">
+<span id="temas-module"></span><h1>temas module<a class="headerlink" href="#module-rubu.temas" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="rubu.temas.Connect">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rubu.temas.</span></span><span class="sig-name descname"><span class="pre">Connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hostname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'temas'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Connect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Connect" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This class alows the Temas connection.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Connect.get_ip_from_hostname">
+<span class="sig-name descname"><span class="pre">get_ip_from_hostname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hostname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_attempts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Connect.get_ip_from_hostname"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Connect.get_ip_from_hostname" title="Link to this definition"></a></dt>
+<dd><p>Attempts to determine the IP address of the hostname.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rubu.temas.Socket">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rubu.temas.</span></span><span class="sig-name descname"><span class="pre">Socket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Socket"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Socket" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This class send commands to Temas</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Socket.send_cmd">
+<span class="sig-name descname"><span class="pre">send_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Socket.send_cmd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Socket.send_cmd" title="Link to this definition"></a></dt>
+<dd><p>Send commands</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>command</strong> (<em>List</em><em>, </em><em>optional</em>) – A command is given</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Data of socket <code class="xref py py-class docutils literal notranslate"><span class="pre">temas.send_cmd</span></code></p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Exception</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rubu.temas.Camera">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rubu.temas.</span></span><span class="sig-name descname"><span class="pre">Camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8081</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Camera"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Camera" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This class allows the control of camera using urllib.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Camera.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Camera.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Camera.update" title="Link to this definition"></a></dt>
+<dd><p>Continuously fetches frames from the MJPEG stream.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Camera.start_thread">
+<span class="sig-name descname"><span class="pre">start_thread</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Camera.start_thread"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Camera.start_thread" title="Link to this definition"></a></dt>
+<dd><p>Starts the thread to fetch frames.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Camera.stop_thread">
+<span class="sig-name descname"><span class="pre">stop_thread</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Camera.stop_thread"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Camera.stop_thread" title="Link to this definition"></a></dt>
+<dd><p>Stops the thread.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Camera.get_frame">
+<span class="sig-name descname"><span class="pre">get_frame</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Camera.get_frame"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Camera.get_frame" title="Link to this definition"></a></dt>
+<dd><p>Returns the most recent frame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Frame</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)">numpy.ndarray</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Camera.set_exposure_time">
+<span class="sig-name descname"><span class="pre">set_exposure_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">microseconds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Camera.set_exposure_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Camera.set_exposure_time" title="Link to this definition"></a></dt>
+<dd><p>Set exposure time of visual camera 50-33000µs</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Camera.set_brightness">
+<span class="sig-name descname"><span class="pre">set_brightness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">brightness_percent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Camera.set_brightness"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Camera.set_brightness" title="Link to this definition"></a></dt>
+<dd><p>Set brightness of visual camera 0-100</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Camera.set_saturation">
+<span class="sig-name descname"><span class="pre">set_saturation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">saturation_percent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Camera.set_saturation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Camera.set_saturation" title="Link to this definition"></a></dt>
+<dd><p>Set saturation of visual camera 0-100</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Camera.set_contrast">
+<span class="sig-name descname"><span class="pre">set_contrast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contrast_percent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Camera.set_contrast"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Camera.set_contrast" title="Link to this definition"></a></dt>
+<dd><p>Set contrast of visual camera 0-100</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Camera.set_lens_position">
+<span class="sig-name descname"><span class="pre">set_lens_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lens_position_percent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Camera.set_lens_position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Camera.set_lens_position" title="Link to this definition"></a></dt>
+<dd><p>Set lens position of visual camera 0-100</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Camera.set_gain">
+<span class="sig-name descname"><span class="pre">set_gain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gain_value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Camera.set_gain"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Camera.set_gain" title="Link to this definition"></a></dt>
+<dd><p>Set gain of visual camera 1.23-16.0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rubu.temas.Control">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rubu.temas.</span></span><span class="sig-name descname"><span class="pre">Control</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8082</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This class alows the control of motors and laser.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.get_pcl">
+<span class="sig-name descname"><span class="pre">get_pcl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.get_pcl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.get_pcl" title="Link to this definition"></a></dt>
+<dd><p>Receive last point cloud</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>.ply file</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.distance" title="Link to this definition"></a></dt>
+<dd><p>Laser distance measurment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Value of the distance [cm]</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.mean_distance">
+<span class="sig-name descname"><span class="pre">mean_distance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.mean_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.mean_distance" title="Link to this definition"></a></dt>
+<dd><p>Mean laser distance measurement</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Value of the mean_distance [cm]</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.get_focus_position">
+<span class="sig-name descname"><span class="pre">get_focus_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.get_focus_position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.get_focus_position" title="Link to this definition"></a></dt>
+<dd><p>Get focus position of visual camera 0-100</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Get focus position of visual camera</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.set_focus_position">
+<span class="sig-name descname"><span class="pre">set_focus_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.set_focus_position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.set_focus_position" title="Link to this definition"></a></dt>
+<dd><p>Set focus position of visual camera 0-100</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set focus position of visual camera</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.get_laser_los">
+<span class="sig-name descname"><span class="pre">get_laser_los</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.get_laser_los"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.get_laser_los" title="Link to this definition"></a></dt>
+<dd><p>Get laser pointer position on visual camera (x,y)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Get laser los [px,px]</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.set_laser_los">
+<span class="sig-name descname"><span class="pre">set_laser_los</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.set_laser_los"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.set_laser_los" title="Link to this definition"></a></dt>
+<dd><p>Set laser pointer position on visual camera (x,y)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.move_pos">
+<span class="sig-name descname"><span class="pre">move_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.move_pos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.move_pos" title="Link to this definition"></a></dt>
+<dd><p>Move to coordinate</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.get_pos">
+<span class="sig-name descname"><span class="pre">get_pos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.get_pos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.get_pos" title="Link to this definition"></a></dt>
+<dd><p>Get motor positions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pan, tilt positions [°]</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.move_home">
+<span class="sig-name descname"><span class="pre">move_home</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.move_home"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.move_home" title="Link to this definition"></a></dt>
+<dd><p>Move to home position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Motor at start position?</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.move"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.move" title="Link to this definition"></a></dt>
+<dd><p>Sends a movement command to the motor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.move_threaded">
+<span class="sig-name descname"><span class="pre">move_threaded</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.move_threaded"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.move_threaded" title="Link to this definition"></a></dt>
+<dd><p>Starts the movement in a separate thread.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.move_right">
+<span class="sig-name descname"><span class="pre">move_right</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.move_right"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.move_right" title="Link to this definition"></a></dt>
+<dd><p>Move motor right in 1° steps</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.move_left">
+<span class="sig-name descname"><span class="pre">move_left</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.move_left"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.move_left" title="Link to this definition"></a></dt>
+<dd><p>Move motor left in 1° steps</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.move_up">
+<span class="sig-name descname"><span class="pre">move_up</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.move_up"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.move_up" title="Link to this definition"></a></dt>
+<dd><p>Move motor up in 1° steps</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.move_down">
+<span class="sig-name descname"><span class="pre">move_down</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.move_down"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.move_down" title="Link to this definition"></a></dt>
+<dd><p>Move motor down in 1° steps</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.move_right_fine">
+<span class="sig-name descname"><span class="pre">move_right_fine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.move_right_fine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.move_right_fine" title="Link to this definition"></a></dt>
+<dd><p>Move motor right in 0.5° steps</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.move_left_fine">
+<span class="sig-name descname"><span class="pre">move_left_fine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.move_left_fine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.move_left_fine" title="Link to this definition"></a></dt>
+<dd><p>Move motor left in 0.5° steps</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.move_up_fine">
+<span class="sig-name descname"><span class="pre">move_up_fine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.move_up_fine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.move_up_fine" title="Link to this definition"></a></dt>
+<dd><p>Move motor up in 0.5° steps</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.move_down_fine">
+<span class="sig-name descname"><span class="pre">move_down_fine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.move_down_fine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.move_down_fine" title="Link to this definition"></a></dt>
+<dd><p>Move motor down in 0.5° steps</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.start_point_cloud_scan">
+<span class="sig-name descname"><span class="pre">start_point_cloud_scan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.start_point_cloud_scan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.start_point_cloud_scan" title="Link to this definition"></a></dt>
+<dd><p>Move to coordinate
+arg1: elevation_min_scan
+arg2: elevation_max_scan
+arg3: azimut_min_scan
+arg4: azimut_max_scan</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.stop_point_cloud_scan">
+<span class="sig-name descname"><span class="pre">stop_point_cloud_scan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.stop_point_cloud_scan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.stop_point_cloud_scan" title="Link to this definition"></a></dt>
+<dd><p>Stop scan</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Control.get_point_cloud_scan_percent">
+<span class="sig-name descname"><span class="pre">get_point_cloud_scan_percent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Control.get_point_cloud_scan_percent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Control.get_point_cloud_scan_percent" title="Link to this definition"></a></dt>
+<dd><p>Point cloud scan status in perecent</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rubu.temas.Common">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rubu.temas.</span></span><span class="sig-name descname"><span class="pre">Common</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8083</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This class included the common settings of Temas</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.shutdown">
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.shutdown"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.shutdown" title="Link to this definition"></a></dt>
+<dd><p>Shutdown Temas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Shutdown temas</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.restart">
+<span class="sig-name descname"><span class="pre">restart</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.restart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.restart" title="Link to this definition"></a></dt>
+<dd><p>Restart Temas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Restart temas</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_temperature">
+<span class="sig-name descname"><span class="pre">get_temperature</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_temperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_temperature" title="Link to this definition"></a></dt>
+<dd><p>Read Temperature of Temas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Temperature Temas</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_ip">
+<span class="sig-name descname"><span class="pre">get_ip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_ip"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_ip" title="Link to this definition"></a></dt>
+<dd><p>Get ip address of Temas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Ip address</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_sn">
+<span class="sig-name descname"><span class="pre">get_sn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_sn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_sn" title="Link to this definition"></a></dt>
+<dd><p>Get serial number of Temas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>serial number is returned</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_fw_version">
+<span class="sig-name descname"><span class="pre">get_fw_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_fw_version"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_fw_version" title="Link to this definition"></a></dt>
+<dd><p>Get firmware version of Temas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>firmware version is returned</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_hostname">
+<span class="sig-name descname"><span class="pre">get_hostname</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_hostname"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_hostname" title="Link to this definition"></a></dt>
+<dd><p>Get hostname of Temas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Hostname is returned</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.set_hostname">
+<span class="sig-name descname"><span class="pre">set_hostname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hostname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.set_hostname"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.set_hostname" title="Link to this definition"></a></dt>
+<dd><p>Set hostname of Temas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Hostname is changed</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_port_camera">
+<span class="sig-name descname"><span class="pre">get_port_camera</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_port_camera"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_port_camera" title="Link to this definition"></a></dt>
+<dd><p>Get port of Temas camera</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Port from camera</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_port_tof_camera">
+<span class="sig-name descname"><span class="pre">get_port_tof_camera</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_port_tof_camera"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_port_tof_camera" title="Link to this definition"></a></dt>
+<dd><p>Get port of Temas tof camera</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Port from tof camera</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_port_common">
+<span class="sig-name descname"><span class="pre">get_port_common</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_port_common"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_port_common" title="Link to this definition"></a></dt>
+<dd><p>Get port of Temas common</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Port from Temas common</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_port_control">
+<span class="sig-name descname"><span class="pre">get_port_control</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_port_control"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_port_control" title="Link to this definition"></a></dt>
+<dd><p>Get port of control</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Port from control</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_ip_hosts">
+<span class="sig-name descname"><span class="pre">get_ip_hosts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_ip_hosts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_ip_hosts" title="Link to this definition"></a></dt>
+<dd><p>Get the host ip address of Temas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Ip adress of host</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_mac">
+<span class="sig-name descname"><span class="pre">get_mac</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_mac"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_mac" title="Link to this definition"></a></dt>
+<dd><p>Get the mac address of Temas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Returns the mac address</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_laser_x_los">
+<span class="sig-name descname"><span class="pre">get_laser_x_los</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_laser_x_los"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_laser_x_los" title="Link to this definition"></a></dt>
+<dd><p>Get the x value los of Laser in pixel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Returns the x value los</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.get_laser_y_los">
+<span class="sig-name descname"><span class="pre">get_laser_y_los</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.get_laser_y_los"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.get_laser_y_los" title="Link to this definition"></a></dt>
+<dd><p>Get the y value los of Laser in pixel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Returns the y value los</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.set_static_ip">
+<span class="sig-name descname"><span class="pre">set_static_ip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gateway</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dns</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.set_static_ip"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.set_static_ip" title="Link to this definition"></a></dt>
+<dd><p>static ip /24 dhcp
+arg1: ip-address
+arg2: gateway
+arg3: dns</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.set_direct_static_ip">
+<span class="sig-name descname"><span class="pre">set_direct_static_ip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.set_direct_static_ip"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.set_direct_static_ip" title="Link to this definition"></a></dt>
+<dd><p>static ip /24 without dhcp
+arg1: ip-address</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.near_mode_on">
+<span class="sig-name descname"><span class="pre">near_mode_on</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.near_mode_on"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.near_mode_on" title="Link to this definition"></a></dt>
+<dd><p>tof near mode on</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.near_mode_off">
+<span class="sig-name descname"><span class="pre">near_mode_off</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.near_mode_off"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.near_mode_off" title="Link to this definition"></a></dt>
+<dd><p>tof near mode off</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rubu.temas.Common.set_temas_serialnumber">
+<span class="sig-name descname"><span class="pre">set_temas_serialnumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sn</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rubu/temas.html#Common.set_temas_serialnumber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rubu.temas.Common.set_temas_serialnumber" title="Link to this definition"></a></dt>
+<dd><p>Set serial number of Temas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>serial number is returned</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>String</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="src" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+
+
+
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

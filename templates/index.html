@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 1) Polyfill für crypto.randomUUID – MUSS ganz oben stehen, ohne defer -->
+    <script>
+        (function(){
+          if (!window.crypto?.randomUUID) {
+            crypto.randomUUID = function(){
+              const a = new Uint8Array(16);
+              crypto.getRandomValues(a);
+              a[6] = (a[6] & 0x0f) | 0x40;
+              a[8] = (a[8] & 0x3f) | 0x80;
+              return [...a].map(b => b.toString(16).padStart(2,'0')).join('')
+                .replace(/^(.{8})(.{4})(.{4})(.{4})(.+)$/, '$1-$2-$3-$4-$5');
+            };
+          }
+        })();
+    </script>
+
+    <title>rubu</title>
+
+    <!-- 2) Favicons & Flags -->
+    <link rel="icon" href="{{ url_for('static', filename='assets/img/logo/favicon.png') }}">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.9.2/css/flag-icons.min.css"
+          crossorigin="anonymous">
+
+    <!-- 3) Vendor CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HP7N4LH3RN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+
+        // ① Consent-Defaults setzen
+        gtag('consent', 'default', {
+          'ad_storage':       'granted',
+          'analytics_storage':'granted'
+        });
+
+        // ② Initialisierung (wird erst mit Consent ('granted') wirklich Daten senden)
+        gtag('js', new Date());
+        gtag('config','G-HP7N4LH3RN',{
+            send_page_view: true,
+            debug_mode:     true
+        });
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaLoaded&render=explicit" async defer></script>
+
+    <!-- 4) CookieConsent CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css">
+
+    <!-- 5) Lokale Roboto-Schrift -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/roboto.css') }}">
+
+    <!-- 6) Haupt-CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+
+    <!-- 7) KaTeX (CSS + JS) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+          crossorigin="anonymous">
+    <script defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+            crossorigin="anonymous"></script>
+    <script defer
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+            crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+        <!--<h1 class="logo me-auto"><a href="#hero">rubu</a></h1>-->
+        <h1 class="logo me-auto"><a href="#hero"><img src="../static/assets/img/logo/logo.png"
+                                                      class="img-fluid animated"></a></h1>
+        <!-- Versteckte div für ausgewählte Sprache -->
+        <div id="selected-language" data-lang="{{ selected_language }}" style="display: none;"></div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <!-- Zeigt die ausgewählte Sprache anhand des 'selected_language'-Werts -->
+                        {% if selected_language == 'de' %}
+                        <span class="fi fi-de"></span> Deutsch
+                        {% elif selected_language == 'tr' %}
+                        <span class="fi fi-tr"></span> Türkçe
+                        {% elif selected_language == 'en' %}
+                        <span class="fi fi-gb"></span> English
+                        {% else %}
+                        <span class="fi fi-de"></span> Deutsch
+                        <!-- Fallback auf Deutsch, falls keine Sprache gewählt ist -->
+                        {% endif %}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li>
+                            <a class="dropdown-item {% if selected_language == 'de' %} active{% endif %}"
+                               href="{{ url_for('set_language', lang='de') }}">
+                                <span class="fi fi-de"></span> Deutsch
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item {% if selected_language == 'tr' %} active{% endif %}"
+                               href="{{ url_for('set_language', lang='tr') }}">
+                                <span class="fi fi-tr"></span> Türkçe
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item {% if selected_language == 'en' %} active{% endif %}"
+                               href="{{ url_for('set_language', lang='en') }}">
+                                <span class="fi fi-gb"></span> English
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="#hero">{{ translations['header']['home'] }}</a></li>
+                <li class="dropdown"><a href="#portfolio"><span>{{translations['header']['product']}}</span> <i
+                        class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#portfolio" class="dropdown-item" data-filter=".filter-description">{{translations['portfolio_section']['filters']['description']}}</a>
+                        </li>
+                        <li><a href="#portfolio" class="dropdown-item" data-filter=".filter-specification">{{translations['portfolio_section']['filters']['specification']}}</a>
+                        </li>
+                        <li><a href="#portfolio" class="dropdown-item" data-filter=".filter-gallery">{{translations['portfolio_section']['filters']['gallery']}}</a>
+                        </li>
+                        <li><a href="#portfolio" class="dropdown-item" data-filter=".filter-view">{{translations['portfolio_section']['filters']['view']}}</a>
+                        </li>
+                        <li><a href="#portfolio" class="dropdown-item" data-filter=".filter-api">{{translations['portfolio_section']['filters']['api']}}</a>
+                        </li>
+                        <li><a href="#portfolio" class="dropdown-item" data-filter=".filter-manual">{{translations['portfolio_section']['filters']['manual']}}</a>
+                        </li>
+                        <li><a href="#portfolio" class="dropdown-item" data-filter=".filter-download">{{
+                            translations['portfolio_section']['filters']['download'] }}</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a class="nav-link scrollto" href="#services">{{translations['header']['application_areas']}}</a></li> -->
+                <li><a class="nav-link scrollto" href="#about">{{translations['header']['about']}}</a></li>
+                <!--<li><a class="nav-link scrollto" href="#team">{{translations['header']['team']}}</a></li>-->
+                <li><a class="nav-link scrollto" href="#contact">{{translations['header']['contact']}}</a></li>
+                <li><a class="getstarted scrollto" href="#services">{{translations['header']['get_started']}}</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+    </div>
+
+    <!-- ======= Message Section ======== -->
+    <div class="container" id="flash-alert">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show opacity-75" role="alert">
+            <span>{{ message }}</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+</header>
+<!-- End Header -->
+<!-- ======= Hero Section (Layout‑shift‑free Typewriter) ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <!-- 1 · frei fliegender Hintergrund -->
+    <div id="particles-js"></div>
+    <div class="container hero-container px-lg-5">
+        <div class="row align-items-center">
+            <!-- Text‑Spalte -->
+            <div class="col-lg-7 text-col" data-aos="fade-up" data-aos-delay="200">
+                <h1 class="display-5 fw-bold mb-3">{{ translations['hero_section']['technologies'] }}</h1>
+
+                <!-- Wrapper verhindert Layout‑Sprünge -->
+                <h2 class="dynamic-wrapper mb-4">
+                    <span class="dynamic-placeholder"></span>
+                    <span id="dynamic-text" class="dynamic-typed"></span>
+                </h2>
+
+                <p class="lead mb-5">{{ translations['hero_section']['application_areas'] }}</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="https://www.kickstarter.com/" class="btn-watch-video d-inline-flex align-items-center">
+                        <i class="bi bi-play-circle me-2"></i>Watch Video on Kickstarter
+                    </a>
+                </div>
+            </div>
+
+            <!-- Modell‑Spalte -->
+            <div class="col-lg-5 model-container text-center">
+                <img src="static/assets/img/TEMAS_2.png" alt="Temas Picture" class="img-fluid rounded"
+                     style="max-height: 550px;">
+                <!-- Software-Kompatibilität Icons -->
+                <div class="compatibility-icons mt-5 pt-4">
+                    <p class="text-white mt-3 mb-0" style="font-size: 0.9rem; opacity: 0.8;">
+                        Verfügbar für Windows und macOS
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End Hero -->
+
+<main id="main">
+    <!-- ======= Cliens Section ======= -->
+    <section id="cliens" class="cliens section-bg">
+        <div class="container">
+
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <h1><i class="bi bi-badge-3d icon3d"></i></h1>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <h1><i class="bi bi-camera iconcam"></i></h1>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <h1><i class="bi bi-ethernet iconwifi"></i></h1>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <h1><i class="bi bi-badge-vr"></i></h1>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <h1><img src="static/assets/img/AI.png" style="width: 30%; height: auto;" class="img-fluid animated"
+                             alt=""></h1>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <h1><i class="bi bi-github"></i></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Clients Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    {# ======= Portfolio Section ======= #}
+    <section id="portfolio" class="portfolio py-5">
+        <div class="container" data-aos="fade-up">
+
+            <!-- ---------- Headline ---------- -->
+            <header class="section-title text-center mb-4">
+                <h2>{{ translations['portfolio_section']['title'] }}</h2>
+            </header>
+
+            <!-- ---------- Filter / Tabs ---------- -->
+            <nav class="mb-4" aria-label="Portfolio filter">
+                <ul id="portfolio-flters"
+                    class="nav nav-pills justify-content-center gap-2"
+                    role="tablist"
+                    data-aos="fade-up" data-aos-delay="100">
+
+                    {% set filters = translations['portfolio_section']['filters'] %}
+                    {% for key, label in [
+                    ('description', filters.description),
+                    ('specification', filters.specification),
+                    ('gallery', filters.gallery),
+                    ('view', filters.view),
+                    ('api', filters.api),
+                    ('manual', filters.manual),
+                    ('download', filters.download)] %}
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link {{ 'active' if loop.first }}"
+                                data-filter=".filter-{{ key }}"
+                                type="button" role="tab">
+                            {{ label }}
+                        </button>
+                    </li>
+
+                    {% endfor %}
+                </ul>
+            </nav>
+            <!-- ---------- Grid-Container ---------- -->
+            <div class="row portfolio-container g-4" data-aos="fade-up" data-aos-delay="200">
+                {# === Beschreibung =================================================== #}
+                <article class="col-12 portfolio-item filter-description">
+                    <div class="product-description">
+
+                        {% for item in translations['portfolio_section']['items'] %}
+                        <h3 class="product-title">{{ item.caption.title }}</h3>
+                        <p class="product-intro">{{ item.caption.description }}</p>
+
+                        {% set features = item.caption.features %}
+                        {% set ACC_ID = 'acc-' ~ loop.index %}
+                        <div class="accordion" id="{{ ACC_ID }}">
+
+                            {% for section_key in ['mainFeatures','applicationAreas','benefits','targetGroups'] %}
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="{{ ACC_ID }}-h{{ loop.index }}">
+                                    <button class="accordion-button {{ '' if loop.first else 'collapsed' }}"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#{{ ACC_ID }}-c{{ loop.index }}"
+                                            aria-expanded="{{ 'true' if loop.first else 'false' }}"
+                                            aria-controls="{{ ACC_ID }}-c{{ loop.index }}">
+                                        {{ features[section_key ~ 'Title'] }}
+                                    </button>
+                                </h2>
+
+                                <div id="{{ ACC_ID }}-c{{ loop.index }}"
+                                     class="accordion-collapse collapse {{ 'show' if loop.first }}"
+                                     data-bs-parent="#{{ ACC_ID }}"
+                                     aria-labelledby="{{ ACC_ID }}-h{{ loop.index }}">
+                                    <div class="accordion-body">
+                                        <ul class="features-list">
+                                            {% for entry in features[section_key] %}
+                                            {% if entry.title is defined and entry.points is defined %}
+                                            <li class="feature-group">
+                                                <div class="feature-title">{{ entry.title }}</div>
+                                                <ul class="features-list">
+                                                    {% for p in entry.points %}
+                                                    <li class="feature-point">{{ p }}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </li>
+                                            {% else %}
+                                            <li class="feature-point">{{ entry }}</li>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div><!-- /.accordion -->
+                        <p class="product-api">{{ item.caption.api }}</p>
+                        {% endfor %}
+                    </div><!-- /.product-description -->
+                </article>
+
+                {# === Spezifikation =================================================== #}
+                <article class="col-12 portfolio-item filter-specification">
+                    {% set spec = translations['portfolio_section']['items'][0].specification %}
+                    {% if spec %}
+                    <div class="portfolio-panel p-4 bg-white shadow-sm rounded">
+                        <div class="table-responsive">
+                            <table class="table table-sm align-middle">
+                                <thead class="table-light">
+                                <tr>
+                                    <th scope="col">{{ spec.table_headings.parameter }}</th>
+                                    <th scope="col">{{ spec.table_headings.value }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for row in spec.table_rows %}
+                                <tr>
+                                    <td>{{ row.parameter }}</td>
+                                    <td>{{ row.value }}</td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    {% endif %}
+                </article>
+
+                {# === Galerie ======================================================== #}
+                <article class="col-12 portfolio-item filter-gallery">
+                    <div class="portfolio-panel p-4 bg-white shadow-sm rounded">
+                        <p>{{ spec.gallery_section.description }}</p>
+                        <div class="row g-4">
+                            {% for m in spec.gallery_section.media %}
+                            <figure class="col-md-6 portfolio-media text-center">
+                                {% if m.src.endswith('.glb') %}
+                                <model-viewer src="{{ m.src }}" alt="{{ m.alt }}"
+                                              camera-controls disable-zoom
+                                              style="width:100%;height:350px"></model-viewer>
+                                {% elif m.src.endswith('.mp4') %}
+                                <video src="{{ m.src }}" controls class="w-100 rounded"
+                                       style="max-height:350px"></video>
+                                {% else %}
+                                <img src="{{ m.src }}" alt="{{ m.alt }}"
+                                     class="img-fluid rounded" style="max-height:350px">
+                                {% endif %}
+                                {% if m.caption %}
+                                <figcaption class="small text-muted mt-2">{{ m.caption }}</figcaption>
+                                {% endif %}
+                            </figure>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </article>
+
+                {# === 3-D View ======================================================= #}
+                <article class="col-12 portfolio-item filter-view text-center">
+                    <div class="portfolio-panel p-4 bg-white shadow-sm rounded">
+                        <p>{{ spec.view.description }}</p>
+                        <model-viewer
+                                src="static/assets/img/temas.glb"
+                                alt="Temas 3D"
+                                camera-controls
+                                disable-zoom
+                                camera-orbit="180deg 75deg auto"
+                                style="width:100%;height:550px">
+                        </model-viewer>
+                    </div>
+                </article>
+
+                {# === API / Dokumentation ============================================ #}
+                <article class="col-12 portfolio-item filter-api text-center">
+                    <div class="portfolio-panel p-4 bg-white shadow-sm rounded">
+                        <p>{{ spec.api.description }}</p>
+                        <div class="d-inline-flex gap-3 flex-wrap">
+                            <a href="{{ url_for('documentation') }}" class="btn btn-outline-primary">
+                                {{ spec.api.button_text }}
+                            </a>
+                            <a href="https://pypi.org/project/rubu/" class="btn btn-outline-primary">
+                                {{ spec.pypi.button_text }}
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                {# === Manual ========================================================= #}
+                <article class="col-12 portfolio-item filter-manual text-center">
+                    <div class="portfolio-panel p-4 bg-white shadow-sm rounded">
+                        <p>{{ spec.manual.description }}</p>
+                        <a href="../static/assets/downloads/Temas-Benutzerhandbuch.pdf"
+                           class="btn btn-outline-primary" download>
+                            {{ spec.manual.button_text }}
+                        </a>
+                    </div>
+                </article>
+
+                {# === Download ======================================================= #}
+                <article class="col-12 portfolio-item filter-download text-center">
+                    <div class="portfolio-panel p-4 bg-white shadow-sm rounded">
+                        <p>{{ translations['portfolio_section']['filters']['download'] }}</p>
+                        <!-- Platzhalter – hier ggf. Download-Links einfügen -->
+                    </div>
+                </article>
+
+            </div> <!-- /.portfolio-container -->
+        </div>
+    </section>
+
+    <!-- End Portfolio Section -->
+    <!-- ======= Application Areas Section ======= -->
+    <section id="services" class="services section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <!-- Überschrift & Intro -->
+            <div class="section-title">
+                <h2>{{ translations['services_section']['title'] }}</h2>
+                <p>{{ translations['services_section']['description'] }}</p>
+                <p>{{ translations['services_section']['sub_description'] }}</p>
+            </div>
+
+            {# Zuordnung Titel → Ziel‑Section #}
+            {% set box_section_mapping = {
+            translations['services_section']['services'][0]['title']: 'why-us',
+            translations['services_section']['services'][1]['title']: 'about',
+            translations['services_section']['services'][2]['title']: 'robotics',
+            translations['services_section']['services'][3]['title']: 'vr-ai',
+            translations['services_section']['services'][4]['title']: 'home-iot',
+            translations['services_section']['services'][5]['title']: 'mapping'
+            } %}
+            <!-- Karten‑Container -->
+            <div class="services-grid">
+                {% for service in translations['services_section']['services'] %}
+                {% set target = box_section_mapping[service['title']] %}
+                <a href="#{{ target }}"
+                   class="icon-box scan-card"
+                   data-aos="zoom-in"
+                   data-aos-delay="{{ loop.index * 100 }}">
+                    <div class="icon">
+                        {% if service['icon'].endswith('.png') %}
+                        <img src="{{ service['icon'] }}" alt="{{ service['title'] }} Icon" class="img-fluid"
+                             style="width: 70%; height: auto; filter: brightness(0) saturate(100%) invert(69%) sepia(15%) saturate(1865%) hue-rotate(176deg) brightness(95%) contrast(90%);">
+                        {% else %}
+                        <i class="bi {{ service['icon'] }}"></i>
+                        {% endif %}
+                    </div>
+                    <h4>{{ service['title'] }}</h4>
+                    <p>{{ service['description'] }}</p>
+                </a>
+                {% endfor %}
+            </div><!-- /.services-grid -->
+
+        </div>
+    </section>
+
+    <!-- Übergangselement -->
+    <div class="transition-divider"
+         style="height: 50px; background: linear-gradient(to bottom, #f0f4f7, #fff);"></div>
+    <!-- ======= /Application Areas Section ======= -->
+    {% for sec in translations['detail_sections'] %}
+    <section id="{{ sec.id }}" class="why-us section-bg py-5" data-aos="fade-up">
+
+        <div class="container">
+
+            <!-- Titel & Intro -->
+            <div class="section-title">
+                <h2 style="color:#003366;">
+                    {% if sec.icon.endswith('.png') %}
+                    <img src="{{ sec.icon }}"
+                         alt="{{ sec.title }} Icon"
+                         style="height: 1.5em; vertical-align: middle; filter: brightness(0) saturate(100%) invert(15%) sepia(38%) saturate(902%) hue-rotate(188deg) brightness(89%) contrast(91%);"
+                         class="me-2">
+                    {% else %}
+                    <i class="bi {{ sec.icon }} me-2"></i>
+                    {% endif %}
+                    {{ sec.title }}
+                </h2>
+                <p style="color:#333;">{{ sec.intro }}</p>
+            </div>
+
+            <!-- Accordion: Merkmale + Use Cases -->
+            <div class="accordion mb-4" id="{{ sec.id }}Accordion">
+                <!-- Merkmale -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="{{ sec.id }}FeaturesHeading">
+                        <button class="accordion-button" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#{{ sec.id }}Features"
+                                aria-expanded="true"
+                                aria-controls="{{ sec.id }}Features">
+                            Merkmale
+                        </button>
+                    </h2>
+                    <div id="{{ sec.id }}Features" class="accordion-collapse collapse show"
+                         data-bs-parent="#{{ sec.id }}Accordion">
+                        <div class="accordion-body">
+                            <ul class="mb-0">
+                                {% for f in sec.features %}
+                                <li>{{ f }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Use Cases -->
+                {% for uc in sec.use_cases %}
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="{{ sec.id }}UseCaseHeading{{ loop.index }}">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#{{ sec.id }}UseCase{{ loop.index }}"
+                                aria-controls="{{ sec.id }}UseCase{{ loop.index }}">
+                            Use Case: {{ uc.title }}
+                        </button>
+                    </h2>
+                    <div id="{{ sec.id }}UseCase{{ loop.index }}"
+                         class="accordion-collapse collapse"
+                         data-bs-parent="#{{ sec.id }}Accordion">
+                        <div class="accordion-body">
+                            <p>{{ uc.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            {# ⬇️ wenn Bilder vorhanden, zeige sie als Row + Transition ⬇️ #}
+            {% if sec.media %}
+            <div class="row mb-5 justify-content-center align-items-center" style="min-height: 550px;">
+                {% for m in sec.media %}
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-center mb-4 mb-md-0">
+                    {% if m.src.endswith('.glb') %}
+                    <model-viewer
+                            src="{{ m.src }}"
+                            alt="{{ m.alt }}"
+                            camera-controls
+                            disable-zoom
+                            camera-orbit="195deg 65deg 120%"
+                            field-of-view="20deg"
+                            exposure="0.15"
+                            shadow-intensity="1"
+                            bounds="tight"
+                            interaction-prompt="none"
+                            style="width: 100%; max-width: 550px; height: 550px; display: block; margin: 0 auto;">
+                    </model-viewer>
+                    {% elif m.src.endswith('.mp4') %}
+                    <video controls class="img-fluid rounded"
+                           style="max-width: 100%; height: 550px; object-fit: contain;">
+                        <source src="{{ m.src }}" type="video/mp4">
+                        Dein Browser unterstützt das Video-Tag nicht.
+                    </video>
+                    {% else %}
+                    <img src="{{ m.src }}" alt="{{ m.alt }}" class="img-fluid rounded" style="max-height: 550px;">
+                    {% endif %}
+
+                    {% if m.caption %}
+                    <p class="mt-2 text-secondary">{{ m.caption }}</p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="transition-divider mb-5"
+                 style="height:50px; background: linear-gradient(to bottom, #fff, #e6eef1);"></div>
+            {% endif %}
+        </div>
+    </section>
+    {% endfor %}
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>{{ translations['about_section']['title'] }}</h2>
+            </div>
+            <div class="content">
+                <div class="col-lg-6">
+                    {% for item in translations['about_section']['content'] %}
+                    <p>
+                        <!-- <i class="ri-check-double-line"></i> -->
+                        {{ item['text'] }}
+                    </p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Us Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>{{ translations['faq_section']['title'] }}</h2>
+                <p>{{ translations['faq_section']['description'] }}</p>
+            </div>
+
+            <div class="faq-list">
+                <ul>
+                    {% for faq in translations['faq_section']['faqs'] %}
+                    <li data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 + 100 }}">
+                        <i class="bx bx-help-circle icon-help"></i>
+                        <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-{{ loop.index }}">
+                            {{ faq['question'] }}
+                            <i class="bx bx-chevron-down icon-show"></i>
+                            <i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-{{ loop.index }}" class="collapse {% if loop.first %}show{% endif %}"
+                             data-bs-parent=".faq-list">
+                            <p>{{ faq['answer'] }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>{{ translations['contact_section']['title'] }}</h2>
+                <p></p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-5 d-flex align-items-stretch">
+                    <div class="info">
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>{{ translations['contact_section']['address']['heading'] }}</h4>
+                            <p>{{ translations['contact_section']['address']['content']}}</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>{{ translations['contact_section']['email']['heading']}}</h4>
+                            <p>{{ translations['contact_section']['email']['content']}}</p>
+                        </div>
+
+                        <!-- Karten-Container -->
+                        <div id="map-wrapper"
+                             style="width:100%;height:290px;background:#e5e5e5;border-radius:6px;position:relative;">
+                            <button id="map-load" type="button"
+                                    style="position:absolute;top:50%;left:50%;transform:translate(-50%, -50%); padding:0.5rem 1rem;z-index:1;">
+                                Karte laden
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                    <form action="{{ url_for('index') }}" method="POST" role="form" class="php-email-form">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="name">{{ translations['contact_section']['customer']['name'] }}</label>
+                                <input type="text" name="name" class="form-control" id="name" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="nachname">{{ translations['contact_section']['customer']['lastname']
+                                    }}</label>
+                                <input type="text" name="nachname" class="form-control" id="nachname" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="organisation">{{
+                                    translations['contact_section']['customer']['organisation']}}</label>
+                                <input type="text" name="organisation" class="form-control" id="organisation">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">{{ translations['contact_section']['customer']['email'] }}</label>
+                                <input type="email" name="email" class="form-control" id="email" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="telefon">{{ translations['contact_section']['customer']['telefon']
+                                    }}</label>
+                                <input type="text" name="telefon" class="form-control" id="telefon" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="land">{{ translations['contact_section']['customer']['country'] }}</label>
+                                <input type="text" name="land" class="form-control" id="land">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">{{ translations['contact_section']['customer']['subject'] }}</label>
+                            <input type="text" name="subject" class="form-control" id="subject">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">{{ translations['contact_section']['customer']['message'] }}</label>
+                            <textarea name="message" class="form-control" id="message" rows="10" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <p class="small">{{ translations['contact_section']['customer']['required_note'] }}</p>
+                        </div>
+
+                        <!-- reCAPTCHA wird dynamisch geladen -->
+                        <div class="col-12">
+                            <div id="recaptcha-box"></div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">
+                                {{ translations['contact_section']['customer']['button_text'] }}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+</main>
+<!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-newsletter">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h4>Join Our Newsletter</h4>
+                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('datenschutz') }}">Datenschutz</a>
+                        </li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('impressum') }}">Impressum</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Networks</h4>
+                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                    <div class="social-links mt-3">
+                        <a href="https://x.com/deinProfil" class="x" aria-label="X (Twitter)" target="_blank"
+                           rel="noopener">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+
+                        <a href="https://youtube.com/deinKanal" class="youtube" aria-label="YouTube" target="_blank"
+                           rel="noopener">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://github.com/rubu-tech/Temas" aria-label="GitHub" target="_blank" rel="noopener">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/deinProfil" class="linkedin" aria-label="LinkedIn"
+                           target="_blank" rel="noopener">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-bottom clearfix">
+        <div class="copyright">
+            <p>Copyright&copy;
+                <script>document.write(new Date().getFullYear())</script>
+                <strong><span>rubu</span></strong>. All Rights Reserved
+            </p>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<!-- <div id="preloader"></div> -->
+
+<!-- ======= Vendor JS und eigene Bundles ======= -->
+<script type="module"
+        src="{{ url_for('static', filename='assets/vendor/model-viewer/model-viewer.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
+<script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}" defer></script>
+<script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}" defer></script>
+<script src="{{ url_for('static', filename='assets/vendor/jquery/jquery-3.6.0.min.js') }}" defer></script>
+<script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}" defer></script>
+
+<!-- Partikel & Hauptskripte -->
+<script src="{{ url_for('static', filename='assets/js/particles/particles.min.js') }}" defer></script>
+<script src="{{ url_for('static', filename='assets/js/particles/app.js') }}" defer></script>
+<script src="{{ url_for('static', filename='assets/js/main.js') }}?v={{ cache_version }}" defer></script>
+
+<!-- 4.1) CookieConsent UMD (kein type="module"!) -->
+<script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
+
+<!-- Konstanten aus Flask -->
+<script>
+  /* öffentlich, darf in den Client */
+  window.RECAPTCHA_SITE_KEY = "{{ config['RECAPTCHA_SITE_KEY'] }}";
+
+  window.CONFIG = {
+    GA_ID           : "{{ config['GA_MEASUREMENT_ID'] }}",
+    GMAPS_EMBED_KEY : "{{ config['GMAPS_EMBED_KEY'] }}"   // <— NEU
+  };
+</script>
+<!-- 5) Deine CookieConsent-Konfiguration -->
+<script defer src="{{ url_for('static', filename='assets/js/cookies/cookieconsent-config.js') }}"></script>
+</body>
+</html>

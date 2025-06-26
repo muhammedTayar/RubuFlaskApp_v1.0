@@ -1,0 +1,703 @@
+{
+  "header": {
+    "home": "Home",
+    "product": "Product",
+    "application_areas": "Application Areas",
+    "downloads": "Downloads",
+    "about": "About Us",
+    "team": "Team",
+    "contact": "Contact",
+    "get_started": "Get Started",
+    "flag": "DE"
+  },
+  "hero_section": {
+    "technologies": "TEMAS: Dive into the perspective of a robot.",
+    "future_science": [
+      "Fast and precise motor control",
+      "3D capture with ToF technology",
+      "Sharp real-time images with a visual camera",
+      "High-frequency laser technology"
+    ],
+    "optimal_tool": "We offer an optoelectronic product with an API interface",
+    "application_areas": "versatile use in robotics, education, laboratories, and innovative applications.",
+    "get_started": "Get Started",
+    "watch_video": "Watch Video"
+  },
+  "portfolio_section": {
+    "title": "Product",
+    "filters": {
+      "description": "Description",
+      "specification": "Specification",
+      "gallery": "Gallery",
+      "view": "3D View",
+      "api": "API",
+      "manual": "Manual",
+      "download": "Downloads"
+    },
+    "items": [
+      {
+        "caption": {
+          "title": "Product Description",
+          "description": "Modular 3D sensor platform for robotics, education, laboratories, and innovative applications.\n\nDiscover the future of 3D sensing with our versatile platform, designed specifically for robotics enthusiasts, educational institutions, labs, and forward-thinking developers. This system combines advanced sensor technologies with powerful onboard processing to capture and analyze precise 3D data in real time.",
+          "features": {
+            "mainFeaturesTitle": "Main Features",
+            "applicationAreasTitle": "Application Areas",
+            "benefitsTitle": "Benefits",
+            "targetGroupsTitle": "Target Groups",
+            "mainFeatures": [
+              {
+                "title": "Integrated Multi-Sensor Architecture and Motor Control",
+                "points": [
+                  "High-resolution RGB camera for detailed visual data",
+                  "Time-of-Flight (ToF) camera for depth information",
+                  "Powerful LiDAR sensor for long-range 3D mapping",
+                  "Precise and fast motor control"
+                ]
+              },
+              {
+                "title": "Intuitive Software and Open API",
+                "points": [
+                  "User-friendly software for Windows and macOS",
+                  "Comprehensive API for developing custom applications in robotics, machine vision, AI, and lab data analysis",
+                  "Power over Ethernet (PoE) for power, control, and video transmission in a single cable"
+                ]
+              },
+              {
+                "title": "Flexible and Robust Design",
+                "points": [
+                  "120° rotation range for dynamic sensor positioning",
+                  "Mounting options for mobile robotics platforms and tripods",
+                  "UV-resistant, impact-tough 3D-printed material that retains shape up to 100°C"
+                ]
+              },
+              {
+                "title": "Onboard Processing with Single-Board Computer",
+                "points": [
+                  "Next-generation single-board solution: Raspberry Pi 5",
+                  "Real-time data processing and point-cloud generation",
+                  "Export of colored point clouds"
+                ]
+              }
+            ],
+            "applicationAreas": [
+              "Robotics: Navigation, object detection, human-robot interaction",
+              "Education and Teaching: Hands-on learning in robotics, computer science, and engineering",
+              "Laboratories and Experiments: Capture and analysis of motion data (e.g., vibration analysis)",
+              "Innovative Projects: 3D modeling, environmental monitoring, creative applications",
+              "Industrial Prototyping: Rapid prototyping for automation and inspection applications"
+            ],
+            "benefits": [
+              "Versatile sensor platform for a wide range of applications",
+              "Real-time data processing and colored point-cloud export",
+              "Easy integration and customization via open API",
+              "Ideal for robotics enthusiasts, educational institutions, and labs"
+            ],
+            "targetGroups": [
+              "Robotics researchers and developers",
+              "Teachers and students in technical fields",
+              "Scientists and technicians in research labs",
+              "Makers and hobbyist roboticists",
+              "Companies developing prototypes for industrial applications"
+            ]
+          },
+          "api": "Contact us to learn more about our modular 3D sensor platform and how it can enhance your projects!"
+        },
+        "specification": {
+          "table_headings": {
+            "parameter": "Parameter",
+            "value": "Value"
+          },
+          "table_rows": [
+            {
+              "parameter": "3D Print Material",
+              "value": "ASA"
+            },
+            {
+              "parameter": "Pan Angle",
+              "value": "-60° to 60°"
+            },
+            {
+              "parameter": "Tilt Angle",
+              "value": "-30° to 90°"
+            },
+            {
+              "parameter": "Minimum Motor Step Size",
+              "value": "0.5°"
+            },
+            {
+              "parameter": "Communication Interface",
+              "value": "Ethernet"
+            },
+            {
+              "parameter": "Power Supply",
+              "value": "Power over Ethernet: 37V–57V (DC)"
+            },
+            {
+              "parameter": "Network Standard",
+              "value": "IEEE 802.3af/at PoE"
+            },
+            {
+              "parameter": "Ethernet Speed",
+              "value": "2.5 Gbit/s"
+            },
+            {
+              "parameter": "Motor Response Time",
+              "value": "0.33 s/60°"
+            },
+            {
+              "parameter": "Gearbox",
+              "value": "Metal"
+            },
+            {
+              "parameter": "Weight",
+              "value": "1 kg ±5%"
+            },
+            {
+              "parameter": "Operating Temperature",
+              "value": "0°C–50°C"
+            },
+            {
+              "parameter": "Camera Sensor",
+              "value": "Sony IMX708"
+            },
+            {
+              "parameter": "Video Modes (Visual)",
+              "value": "1280x720@30fps"
+            },
+            {
+              "parameter": "IR Filter (Visual)",
+              "value": "Yes"
+            },
+            {
+              "parameter": "Pixel Size (Visual)",
+              "value": "1.4 µm x 1.4 µm"
+            },
+            {
+              "parameter": "Horizontal Field of View",
+              "value": "73°"
+            },
+            {
+              "parameter": "Vertical Field of View",
+              "value": "45°"
+            },
+            {
+              "parameter": "Light Source (ToF)",
+              "value": "940 nm VCSEL"
+            },
+            {
+              "parameter": "Measurement Range (ToF)",
+              "value": "3.9 m"
+            },
+            {
+              "parameter": "Video Modes (ToF)",
+              "value": "180x180@30fps"
+            },
+            {
+              "parameter": "IR Filter (ToF)",
+              "value": "No"
+            },
+            {
+              "parameter": "Pixel Size (ToF)",
+              "value": "14.3 µm x 14.3 µm"
+            },
+            {
+              "parameter": "Horizontal FoV (ToF)",
+              "value": "45°"
+            },
+            {
+              "parameter": "Vertical FoV (ToF)",
+              "value": "45°"
+            },
+            {
+              "parameter": "Laser Class",
+              "value": "1"
+            },
+            {
+              "parameter": "Range",
+              "value": "40 m"
+            },
+            {
+              "parameter": "Resolution",
+              "value": "±1 cm"
+            },
+            {
+              "parameter": "Accuracy",
+              "value": "±2.5 cm"
+            },
+            {
+              "parameter": "Wavelength",
+              "value": "905 nm"
+            },
+            {
+              "parameter": "Peak Power",
+              "value": "1.3 W"
+            },
+            {
+              "parameter": "Update Rate",
+              "value": "180 Hz"
+            },
+            {
+              "parameter": "Beam Divergence",
+              "value": "8 mrad"
+            }
+          ],
+          "gallery_section": {
+            "media": [
+              {
+                "src": "static/assets/img/DSC00016.JPG",
+                "alt": "Temas 3D model"
+              },
+              {
+                "src": "static/assets/img/DSC00022.JPG",
+                "alt": "Temas 3D model"
+              }
+            ]
+          },
+          "view": {},
+          "api": {
+            "description": "Here you can find the comprehensive API documentation, providing clear instructions on how Temas works.",
+            "button_text": "Documentation"
+          },
+          "pypi": {
+            "button_text": "PyPI"
+          },
+          "manual": {
+            "description": "For more information, please download our manual.",
+            "button_text": "Download"
+          }
+        }
+      }
+    ]
+  },
+  "services_section": {
+    "title": "Application Areas",
+    "description": "Temas features an integrated multi-sensor architecture, motor control, an open API, and a mechanical interface for easy integration into a wide range of applications – from robotic systems to smart home projects.",
+    "sub_description": "",
+    "services": [
+      {
+        "title": "Robotics",
+        "icon": "bi-robot",
+        "description": "Temas combines a mechanical interface with a multi-sensor architecture – including visual camera, ToF camera, and laser – plus fast and precise motors. The integrated single-cable PoE solution ensures efficient power and data transmission. The open API enables seamless integration into mobile robotic systems and collaborative cobots."
+      },
+      {
+        "title": "3D Mapping & Surveying",
+        "icon": "bi-map",
+        "description": "Tailored flexibility: Two powerful options for precise mapping – the laser for large-scale applications and the ToF camera for impressive, detailed live point clouds – perfect for dynamic close-range scenarios."
+      },
+      {
+        "title": "Research & Education",
+        "icon": "bi-mortarboard",
+        "description": "Experience digital education: Visualize live experiments, integrate measurement data seamlessly into labs or lectures, and make physical phenomena – such as free-fall, pendulum, or velocity experiments – interactive and tangible."
+      },
+      {
+        "title": "Artificial Intelligence",
+        "icon": "static/assets/img/AI.png",
+        "description": "The multi-sensor setup generates rich training data – combining RGB images, depth data, and geometry. Especially by fusing ToF and laser data with visual camera images, detection accuracy can be significantly enhanced."
+      },
+      {
+        "title": "Virtual Reality",
+        "icon": "bi-badge-vr",
+        "description": "In combination with a VR headset, our sensor system makes complex environments immersively tangible in real time – ideal for interactive visualization, hands-on training, and remote collaboration in research, industry, and education."
+      },
+      {
+        "title": "Smart Home & IoT",
+        "icon": "bi-house-door",
+        "description": "Our sensor system captures spaces, objects, and motion in the smart home precisely in 3D and real time. It detects changes and lays the foundation for intelligent automation, adaptive security systems, and enhanced living comfort. Power and data transmission are efficiently handled via a single cable – thanks to integrated Power-over-Ethernet (PoE) technology."
+      }
+    ]
+  },
+  "detail_sections": [
+    {
+      "id": "robotics-detection",
+      "title": "Robotics",
+      "icon": "bi-robot",
+      "intro": "Robotic systems benefit from a multi-sensor architecture, precise and fast motor control, open hardware integration, and seamless connectivity via PoE and open API.",
+      "features": [
+        "Open hardware integration: We provide an STL download of a 3D model for easy mechanical integration of the sensor system into your own projects.",
+        "Precise environment detection: The integrated multi-sensor architecture enables detailed 3D capture of the surroundings in real time – essential for navigation and object recognition.",
+        "Easy integration: Through the open API and single-cable PoE technology.",
+        "Fast responsiveness: The combination of rapid data processing and precise motor control enables immediate reactions to environmental changes."
+      ],
+      "media": [
+        {
+          "src": "static/assets/img/temas_without_bottom_cover.glb",
+          "alt": "Temas 3D model"
+        },
+        {
+          "src": "static/assets/img/robotic_car.png",
+          "alt": "robotic car"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Mobile Robotic Systems",
+          "description": "Mobile robotic systems benefit from our multi-sensor architecture – including ToF depth data, visual camera, and laser – combined with fast motor control to reliably detect obstacles and navigate safely and autonomously in real time."
+        },
+        {
+          "title": "Collaborative Robots",
+          "description": "Collaborative robots benefit from our multi-sensor architecture with ToF, visual camera, and laser technology, as well as precise motor control, enabling safe, flexible, and responsive real-time collaboration with humans."
+        }
+      ]
+    },
+    {
+      "id": "mapping",
+      "title": "3D Mapping & Surveying",
+      "icon": "bi-map",
+      "intro": "For 3D mapping, two flexible options are available: the laser for large-scale applications and the ToF camera for detailed live point clouds at close range.",
+      "features": [
+        "Direct export as colored .ply file",
+        "Laser range up to 40 m",
+        "ToF camera with dynamic range up to 3.9 m"
+      ],
+      "media": [
+        {
+          "src": "static/assets/video/laser.mp4",
+          "alt": "video laser",
+          "caption": "Colored point cloud (Laser)"
+        },
+        {
+          "src": "static/assets/video/tof.mp4",
+          "alt": "video tof",
+          "caption": "Live colored point cloud (ToF)"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Large-Scale 3D Capture with Long Range",
+          "description": "The laser enables large-scale mappings, seamlessly overlaid with visual camera data for vibrant, detailed color rendering."
+        },
+        {
+          "title": "Detailed Close-Range 3D Mapping",
+          "description": "The ToF camera allows for high-detail close-range capture with colored rendering via real-time overlay with the visual camera."
+        }
+      ]
+    },
+    {
+      "id": "research-education",
+      "title": "Research & Education",
+      "icon": "bi-mortarboard",
+      "intro": "Digital education becomes tangible through interactive visualization of live experiments.",
+      "features": [
+        "Position reading in spherical coordinates (r, θ, φ) for precise spatial localization",
+        "A high-frequency laser provides extensive measurement data",
+        "3D motion analysis for advanced learning content and hands-on experiments"
+      ],
+      "media": [
+        {
+          "src": "static/assets/video/animation_ball.mp4",
+          "alt": "video animation",
+          "caption": "Animation"
+        },
+        {
+          "src": "static/assets/video/falling_ball.mp4",
+          "alt": "video falling ball",
+          "caption": "Falling tennis ball"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Robotics and IT",
+          "description": "Low code, big “aha!”: Our open API makes programming an experience with direct visual feedback – ideal for creative minds and curious beginners."
+        },
+        {
+          "title": "Physics Experiments",
+          "description": "Versatile use from school to research: From simple linear motion measurements with a high-frequency laser and CSV output to complex 3D motion analyses via computer vision (e.g., background subtraction, feature matching)."
+        }
+      ]
+    },
+    {
+      "id": "ai-vision",
+      "title": "Artificial Intelligence",
+      "icon": "static/assets/img/AI.png",
+      "intro": "Our intelligent multi-sensor platform with visual camera, ToF technology, and distance sensing enables precise object detection in real time – seamlessly integrable via an open API with popular AI libraries.",
+      "features": [
+        "Increased detection accuracy through the combination of visual camera, ToF sensing, and distance measurement in one integrated multi-sensor platform.",
+        "Open API for easy integration with popular AI frameworks and libraries.",
+        "Real-time object detection for fast and reliable analysis of dynamic scenes."
+      ],
+      "media": [
+        {
+          "src": "static/assets/video/pose.mp4",
+          "alt": "pose",
+          "caption": "AI integrated with Temas"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Intelligent Body and Gesture Recognition in Real Time",
+          "description": "Seamless integration of popular AI frameworks with automatic object tracking via smart motor control."
+        },
+        {
+          "title": "Voice Control",
+          "description": "Control your systems and applications by voice – fast and precise, with our integrated open API and support for modern AI frameworks for flexible and intelligent user interaction."
+        }
+      ]
+    },
+    {
+      "id": "rapid-prototyping",
+      "title": "Virtual Reality",
+      "icon": "bi-badge-vr",
+      "intro": "Immerse yourself in virtual reality on your smartphone – powered by our integrated open API.",
+      "features": [
+        "Immersive virtual reality on the smartphone.",
+        "Integrated open API – also seamlessly usable with Python-based mobile apps.",
+        "Precise control and navigation."
+      ],
+      "media": [
+        {
+          "src": "static/assets/video/vr.mp4",
+          "alt": "video vr",
+          "caption": "Virtual reality with Temas"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Interactive Training",
+          "description": "Realistic training in simulated environments that accurately represent complex scenarios."
+        },
+        {
+          "title": "Remote Collaboration",
+          "description": "Virtual meeting rooms and shared workspaces connecting teams from different locations in research, teaching, and industry."
+        }
+      ]
+    },
+    {
+      "id": "smart-home",
+      "title": "Smart Home & IoT",
+      "icon": "bi-house-door",
+      "intro": "Temas revolutionizes smart home projects with intelligent room sensing, intuitive gesture control, and secure PoE automation – for seamless integration, enhanced comfort, and energy efficiency.",
+      "features": [
+        "Intelligent room sensing enables precise detection of occupancy and movement for automated control.",
+        "Intuitive gesture control allows hands-free operation of smart home devices for greater comfort and hygiene.",
+        "Temas provides energy-efficient and reliable control functions via Power-over-Ethernet (PoE)."
+      ],
+      "media": [
+        {
+          "src": "static/assets/img/smart_home.jpeg",
+          "alt": "Smart home"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Intelligent Room Sensing",
+          "description": "Automatic detection and analysis of occupancy and usage for efficient control of lighting, climate, and energy."
+        },
+        {
+          "title": "Control via PoE",
+          "description": "Use our open API for flexible and seamless smart home solutions, efficiently powered over Power-over-Ethernet (PoE)."
+        }
+      ]
+    }
+  ],
+  "about_section": {
+    "title": "About Us",
+    "content": [
+      {
+        "text": "The foundation for our technology was laid in 2019 when we – Dr. Emre Gürdal and Muhammed Tayar – joined forces with a shared vision for digital environmental sensing. In 2025, the official company was founded with the goal of combining precision, openness, and versatility in one compact system. Our technology combines an integrated multi-sensor architecture, consisting of visual camera, ToF camera, and laser, with fast and precise motor movement. The system is complemented by open interfaces – both mechanical and software (API) – enabling precise 3D mapping and seamless integration into a wide range of applications. Whether in robotics, smart home, mobile platforms, or educational environments: our system generates point clouds in real time, exports them directly in .ply format, and supports both live visualization and immediate post-processing. As an optoelectronic component, our system is ideal for robotics applications and ensures highly precise, real-time environment sensing for safe and efficient navigation."
+      }
+    ],
+    "button_text": "Learn More"
+  },
+  "why_us_section": {
+    "title": "Temas – Your Starting Point into Digitalization!",
+    "content": "We transform data into valuable digital resources. Join us on an adventure in object recognition.",
+    "accordion_list": [
+      {
+        "title": "Spring Pendulum / String Pendulum – Mechanical Oscillations",
+        "content": "Temas can determine mechanical oscillations.",
+        "formula_federpendel": "Oscillation period of a spring pendulum:",
+        "formula_fadenpendel": "Oscillation period of a string pendulum:"
+      },
+      {
+        "title": "Free Fall",
+        "content": "With the LiDAR sensor, acceleration due to gravity can be determined.",
+        "formula_freier_fall": "Distance-time law:"
+      },
+      {
+        "title": "Three-Dimensional Motion",
+        "content": "Three-dimensional motion extends across all three dimensions.",
+        "formula_dreidimensionale": "Three-dimensional motion equation:"
+      }
+    ]
+  },
+  "skills_section": {
+    "title": "Which Programming Languages Were Used?",
+    "subtitle": "The various technologies make Temas unique.",
+    "skills": [
+      {
+        "name": "Python",
+        "percentage": "100"
+      },
+      {
+        "name": "Swift",
+        "percentage": "90"
+      },
+      {
+        "name": "Windows",
+        "percentage": "90"
+      },
+      {
+        "name": "Pandas",
+        "percentage": "55"
+      }
+    ]
+  },
+  "cta_section": {
+    "title": "Want to Learn More?",
+    "description": "Would you like more information or to schedule a web presentation?",
+    "cta_button_text": "Try for Free"
+  },
+  "faq_section": {
+    "title": "Frequently Asked Questions",
+    "description": "Here you’ll find answers to common questions about Temas.",
+    "faqs": [
+      {
+        "question": "Which sensors are built into the device?",
+        "answer": "The device features a visual camera, a ToF camera, a LiDAR laser, and two precisely controllable motors."
+      },
+      {
+        "question": "How can I control Temas?",
+        "answer": "Temas can be precisely controlled via an Ethernet interface and integrated into existing networks."
+      },
+      {
+        "question": "Are example API codes available?",
+        "answer": "Yes, example API usage codes are available in our GitHub repository."
+      },
+      {
+        "question": "Is Temas AI capable?",
+        "answer": "Temas can be combined with popular AI frameworks via the open API. Discover our example codes and applications on GitHub – ideal for a quick start."
+      },
+      {
+        "question": "Is the device compatible with existing smart home systems?",
+        "answer": "Yes, the open API allows flexible integration of the device into common smart home platforms."
+      },
+      {
+        "question": "How can the device be operated?",
+        "answer": "Temas can be operated via our software for Windows and macOS or flexibly via the open API."
+      },
+      {
+        "question": "How is the device powered?",
+        "answer": "Temas is powered via Power-over-Ethernet (PoE) – simplifying installation and eliminating additional cabling."
+      },
+      {
+        "question": "Is a power supply included?",
+        "answer": "A power supply is not included. We recommend the following model: Manufacturer TP-Link, Model PoE260S."
+      }
+    ]
+  },
+  "contact_section": {
+    "title": "Contact Rubu",
+    "address": {
+      "icon": "bi bi-geo-alt",
+      "heading": "Location:",
+      "content": "Felix-Wankel-Strasse 1, Aalen, 73431"
+    },
+    "email": {
+      "icon": "bi bi-envelope",
+      "heading": "Email:",
+      "content": "info@rubu-tech.de"
+    },
+    "phone": {
+      "icon": "bi bi-phone",
+      "heading": "Call:",
+      "content": "+1 5589 55488 55s"
+    },
+    "customer": {
+      "lastname": "Last Name*",
+      "name": "First Name*",
+      "organisation": "Organization",
+      "email": "Business Email*",
+      "telefon": "Phone*",
+      "country": "Country*",
+      "subject": "Subject",
+      "message": "Message*",
+      "info": "Required fields are marked with *",
+      "button_text": "Submit"
+    },
+    "form": {
+      "required_fields_message": "Required fields are marked with *",
+      "submit_button_text": "Submit"
+    }
+  },
+  "team_section": {
+    "title": "Future Goals and Teamwork",
+    "content": [
+      {
+        "text": "Our vision and team culture."
+      },
+      {
+        "text": "Research collaborations\n\nPartnerships with institutes and companies."
+      },
+      {
+        "text": "New application areas\n\nAim: Expand the range of uses."
+      },
+      {
+        "text": "Creative approaches\n\nWe value innovative ideas."
+      },
+      {
+        "text": "Passion for progress\n\nA shared passion for technology."
+      }
+    ]
+  },
+  "timeline_section": {
+    "title": "Project Timeline",
+    "events": [
+      {
+        "year": "2018",
+        "title": "Team Formation",
+        "description": [
+          "Brought together a three-member team."
+        ]
+      },
+      {
+        "year": "2020",
+        "title": "R&D Phase",
+        "description": [
+          "Research and development in the experimental realm."
+        ]
+      },
+      {
+        "year": "2021",
+        "title": "Values Definition",
+        "description": [
+          "Emphasis on the importance of human values."
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "Culture Solidification",
+        "description": [
+          "Expansion of all participants’ competencies."
+        ]
+      },
+      {
+        "year": "2024",
+        "title": "Further Development",
+        "description": [
+          "Focus on the established values."
+        ]
+      }
+    ]
+  },
+  "klaro": {
+    "privacyPolicyUrl": "/privacy-policy",
+    "consentModal": {
+      "title": "Cookies & Services",
+      "description": "We use cookies to personalize content and ads. To learn more, please read our <a href='/privacy-policy' target='_blank'>Privacy Policy</a>."
+    },
+    "consentNotice": {
+      "description": "This website uses cookies – you can decide for yourself.",
+      "learnMore": "Learn More"
+    },
+    "purposes": {
+      "maps": "Google Maps",
+      "security": "Security Services (e.g., reCAPTCHA)"
+    },
+    "buttons": {
+      "ok": "That’s OK",
+      "acceptAll": "Accept All",
+      "acceptSelected": "Accept Selected",
+      "decline": "Decline"
+    }
+  }
+}

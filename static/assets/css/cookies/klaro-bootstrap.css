@@ -1,0 +1,106 @@
+#klaro {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    z-index: 99999;
+}
+
+.klaro .cm-modal {
+    background-color: #ffffff;
+    color: #212529;
+    border-radius: 1rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    max-width: 650px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.klaro .cm-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.klaro .cm-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.klaro .cm-app-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.klaro .cm-app {
+    margin-bottom: 1rem;
+    border-top: 1px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+.klaro .cm-app h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.klaro .cm-app-description {
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.klaro .cm-button,
+.klaro .cm-btn {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border: none;
+}
+
+.klaro .cm-btn-accept-all {
+    background-color: #003366;
+    color: #fff;
+}
+
+.klaro .cm-btn-accept-all:hover {
+    background-color: #00264d;
+}
+
+.klaro .cm-btn-save {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.klaro .cm-btn-save:hover {
+    background-color: #218838;
+}
+
+.klaro .cm-btn-decline {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.klaro .cm-btn-decline:hover {
+    background-color: #c82333;
+}
+
+.klaro .cm-footer {
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.klaro .cm-switch {
+    margin-right: 0.5rem;
+}
+
+.klaro .cookie-modal__backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Verhindert Click-Events außerhalb des Modals */
+.klaro .cookie-modal-overlay {
+    pointer-events: all;
+    background: rgba(0, 0, 0, 0.7) !important;
+}

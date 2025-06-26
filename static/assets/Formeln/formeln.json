@@ -1,0 +1,20 @@
+{
+  "formeln": [
+    {
+      "name": "Schwingungsdauer eines Federpendels",
+      "latex": "T = 2\\pi\\sqrt{\\frac{m}{k}}"
+    },
+    {
+      "name": "Schwingungsdauer eines Fadenpendels",
+      "latex": "T = 2\\pi\\sqrt{\\frac{l}{g}}"
+    },
+    {
+      "name": "Freier Fall",
+      "latex": "h = \\frac{1}{2}gt^2"
+    },
+    {
+      "name": "Dreidimensionale Bewegung",
+      "latex": "\\vec{r}(t) = x(t)\\hat{i} + y(t)\\hat{j} + z(t)\\hat{k}"
+    }
+  ]
+}

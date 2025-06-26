@@ -1,0 +1,907 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rubu.temas &mdash; TEMAS 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fa5ea642" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fa5ea642" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: rgba(0,50,100,1)" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            TEMAS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">src</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../temas.html">temas module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../temas.html#rubu.temas.Connect"><code class="docutils literal notranslate"><span class="pre">Connect</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Connect.get_ip_from_hostname"><code class="docutils literal notranslate"><span class="pre">Connect.get_ip_from_hostname()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../temas.html#rubu.temas.Socket"><code class="docutils literal notranslate"><span class="pre">Socket</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Socket.send_cmd"><code class="docutils literal notranslate"><span class="pre">Socket.send_cmd()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../temas.html#rubu.temas.Camera"><code class="docutils literal notranslate"><span class="pre">Camera</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Camera.update"><code class="docutils literal notranslate"><span class="pre">Camera.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Camera.start_thread"><code class="docutils literal notranslate"><span class="pre">Camera.start_thread()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Camera.stop_thread"><code class="docutils literal notranslate"><span class="pre">Camera.stop_thread()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Camera.get_frame"><code class="docutils literal notranslate"><span class="pre">Camera.get_frame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Camera.set_exposure_time"><code class="docutils literal notranslate"><span class="pre">Camera.set_exposure_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Camera.set_brightness"><code class="docutils literal notranslate"><span class="pre">Camera.set_brightness()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Camera.set_saturation"><code class="docutils literal notranslate"><span class="pre">Camera.set_saturation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Camera.set_contrast"><code class="docutils literal notranslate"><span class="pre">Camera.set_contrast()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Camera.set_lens_position"><code class="docutils literal notranslate"><span class="pre">Camera.set_lens_position()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Camera.set_gain"><code class="docutils literal notranslate"><span class="pre">Camera.set_gain()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../temas.html#rubu.temas.Control"><code class="docutils literal notranslate"><span class="pre">Control</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.get_pcl"><code class="docutils literal notranslate"><span class="pre">Control.get_pcl()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.distance"><code class="docutils literal notranslate"><span class="pre">Control.distance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.mean_distance"><code class="docutils literal notranslate"><span class="pre">Control.mean_distance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.get_focus_position"><code class="docutils literal notranslate"><span class="pre">Control.get_focus_position()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.set_focus_position"><code class="docutils literal notranslate"><span class="pre">Control.set_focus_position()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.get_laser_los"><code class="docutils literal notranslate"><span class="pre">Control.get_laser_los()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.set_laser_los"><code class="docutils literal notranslate"><span class="pre">Control.set_laser_los()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.move_pos"><code class="docutils literal notranslate"><span class="pre">Control.move_pos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.get_pos"><code class="docutils literal notranslate"><span class="pre">Control.get_pos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.move_home"><code class="docutils literal notranslate"><span class="pre">Control.move_home()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.move"><code class="docutils literal notranslate"><span class="pre">Control.move()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.move_threaded"><code class="docutils literal notranslate"><span class="pre">Control.move_threaded()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.move_right"><code class="docutils literal notranslate"><span class="pre">Control.move_right()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.move_left"><code class="docutils literal notranslate"><span class="pre">Control.move_left()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.move_up"><code class="docutils literal notranslate"><span class="pre">Control.move_up()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.move_down"><code class="docutils literal notranslate"><span class="pre">Control.move_down()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.move_right_fine"><code class="docutils literal notranslate"><span class="pre">Control.move_right_fine()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.move_left_fine"><code class="docutils literal notranslate"><span class="pre">Control.move_left_fine()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.move_up_fine"><code class="docutils literal notranslate"><span class="pre">Control.move_up_fine()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.move_down_fine"><code class="docutils literal notranslate"><span class="pre">Control.move_down_fine()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.start_point_cloud_scan"><code class="docutils literal notranslate"><span class="pre">Control.start_point_cloud_scan()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.stop_point_cloud_scan"><code class="docutils literal notranslate"><span class="pre">Control.stop_point_cloud_scan()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Control.get_point_cloud_scan_percent"><code class="docutils literal notranslate"><span class="pre">Control.get_point_cloud_scan_percent()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../temas.html#rubu.temas.Common"><code class="docutils literal notranslate"><span class="pre">Common</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.shutdown"><code class="docutils literal notranslate"><span class="pre">Common.shutdown()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.restart"><code class="docutils literal notranslate"><span class="pre">Common.restart()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_temperature"><code class="docutils literal notranslate"><span class="pre">Common.get_temperature()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_ip"><code class="docutils literal notranslate"><span class="pre">Common.get_ip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_sn"><code class="docutils literal notranslate"><span class="pre">Common.get_sn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_fw_version"><code class="docutils literal notranslate"><span class="pre">Common.get_fw_version()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_hostname"><code class="docutils literal notranslate"><span class="pre">Common.get_hostname()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.set_hostname"><code class="docutils literal notranslate"><span class="pre">Common.set_hostname()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_port_camera"><code class="docutils literal notranslate"><span class="pre">Common.get_port_camera()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_port_tof_camera"><code class="docutils literal notranslate"><span class="pre">Common.get_port_tof_camera()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_port_common"><code class="docutils literal notranslate"><span class="pre">Common.get_port_common()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_port_control"><code class="docutils literal notranslate"><span class="pre">Common.get_port_control()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_ip_hosts"><code class="docutils literal notranslate"><span class="pre">Common.get_ip_hosts()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_mac"><code class="docutils literal notranslate"><span class="pre">Common.get_mac()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_laser_x_los"><code class="docutils literal notranslate"><span class="pre">Common.get_laser_x_los()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.get_laser_y_los"><code class="docutils literal notranslate"><span class="pre">Common.get_laser_y_los()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.set_static_ip"><code class="docutils literal notranslate"><span class="pre">Common.set_static_ip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.set_direct_static_ip"><code class="docutils literal notranslate"><span class="pre">Common.set_direct_static_ip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.near_mode_on"><code class="docutils literal notranslate"><span class="pre">Common.near_mode_on()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.near_mode_off"><code class="docutils literal notranslate"><span class="pre">Common.near_mode_off()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../temas.html#rubu.temas.Common.set_temas_serialnumber"><code class="docutils literal notranslate"><span class="pre">Common.set_temas_serialnumber()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: rgba(0,50,100,1)" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">TEMAS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">rubu.temas</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for rubu.temas</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">socket</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">threading</span><span class="w"> </span><span class="kn">import</span> <span class="n">Thread</span><span class="p">,</span> <span class="n">Lock</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+
+<div class="viewcode-block" id="Connect">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Connect">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Connect</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This class alows the Temas connection.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hostname</span><span class="o">=</span><span class="s2">&quot;temas&quot;</span><span class="p">,</span> <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initial values of class Connect.&quot;&quot;&quot;</span>
+        <span class="k">global</span> <span class="n">ip</span>
+        <span class="n">ip</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">ip_address</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="n">ip</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ip_from_hostname</span><span class="p">(</span><span class="n">hostname</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ip</span> <span class="o">=</span> <span class="n">ip_address</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Connect.get_ip_from_hostname">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Connect.get_ip_from_hostname">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_ip_from_hostname</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hostname</span><span class="p">,</span> <span class="n">max_attempts</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Attempts to determine the IP address of the hostname.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_attempts</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">ip</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostbyname</span><span class="p">(</span><span class="n">hostname</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">ip</span>
+            <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">gaierror</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Attempt </span><span class="si">{</span><span class="n">attempt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">max_attempts</span><span class="si">}</span><span class="s2">: Could not resolve hostname &#39;</span><span class="si">{</span><span class="n">hostname</span><span class="si">}</span><span class="s2">&#39;. Retrying...&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: Could not resolve hostname &#39;</span><span class="si">{</span><span class="n">hostname</span><span class="si">}</span><span class="s2">&#39; after </span><span class="si">{</span><span class="n">max_attempts</span><span class="si">}</span><span class="s2"> attempts.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="Socket">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Socket">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Socket</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This class send commands to Temas</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initial values of class Socket.&quot;&quot;&quot;</span>
+        <span class="k">global</span> <span class="n">ip</span>
+        <span class="k">if</span> <span class="n">ip_address</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">=</span> <span class="n">ip_address</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<div class="viewcode-block" id="Socket.send_cmd">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Socket.send_cmd">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_cmd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Send commands</span>
+
+<span class="sd">        :param command: A command is given</span>
+<span class="sd">        :type command: List, optional</span>
+<span class="sd">        :return: Data of socket :class:`temas.send_cmd`</span>
+<span class="sd">        :raises: Exception</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">ip</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">sendall</span><span class="p">((</span><span class="n">command</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+            <span class="k">if</span> <span class="n">text</span><span class="p">:</span>
+                <span class="n">response</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+                <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+                    <span class="n">buffer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">buffer</span><span class="p">:</span>
+                        <span class="k">break</span>
+
+                    <span class="n">response</span> <span class="o">+=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+
+                <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">-%H-%M-%S&quot;</span><span class="p">)</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="n">now</span> <span class="o">+</span> <span class="s1">&#39;-laser.ply&#39;</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">text2</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">n&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="n">text2</span> <span class="o">=</span> <span class="n">text2</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;b&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+                    <span class="n">text2</span> <span class="o">=</span> <span class="n">text2</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+                    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text2</span><span class="p">)</span>
+                    <span class="c1"># f.write(self.data)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Sending failed - IP: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">+</span> <span class="s2">&quot; PORT: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="Camera">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Camera">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Camera</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This class allows the control of camera using urllib.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8081</span><span class="p">,</span> <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initializes the Camera class&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">ip_address</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">global</span> <span class="n">ip</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">=</span> <span class="n">ip_address</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stream</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">html_page</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;http://</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">ip</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="si">}</span><span class="s2">/stream.mjpg&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">html_page</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kill</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lock</span> <span class="o">=</span> <span class="n">Lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">thread</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">thread</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="kc">True</span>
+
+<div class="viewcode-block" id="Camera.update">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Camera.update">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Continuously fetches frames from the MJPEG stream.&quot;&quot;&quot;</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">kill</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">chunk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">chunk</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stream</span> <span class="o">+=</span> <span class="n">chunk</span>
+                <span class="n">a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xff\xd8</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># Start of JPEG</span>
+                <span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xff\xd9</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># End of JPEG</span>
+                <span class="k">if</span> <span class="n">a</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                    <span class="n">jpg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">stream</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="p">[</span><span class="n">b</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:]</span>
+                    <span class="n">img_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">jpg</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+                    <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imdecode</span><span class="p">(</span><span class="n">img_array</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_COLOR</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">frame</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">lock</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">frame</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Camera stream error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">continue</span></div>
+
+
+<div class="viewcode-block" id="Camera.start_thread">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Camera.start_thread">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">start_thread</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Starts the thread to fetch frames.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kill</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Camera.stop_thread">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Camera.stop_thread">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stop_thread</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Stops the thread.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kill</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Camera.get_frame">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Camera.get_frame">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the most recent frame</span>
+
+<span class="sd">        :return: Frame</span>
+<span class="sd">        :rtype: numpy.ndarray or None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">lock</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame</span></div>
+
+
+<div class="viewcode-block" id="Camera.set_exposure_time">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Camera.set_exposure_time">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_exposure_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">microseconds</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set exposure time of visual camera 50-33000µs&quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/set_exposure/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">microseconds</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Camera.set_brightness">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Camera.set_brightness">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_brightness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">brightness_percent</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set brightness of visual camera 0-100&quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/set_brightness/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">brightness_percent</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Camera.set_saturation">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Camera.set_saturation">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_saturation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">saturation_percent</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set saturation of visual camera 0-100&quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/set_saturation/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">saturation_percent</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Camera.set_contrast">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Camera.set_contrast">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_contrast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contrast_percent</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set contrast of visual camera 0-100&quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/set_contrast/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">contrast_percent</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Camera.set_lens_position">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Camera.set_lens_position">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_lens_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lens_position_percent</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set lens position of visual camera 0-100&quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/set_lens_position/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lens_position_percent</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Camera.set_gain">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Camera.set_gain">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_gain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gain_value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set gain of visual camera 1.23-16.0&quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/set_gain/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">gain_value</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="Control">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Control</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This class alows the control of motors and laser.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8082</span><span class="p">,</span> <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">port_control</span> <span class="o">=</span> <span class="n">port</span>
+        <span class="k">global</span> <span class="n">ip</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span> <span class="k">if</span> <span class="n">ip_address</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="k">else</span> <span class="n">ip_address</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">temas</span> <span class="o">=</span> <span class="n">Socket</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port_control</span><span class="p">,</span> <span class="n">ip_address</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ip</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fehler beim Erstellen des Sockets: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Control.get_pcl">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.get_pcl">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_pcl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Receive last point cloud</span>
+
+<span class="sd">        :return: .ply file</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_pcl</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Control.distance">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.distance">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Laser distance measurment</span>
+
+<span class="sd">        :return: Value of the distance [cm]</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;distance</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Control.mean_distance">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.mean_distance">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mean_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Mean laser distance measurement</span>
+
+<span class="sd">        :return: Value of the mean_distance [cm]</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;distance_mean_fix_number</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Control.get_focus_position">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.get_focus_position">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_focus_position</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get focus position of visual camera 0-100</span>
+
+<span class="sd">        :return: Get focus position of visual camera</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_focus_position</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Control.set_focus_position">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.set_focus_position">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_focus_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set focus position of visual camera 0-100</span>
+
+<span class="sd">        :return: Set focus position of visual camera</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;set_focus_position|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">position</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Control.get_laser_los">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.get_laser_los">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_laser_los</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get laser pointer position on visual camera (x,y)</span>
+
+<span class="sd">        :return: Get laser los [px,px]</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_laser_los</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Control.set_laser_los">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.set_laser_los">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_laser_los</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set laser pointer position on visual camera (x,y)&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;set_laser_los|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Control.move_pos">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.move_pos">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_pos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phi</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move to coordinate&quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;move_pos|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Control.get_pos">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.get_pos">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_pos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get motor positions</span>
+
+<span class="sd">        :return: pan, tilt positions [°]</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_position</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Control.move_home">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.move_home">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_home</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move to home position</span>
+
+<span class="sd">        :return: Motor at start position?</span>
+<span class="sd">        :rtype: Boolean</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;move_home</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Control.move">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.move">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sends a movement command to the motor.&quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">lock</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;move_</span><span class="si">{</span><span class="n">direction</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Control.move_threaded">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.move_threaded">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_threaded</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Starts the movement in a separate thread.&quot;&quot;&quot;</span>
+        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">direction</span><span class="p">,),</span> <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Control.move_right">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.move_right">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_right</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move motor right in 1° steps&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_threaded</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Control.move_left">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.move_left">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_left</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move motor left in 1° steps&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_threaded</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Control.move_up">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.move_up">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move motor up in 1° steps&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_threaded</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Control.move_down">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.move_down">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_down</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move motor down in 1° steps&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_threaded</span><span class="p">(</span><span class="s2">&quot;down&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Control.move_right_fine">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.move_right_fine">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_right_fine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move motor right in 0.5° steps&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_threaded</span><span class="p">(</span><span class="s2">&quot;right_fine&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Control.move_left_fine">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.move_left_fine">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_left_fine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move motor left in 0.5° steps&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_threaded</span><span class="p">(</span><span class="s2">&quot;left_fine&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Control.move_up_fine">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.move_up_fine">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_up_fine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move motor up in 0.5° steps&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_threaded</span><span class="p">(</span><span class="s2">&quot;up_fine&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Control.move_down_fine">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.move_down_fine">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_down_fine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move motor down in 0.5° steps&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">move_threaded</span><span class="p">(</span><span class="s2">&quot;down_fine&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Control.start_point_cloud_scan">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.start_point_cloud_scan">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">start_point_cloud_scan</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta1</span><span class="p">,</span> <span class="n">theta2</span><span class="p">,</span> <span class="n">phi1</span><span class="p">,</span> <span class="n">phi2</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Move to coordinate</span>
+<span class="sd">        arg1: elevation_min_scan</span>
+<span class="sd">        arg2: elevation_max_scan</span>
+<span class="sd">        arg3: azimut_min_scan</span>
+<span class="sd">        arg4: azimut_max_scan</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span>
+            <span class="s1">&#39;start_point_cloud_scan|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">theta1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">theta2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">phi1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span>
+                <span class="n">phi2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Control.stop_point_cloud_scan">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.stop_point_cloud_scan">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stop_point_cloud_scan</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Stop scan&quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;stop_point_cloud_scan</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Control.get_point_cloud_scan_percent">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Control.get_point_cloud_scan_percent">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_point_cloud_scan_percent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Point cloud scan status in perecent&quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_point_cloud_scan_percent</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="Common">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Common</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This class included the common settings of Temas&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8083</span><span class="p">,</span> <span class="n">ip_address</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initial values of class Common&quot;&quot;&quot;</span>
+        <span class="k">global</span> <span class="n">ip</span>
+        <span class="k">if</span> <span class="n">ip_address</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">=</span> <span class="n">ip_address</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">temas</span> <span class="o">=</span> <span class="n">Socket</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="n">ip_address</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ip</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+<div class="viewcode-block" id="Common.shutdown">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.shutdown">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Shutdown Temas</span>
+
+<span class="sd">        :return: Shutdown temas</span>
+<span class="sd">        :rtype: Boolean</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;temas_shutdown</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.restart">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.restart">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">restart</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Restart Temas</span>
+
+<span class="sd">        :return: Restart temas</span>
+<span class="sd">        :rtype: Boolean</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;temas_restart</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_temperature">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_temperature">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_temperature</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read Temperature of Temas</span>
+
+<span class="sd">        :return: Temperature Temas</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_temperature</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_ip">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_ip">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_ip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get ip address of Temas</span>
+
+<span class="sd">        :return: Ip address</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">global</span> <span class="n">ip</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">ip</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_sn">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_sn">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_sn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get serial number of Temas</span>
+
+<span class="sd">        :return: serial number is returned</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_sn</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_fw_version">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_fw_version">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_fw_version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get firmware version of Temas</span>
+
+<span class="sd">        :return: firmware version is returned</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_fw_version</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_hostname">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_hostname">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_hostname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get hostname of Temas</span>
+
+<span class="sd">        :return: Hostname is returned</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_hostname</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.set_hostname">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.set_hostname">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_hostname</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hostname</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set hostname of Temas</span>
+
+<span class="sd">        :return: Hostname is changed</span>
+<span class="sd">        :rtype: Boolean</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;set_hostname|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">hostname</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_port_camera">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_port_camera">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_port_camera</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get port of Temas camera</span>
+
+<span class="sd">        :return: Port from camera</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_port_camera</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_port_tof_camera">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_port_tof_camera">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_port_tof_camera</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get port of Temas tof camera</span>
+
+<span class="sd">        :return: Port from tof camera</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_port_tof_camera</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_port_common">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_port_common">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_port_common</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get port of Temas common</span>
+
+<span class="sd">        :return: Port from Temas common</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_port_common</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_port_control">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_port_control">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_port_control</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get port of control</span>
+
+<span class="sd">        :return: Port from control</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_port_control</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_ip_hosts">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_ip_hosts">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_ip_hosts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the host ip address of Temas</span>
+
+<span class="sd">        :return: Ip adress of host</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_ip</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_mac">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_mac">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_mac</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the mac address of Temas</span>
+
+<span class="sd">        :return: Returns the mac address</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_mac</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_laser_x_los">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_laser_x_los">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_laser_x_los</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the x value los of Laser in pixel</span>
+
+<span class="sd">        :return: Returns the x value los</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_laser_x_los</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.get_laser_y_los">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.get_laser_y_los">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_laser_y_los</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the y value los of Laser in pixel</span>
+
+<span class="sd">        :return: Returns the y value los</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;get_laser_y_los</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="Common.set_static_ip">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.set_static_ip">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_static_ip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ip</span><span class="p">,</span> <span class="n">gateway</span><span class="p">,</span> <span class="n">dns</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;static ip /24 dhcp</span>
+<span class="sd">        arg1: ip-address</span>
+<span class="sd">        arg2: gateway</span>
+<span class="sd">        arg3: dns</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;set_static_ip|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">gateway</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dns</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Common.set_direct_static_ip">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.set_direct_static_ip">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_direct_static_ip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ip</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;static ip /24 without dhcp</span>
+<span class="sd">        arg1: ip-address</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;set_direct_static_ip|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Common.near_mode_on">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.near_mode_on">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">near_mode_on</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;tof near mode on&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;near_mode_on</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Common.near_mode_off">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.near_mode_off">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">near_mode_off</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;tof near mode off&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;near_mode_off</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Common.set_temas_serialnumber">
+<a class="viewcode-back" href="../../temas.html#rubu.temas.Common.set_temas_serialnumber">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_temas_serialnumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sn</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set serial number of Temas</span>
+
+<span class="sd">        :return: serial number is returned</span>
+<span class="sd">        :rtype: String</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temas</span><span class="o">.</span><span class="n">send_cmd</span><span class="p">(</span><span class="s1">&#39;set_temas_serialnumber|&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sn</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+
+
+
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

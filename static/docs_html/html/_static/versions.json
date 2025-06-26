@@ -1,0 +1,8 @@
+{
+  "versions": [
+    { "name": "latest", "url": "./latest/" },
+    { "name": "v0.0.1", "url": "./v0.0.1/" },
+    { "name": "v0.1.0", "url": "./v0.1.0/" },
+    { "name": "v1.0.0", "url": "./v1.0.0/" }
+  ]
+}

@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<!-- <html lang="de"> -->
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>rubu</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../static/assets/img/logo/favicon.png" rel="icon">
+    <!--<link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+    <!-- Flag Icons -->
+    <link href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.9.2/css/flag-icons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../static/assets/css/style.css" rel="stylesheet">
+
+    <!-- Katex for LaTex Style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+          integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+            integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+            crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+            integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- =======================================================
+    * Template Name: Arsha - v4.7.0
+    * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+
+</head>
+
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+        <!--<h1 class="logo me-auto"><a href="#hero">rubu</a></h1>-->
+        <h1 class="logo me-auto"><a href="#hero"><img src="../static/assets/img/logo/logo.png"
+                                                      class="img-fluid animated"></a></h1>
+        <!-- Versteckte div für ausgewählte Sprache -->
+        <div id="selected-language" data-lang="{{ selected_language }}" style="display: none;"></div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li>
+                    <a class="nav-link{% if selected_language == 'en' %} selected{% endif %}"
+                       href="{{ url_for('set_language', lang='en') }}">
+                        <span class="fi fi-gb"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link{% if selected_language == 'de' %} selected{% endif %}"
+                       href="{{ url_for('set_language', lang='de') }}">
+                        <span class="fi fi-de"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link{% if selected_language == 'tr' %} selected{% endif %}"
+                       href="{{ url_for('set_language', lang='tr') }}">
+                        <span class="fi fi-tr"></span>
+                    </a>
+                </li>
+                <li><a class="nav-link scrollto" href="#hero">{{ translations['header']['home'] }}</a></li>
+                <li class="dropdown"><a href="#portfolio"><span>{{translations['header']['product']}}</span> <i
+                        class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#portfolio" class="dropdown-item" data-filter=".filter-app">{{translations['portfolio_section']['filters']['description']}}</a>
+                        </li>
+                        <li><a href="#portfolio" class="dropdown-item" data-filter=".filter-web">{{translations['portfolio_section']['filters']['specification']}}</a>
+                        </li>
+                        <li><a href="#portfolio" class="dropdown-item" data-filter=".filter-dok">{{translations['portfolio_section']['filters']['api']}}</a>
+                        </li>
+                        <li><a href="#portfolio" class="dropdown-item" data-filter=".filter-bedienung">{{translations['portfolio_section']['filters']['manual']}}</a>
+                        </li>
+                        <li><a href="#portfolio" class="dropdown-item" data-filter=".filter-download">{{
+                            translations['portfolio_section']['filters']['download'] }}</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="#about">{{translations['header']['about']}}</a></li>
+                <li><a class="nav-link scrollto" href="#team">{{translations['header']['team']}}</a></li>
+                <li><a class="nav-link scrollto" href="#contact">{{translations['header']['contact']}}</a></li>
+                <li><a class="getstarted scrollto" href="#services">{{translations['header']['get_started']}}</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+    </div>
+
+    <!-- ======= Message Section ======== -->
+    <div class="container" id="flash-alert">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show opacity-75" role="alert">
+            <span>{{ message }}</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+</header>
+<!-- End Header -->
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+                 data-aos="fade-up" data-aos-delay="200">
+                <h1>{{ translations['hero_section']['technologies'] }}</h1>
+                <div class="dynamic-text-container">
+                    <h2 id="dynamic-text"></h2>
+                </div>
+                <h4 style="color:white">{{ translations['hero_section']['optimal_tool'] }} </h4>
+                <h5 style="color:white">{{ translations['hero_section']['application_areas'] }} </h5>
+                <br>
+                <br>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <!--<a href="#about" class="btn-get-started scrollto">Get Started</a>-->
+                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i
+                            class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="static/assets/img/hero-rubu-img.png" class="img-fluid animated" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<section id="hero" class="d-flex align-items-center">
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+                 data-aos="fade-up" data-aos-delay="200">
+                <h1>{{ translations['hero_section']['technologies'] }}</h1>
+                <h2 id="dynamic-text" class="dynamic-text-visible"></h2>
+                <h4 style="color:white">{{ translations['hero_section']['optimal_tool'] }} </h4>
+                <h5 style="color:white">{{ translations['hero_section']['application_areas'] }} </h5>
+                <br>
+                <br>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <a href="#about" class="btn-get-started scrollto">{{ translations['hero_section']['get_started']
+                        }}</a>
+                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i
+                            class="bi bi-play-circle"></i><span>{{ translations['hero_section']['watch_video'] }}</span></a>
+                </div>
+            </div>
+            <div id="offscreen-text" style="position: absolute; left: -9999px;"></div>
+
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="static/assets/img/hero-rubu-img.png" class="img-fluid animated" alt="">
+            </div>
+        </div>
+    </div>
+</section>-->
+
+
+<!--<section id="hero" class="d-flex align-items-center">
+
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+                 data-aos="fade-up" data-aos-delay="200">
+                <h1>{{ translations['hero_section']['technologies'] }}</h1>
+                <h2 id="dynamic-text"></h2>
+                <h4 style="color:white">{{ translations['hero_section']['optimal_tool'] }} </h4>
+                <h5 style="color:white">{{ translations['hero_section']['application_areas'] }} </h5>
+                <br>
+                <br>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <a href="#about" class="btn-get-started scrollto">{{ translations['hero_section']['get_started']
+                        }}</a>
+                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i
+                            class="bi bi-play-circle"></i><span>{{ translations['hero_section']['watch_video'] }}</span></a>
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="static/assets/img/hero-rubu-img.png" class="img-fluid animated" alt="">
+            </div>
+        </div>
+    </div>
+</section>--><!-- End Hero -->
+
+<main id="main">
+    <!-- ======= Cliens Section ======= -->
+    <section id="cliens" class="cliens section-bg">
+        <div class="container">
+
+            <div class="row" data-aos="zoom-in">
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <h1><img src="static/assets/img/AI.png" class="img-fluid animated" alt=""></h1>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <h1><i class="bi bi-eye iconeye"></i></h1>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <!--<img src="static/assets/img/clients/client-1.png" class="img-fluid" alt="">-->
+                    <h1><i class="bi bi-badge-3d icon3d"></i></h1>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <h1><i class="bi bi-wifi iconwifi"></i></h1>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <h1><i class="bi bi-camera iconcam"></i></h1>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <h1><i class="bi bi-github"></i></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Clients Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>{{ translations['portfolio_section']['title'] }}</h2>
+            </div>
+            <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <!--<ul id="portfolio-flters" data-aos="fade-up" data-aos-delay="100">-->
+                <!-- Button Filters !-->
+                <li data-filter=".filter-app" class="filter-active">{{
+                    translations['portfolio_section']['filters']['description'] }}
+                </li>
+                <li data-filter=".filter-web">{{ translations['portfolio_section']['filters']['specification'] }}</li>
+                <li data-filter=".filter-dok">{{ translations['portfolio_section']['filters']['api'] }}</li>
+                <li data-filter=".filter-bedienung">{{ translations['portfolio_section']['filters']['manual'] }}</li>
+                <li data-filter=".filter-download">{{ translations['portfolio_section']['filters']['download'] }}</li>
+            </ul>
+            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                <!-- Produktbeschreibung
+                <div class="portfolio-item filter-app">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Produktbeschreibung</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="product-description">
+                                {% for item in translations['portfolio_section']['items'] %}
+                                <div class="portfolio-item-content">
+                                    <h5>{{ item['caption']['title'] }}</h5>
+                                    <p>{{ item['caption']['description'] }}</p>
+                                    <ul>
+                                        {% for feature in item['caption']['features'] %}
+                                        <li>{{ feature }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                    <p>{{ item['caption']['api'] }}</p>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <!-- Produktbeschreibung -->
+                <div class="portfolio-item filter-app">
+                    <div class="product-description">
+                        {% for item in translations['portfolio_section']['items'] %}
+                        <div class="portfolio-item-content">
+                            <h3>{{ item['caption']['title'] }}</h3>
+                            <p>{{ item['caption']['description'] }}</p>
+                            <ul>
+                                {% for feature in item['caption']['features'] %}
+                                <li>{{ feature }}</li>
+                                {% endfor %}
+                            </ul>
+                            <p>{{ item['caption']['api'] }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Spezifikation -->
+                <div class="portfolio-item filter-web">
+                    <div id="table-container">
+                        {% if 'specification' in translations['portfolio_section']['items'][0] %}
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col"><b>{{
+                                    translations['portfolio_section']['items'][0]['specification']['table_headings']['parameter']
+                                    }}</b></th>
+                                <th scope="col"><b>{{
+                                    translations['portfolio_section']['items'][0]['specification']['table_headings']['value']
+                                    }}</b></th>
+                            </tr>
+                            </thead>
+                            <tbody id="table-body">
+                            {% for row in translations['portfolio_section']['items'][0]['specification']['table_rows']
+                            %}
+                            <tr>
+                                <td>{{ row['parameter'] }}</td>
+                                <td>{{ row['value'] }}</td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+
+                        <!-- Paginator nur anzeigen, wenn Spezifikationen vorhanden sind -->
+                        <nav aria-label="Table Pagination">
+                            <ul class="pagination justify-content-center" id="pagination">
+                                <!-- Hier kommt dein Paginator Code -->
+                            </ul>
+                        </nav>
+
+                        {% else %}
+                        <p>Spezifikation nicht verfügbar.</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Dokumentation -->
+                <div class="portfolio-item filter-dok">
+                    <p>{{ translations['portfolio_section']['items'][0]['specification']['api']['description'] }}</p>
+                    <div class="button-group d-flex justify-content-between">
+                        <a href="dokumentation.html" class="btn-download">{{
+                            translations['portfolio_section']['items'][0]['specification']['api']['button_text'] }}</a>
+                        <a href="https://pypi.org/" class="btn-download">{{
+                            translations['portfolio_section']['items'][0]['specification']['pypi']['button_text'] }}</a>
+                    </div>
+                </div>
+                <!-- Bedienungsanleitung -->
+                <div class="portfolio-item filter-bedienung">
+                    <p>{{ translations['portfolio_section']['items'][0]['specification']['manual']['description'] }}</p>
+                    <a href="../static/assets/downloads/Temas-Benuzterhandbuch.pdf" class="btn-download" download>{{
+                        translations['portfolio_section']['items'][0]['specification']['manual']['button_text'] }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Portfolio Section -->
+    <!-- ======= Application Areas Section ======= -->
+    <section id="services" class="services section-bg">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>{{ translations['services_section']['title'] }}</h2>
+                <p>{{ translations['services_section']['description'] }}</p>
+                <p>{{ translations['services_section']['sub_description'] }}</p>
+            </div>
+
+            <!-- Definiere eine Zuordnungstabelle für Boxen und Abschnitts-Sectionen -->
+            {% set box_section_mapping = {
+            translations['services_section']['services'][0]['title']: 'why-us',
+            translations['services_section']['services'][1]['title']: 'about',
+            translations['services_section']['services'][2]['title']: 'xyz',
+            translations['services_section']['services'][3]['title']: 'zzz'
+            } %}
+
+            <div class="row">
+                {% for service in translations['services_section']['services'] %}
+                {% set box_title = service['title'] %}
+                <!-- Generiere den Link zur entsprechenden Abschnitts-Section -->
+                <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+                     data-aos-delay="{{ loop.index * 100 }}">
+                    <a href="#{{ box_section_mapping[box_title] }}" class="icon-box">
+                        <div class="icon"><i class="bx bx-file"></i></div>
+                        <h4>{{ box_title }}</h4>
+                        <p>{{ service['description'] }}</p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+
+
+            <!--<div class="row">
+                {% for service in translations['services_section']['services'] %}
+                <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+                     data-aos-delay="{{ loop.index * 100 }}">
+
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-file"></i></div>
+                        <h4>{{ service['title'] }}</h4>
+                        <p>{{ service['description'] }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div> -->
+        </div>
+    </section>
+    <!-- End Application Areas Section -->
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>{{ translations['about_section']['title'] }}</h2>
+            </div>
+            <div class="row content">
+                <div class="col-lg-6">
+                    {% for item in translations['about_section']['content'] %}
+                    <p>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i>
+                            {{ item['text'] }}
+                        </li>
+                    </ul>
+                    </p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Us Section -->
+    <!-- ======= Physic Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
+                    <div class="content flex-column">
+                        <h3>{{ translations['why_us_section']['title'] }}</h3>
+                        <p>{{ translations['why_us_section']['content'] }}</p>
+                    </div>
+
+                    <div class="accordion-list">
+                        <ul>
+                            {% for item in translations['why_us_section']['accordion_list'] %}
+                            <li>
+                                <a data-bs-toggle="collapse"
+                                   class="collapse{% if loop.index != 1 %} collapsed{% endif %}"
+                                   data-bs-target="#accordion-list-{{ loop.index }}"><span>{{ loop.index | string }}</span>
+                                    {{ item['title'] }}
+                                    <i class="bx bx-chevron-down icon-show"></i>
+                                    <i class="bx bx-chevron-up icon-close"></i></a>
+                                <div id="accordion-list-{{ loop.index }}"
+                                     class="collapse{% if loop.index == 1 %} show{% endif %}"
+                                     data-bs-parent=".accordion-list">
+                                    <p>{{ item['content'] }}</p>
+                                    {% if loop.index == 1 %}
+                                    <p id="formelFederpendel">{{ item['formula_federpendel'] }}</p>
+                                    <p id="formelFadenpendel">{{ item['formula_fadenpendel'] }}</p>
+                                    {% endif %}
+                                    {% if loop.index == 2 %}
+                                    <div id="formelFreierFall">{{ item['formula_freier_fall'] }}</div>
+                                    {% endif %}
+                                    {% if loop.index == 3 %}
+                                    <p id="formelDreidimensionale">{{ item['formula_dreidimensionale'] }}</p>
+                                    {% endif %}
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
+                     style='background-image: url("static/assets/img/why-us.png");' data-aos="zoom-in"
+                     data-aos-delay="150">&nbsp;
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Physic Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <!--<section id="skills" class="skills">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                    <img src="static/assets/img/skills.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+                    <h3>Voluptatem dignissimos provident quasi corporis voluptates</h3>
+                    <p class="fst-italic">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore
+                        magna aliqua.
+                    </p>
+
+                    <div class="skills-content">
+
+                        <div class="progress">
+                            <span class="skill">HTML <i class="val">100%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">CSS <i class="val">90%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">JavaScript <i class="val">75%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">Photoshop <i class="val">55%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>-->
+    <!-- End Skills Section -->
+
+    <!-- Start Timeline Section -->
+    <section class="timeline">
+        <div class="section-title">
+            <h2>{{ translations['timeline_section']['title'] }}</h2>
+        </div>
+        <ul>
+            {% for event in translations['timeline_section']['events'] %}
+            <li>
+                <div>
+                    <time>{{ event['year'] }}</time>
+                    <h4>{{ event['title'] }}</h4>
+                    {% for description in event['description'] %}
+                    <p>{{ description }}</p>
+                    {% endfor %}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <!-- End Timeline Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <!--<section id="cta2" class="cta">
+        <div class="container" data-aos="zoom-in">
+
+            <div class="row">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>Sie wollen mehr über unser Produkt oder Services erfahren?</h3>
+                    <p> Möchten Sie weiterführende Informationen
+                        erhalten oder einen Termin für eine Webpräsentation oder
+                        eine Vorführung vor Ort ausmachen? Wir sind gerne für Sie da.</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="#">Kostenlos Testen</a>
+                </div>
+            </div>
+
+        </div>
+    </section> -->
+    <!-- End Cta Section -->
+
+    <!-- ======= Zukunft und Teamarbeit ======= -->
+    <section id="team" class="team section-bg">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>{{translations.team_section.title}}</h2>
+                <p>{{translations.team_section.content[0].text}}</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="member-info">
+                            <h3>{{translations.team_section.content[1].text.split('\n\n')[0]}}</h3>
+                            <p>{{translations.team_section.content[1].text.split('\n\n')[1]}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="member-info">
+                            <h3>{{translations.team_section.content[2].text.split('\n\n')[0]}}</h3>
+                            <p>{{translations.team_section.content[2].text.split('\n\n')[1]}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="member-info">
+                            <h3>{{translations.team_section.content[3].text.split('\n\n')[0]}}</h3>
+                            <p>{{translations.team_section.content[3].text.split('\n\n')[1]}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="member-info">
+                            <h3>{{translations.team_section.content[4].text.split('\n\n')[0]}}</h3>
+                            <p>{{translations.team_section.content[4].text.split('\n\n')[1]}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Zukunft und Teamarbeit -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Häufig gestellte Fragen zu Temas. </br> FAQ</h2>
+                <p>Hier finden Sie Antworten auf häufig gestellte Fragen zu Temas.</p>
+            </div>
+
+            <div class="faq-list">
+                <ul>
+                    <li data-aos="fade-up" data-aos-delay="100">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
+                                                                       data-bs-target="#faq-list-1">Was ist Temas und
+                        wofür kann ich es verwenden? <i class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                            <p>
+                                Temas ist ein Mini-Gimbal, der mit verschiedenen Komponenten wie Kamera, Lidar-Laser und
+                                Motoren ausgestattet ist.
+                                Mit Temas können Sie verschiedene Funktionen wie Bewegung der Motoren, Live-Stream der
+                                Kamera, Entfernungsmessung, 3D-Ansicht, Point-Cloud, Objektverfolgung,
+                                Positionskontrolle von
+                                Objekten und Scannen von QR-Codes ausführen.
+                                Das Produkt eignet sich für die Verwendung in verschiedenen Anwendungsbereichen,
+                                wie z.B. Physikexperimente, industrielle Prozessoptimierung, maschinelles Sehen, Deep
+                                Learning und Industrie 4.0.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="200">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-2" class="collapsed">Welche
+                        Komponenten sind in Temas integriert? <i class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Temas enthält eine Kamera, einen Lidar-Laser und zwei Motoren, die über eine
+                                Wifi-Schnittstelle gesteuert werden können. Die Kamera kann Live-Streams aufnehmen und
+                                die Objektverfolgungsfunktion unterstützt die Verfolgung von Objekten in Echtzeit. Die
+                                Lidar-Technologie ermöglicht es, die Entfernung zwischen dem Gimbal und Objekten zu
+                                messen und Point-Cloud-Informationen zu generieren.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-3" class="collapsed">Wie
+                        kann ich Temas steuern? <i class="bx bx-chevron-down icon-show"></i><i
+                                class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Temas wird über eine Wifi-Schnittstelle gesteuert. Eine mitgelieferte Software
+                                ermöglicht die Steuerung der verschiedenen Funktionen. Sie können auch eine API nutzen,
+                                um eigene Ideen im Bereich der künstlichen Intelligenz und des maschinellen Sehens
+                                umzusetzen.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="400">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-4" class="collapsed">Was
+                        ist die Objektverfolgungsfunktion von Temas? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Die Objektverfolgungsfunktion von Temas ermöglicht die Verfolgung von Objekten in
+                                Echtzeit. Diese Funktion kann für verschiedene Anwendungen wie z.B. Überwachungssysteme,
+                                Inspektion von Anlagen und Prozessoptimierung in der Industrie eingesetzt werden. Die
+                                3D-Trajektorie der verfolgten Objekte kann aufgezeichnet und ausgewertet werden.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="500">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-5" class="collapsed">Kann
+                        ich Temas in meine Industrie 4.0-Prozesse integrieren? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Ja, Temas lässt sich leicht in die Prozessoptimierung im neuen Standard der Industrie
+                                4.0 integrieren. Mit den verschiedenen Funktionen von Temas können Sie Ihre
+                                industriellen Prozesse optimieren und automatisieren.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="600">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-6" class="collapsed">Ist
+                        Temas für den Einsatz in der Forschung geeignet? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Ja, Temas eignet sich für den Einsatz in der Forschung. Mit den verschiedenen Funktionen
+                                von Temas können Sie physikalische Experimente digital aufzeichnen und auswerten. Die
+                                Point-Cloud-Informationen und die 3D-Trajektorie von Objekten können für die Forschung
+                                nützlich sein.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="700">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-7" class="collapsed">Ist
+                        Temas einfach zu bedienen? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-7" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Ja, Temas ist einfach zu bedienen. Eine mitgelieferte Software ermöglicht die Steuerung
+                                der verschiedenen Funktionen von Temas. Außerdem gibt es eine API, die es ermöglicht,
+                                eigene Ideen im Bereich der künstlichen Intelligenz und des maschinellen Sehens
+                                umzusetzen.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="800">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-8" class="collapsed">Kann
+                        ich meine eigenen Ideen für künstliche Intelligenz und maschinelles Sehen mit Temas umsetzen? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-8" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Ja, Temas bietet eine API, die es Ihnen ermöglicht, eigene Ideen für künstliche
+                                Intelligenz und maschinelles Sehen umzusetzen. Mit der Objektverfolgung können Sie
+                                beispielsweise 3D-Trajektorien aufzeichnen und physikalische Experimente im digitalen
+                                Zeitalter auswerten.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="900">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                                                       data-bs-target="#faq-list-9" class="collapsed">Wie
+                        wird Temas mit Strom versorgt? <i
+                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                        <div id="faq-list-9" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Temas wird über einen eingebauten Akku mit Strom versorgt. Der Akku kann über USB
+                                aufgeladen werden.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Rubu kontaktieren</h2>
+                <p></p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-5 d-flex align-items-stretch">
+                    <div class="info">
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>Location:</h4>
+                            <p>A108 Adam Street, New York, NY 535022</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>info@example.com</p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4>Call:</h4>
+                            <p>+1 5589 55488 55s</p>
+                        </div>
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20743.198317486607!2d9.181692774903173!3d48.77584548947523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799c69db63b17e1%3A0x74d1c5ba92cc14b7!2sStuttgart%2C%20Germany!5e0!3m2!1sen!2sus!4v1569453427482!5m2!1sen!2sus"
+                                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                    <form action="{{ url_for('index') }}" method="POST" role="form" class="php-email-form">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Vorname*</label>
+                                <input type="text" name="name" class="form-control" id="name" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="name">Nachname*</label>
+                                <input type="text" class="form-control" name="nachname" id="nachname" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Organisation</label>
+                                <input type="text" class="form-control" name="organisation" id="organisation">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="name">Geschäftliche Email*</label>
+                                <input type="email" class="form-control" name="email" id="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Telefon*</label>
+                                <input type="text" class="form-control" name="telefon" id="telefon" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="name">Land</label>
+                                <input type="text" class="form-control" name="land" id="land">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Betreff</label>
+                            <input type="text" class="form-control" name="subject" id="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nachricht*</label>
+                            <textarea class="form-control" name="message" rows="10" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <p>Erforderliche Felder sind markiert mit*</p>
+                        </div>
+                        <div class="form-group text-center">
+                            <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}"></div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit">Anfragen</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+</main>
+<!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+    <div class="footer-newsletter">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h4>Join Our Newsletter</h4>
+                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>rubu</h3>
+                    <p>
+                        A108 Adam Street <br>
+                        New York, NY 535022<br>
+                        United States <br><br>
+                        <strong>Phone:</strong> <br>
+                        <strong>Email:</strong> info@rubu-tech.de<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Networks</h4>
+                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+        <div class="copyright">
+            <p>Copyright&copy;
+                <script>document.write(new Date().getFullYear())</script>
+                <strong><span>rubu</span></strong>. All Rights Reserved
+            </p>
+        </div>
+
+    </div>
+</footer><!-- End Footer -->
+
+<div id="preloader"></div>
+<!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a> -->
+
+<!-- Vendor JS Files -->
+<script src="../static/assets/vendor/aos/aos.js"></script>
+<script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../static/assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="../static/assets/vendor/jquery/jquery-3.6.0.min.js"></script>
+
+<!-- For Particles JS -->
+<script src="../static/assets/js/particles/particles.js"></script>
+<script src="../static/assets/js/particles/app.js"></script>
+
+<!-- Template Main JS File -->
+<script src="../static/assets/js/main.js"></script>
+
+<!-- Template MathMl -->
+<script src="http://fred-wang.github.io/mathml.css/mspace.js"></script>
+
+<!-- -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,707 @@
+{
+  "header": {
+    "home": "Startseite",
+    "product": "Produkt",
+    "application_areas": "Einsatzgebiete",
+    "downloads": "Downloads",
+    "about": "Über uns",
+    "team": "Team",
+    "contact": "Kontakt",
+    "get_started": "Loslegen",
+    "flag": "DE"
+  },
+  "hero_section": {
+    "technologies": "TEMAS: Tauche ein in die Perspektive eines Roboters.",
+    "future_science": [
+      "Schnelle und präzise Motorsteuerung",
+      "3D-Erfassung mit ToF-Technologie",
+      "Scharfe Echtzeitbilder mit visueller Kamera",
+      "Hochfrequente Lasertechnologie"
+    ],
+    "optimal_tool": "Wir bieten ein optoelektronisches Produkt mit API-Schnittstelle",
+    "application_areas": "vielseitig einsetzbar in Robotik, Bildung, Laboren und innovativen Anwendungen.",
+    "get_started": "Loslegen",
+    "watch_video": "Video ansehen"
+  },
+  "portfolio_section": {
+    "title": "Produkt",
+    "filters": {
+      "description": "Beschreibung",
+      "specification": "Spezifikation",
+      "gallery": "Galerie",
+      "view": "3D-Ansicht",
+      "api": "API",
+      "manual": "Handbuch",
+      "download": "Downloads"
+    },
+    "items": [
+      {
+        "caption": {
+          "title": "Produktbeschreibung",
+          "description": "Modulare 3D-Sensorplattform für Robotik, Bildung, Labore und innovative Anwendungen.\n\nEntdecken Sie die Zukunft der 3D-Sensorik mit unserer vielseitigen Plattform, die speziell für Robotik-Enthusiasten, Bildungseinrichtungen, Labore und zukunftsorientierte Entwickler konzipiert wurde. Dieses System kombiniert fortschrittliche Sensortechnologien mit leistungsstarker Onboard-Verarbeitung, um präzise 3D-Daten in Echtzeit zu erfassen und zu analysieren.",
+          "features": {
+            "mainFeaturesTitle": "Hauptmerkmale",
+            "applicationAreasTitle": "Anwendungsbereiche",
+            "benefitsTitle": "Vorteile",
+            "targetGroupsTitle": "Zielgruppen",
+            "mainFeatures": [
+              {
+                "title": "Integrierte Multi-Sensor-Architektur und Motorsteuerung",
+                "points": [
+                  "Hochauflösende RGB-Kamera für detaillierte visuelle Daten",
+                  "Time-of-Flight (ToF)-Kamera für Tiefeninformationen",
+                  "Leistungsstarker LiDAR-Sensor für weitreichende 3D-Kartierung",
+                  "Präzise und schnelle Motorsteuerung"
+                ]
+              },
+              {
+                "title": "Intuitive Software und offene API",
+                "points": [
+                  "Benutzerfreundliche Software für Windows und macOS",
+                  "Umfassende API für die Entwicklung eigener Anwendungen in Robotik, maschinellem Sehen, KI und Labordatenanalyse",
+                  "Power over Ethernet (PoE) für Strom, Steuerung und Videoübertragung in einem Kabel"
+                ]
+              },
+              {
+                "title": "Flexible und robuste Bauweise",
+                "points": [
+                  "120°-Drehbereich für dynamische Sensorpositionierung",
+                  "Montageoptionen für mobile Robotikplattformen und Stative",
+                  "UV-beständiges und robustes 3D-Druckmaterial mit hoher Schlagzähigkeit, welches die Form bis zu 100°C beibehält"
+                ]
+              },
+              {
+                "title": "Onboard-Verarbeitung mit Einplatinencomputer",
+                "points": [
+                  "Einplatinenlösung der nächsten Generation: Raspberry Pi 5",
+                  "Echtzeit-Datenverarbeitung und Point-Cloud-Generierung",
+                  "Export farbiger Punktwolken"
+                ]
+              }
+            ],
+            "applicationAreas": [
+              "Robotik: Navigation, Objekterkennung, Mensch-Roboter-Interaktion",
+              "Bildung und Lehre: Praktisches Lernen in Robotik, Informatik und Ingenieurwissenschaften",
+              "Labore und Experimente: Erfassung und Analyse von Bewegungsdaten (z. B. Schwingungsanalysen)",
+              "Innovative Projekte: 3D-Modellierung, Umweltüberwachung, kreative Anwendungen",
+              "Industrielle Prototypen: Schnelle Erstellung von Prototypen für Automatisierungs- und Inspektionsanwendungen"
+            ],
+            "benefits": [
+              "Vielseitige Sensorplattform für eine breite Palette von Anwendungen",
+              "Echtzeit-Datenverarbeitung und farbiges Point-Cloud-Export",
+              "Einfache Integration und Anpassung durch offene API",
+              "Ideal für Robotik-Enthusiasten, Bildungseinrichtungen und Labore"
+            ],
+            "targetGroups": [
+              "Robotik-Forscher und -Entwickler",
+              "Lehrkräfte und Studierende in technischen Disziplinen",
+              "Wissenschaftler und Techniker in Forschungslaboren",
+              "Maker und Hobby-Robotiker",
+              "Unternehmen, die Prototypen für industrielle Anwendungen entwickeln"
+            ]
+          },
+          "api": "Kontaktieren Sie uns, um mehr über unsere modulare 3D-Sensorplattform zu erfahren und wie sie Ihre Projekte bereichern kann!"
+        },
+        "specification": {
+          "table_headings": {
+            "parameter": "Parameter",
+            "value": "Wert"
+          },
+          "table_rows": [
+            {
+              "parameter": "3D Druck Material",
+              "value": "ASA"
+            },
+            {
+              "parameter": "Schwenkwinkel",
+              "value": "-60° bis 60°"
+            },
+            {
+              "parameter": "Neigungswinkel",
+              "value": "-30° bis 90°"
+            },
+            {
+              "parameter": "Minimale Motor-Schrittweite",
+              "value": "0.5°"
+            },
+            {
+              "parameter": "Kommunikationsschnittstelle",
+              "value": "Ethernet"
+            },
+            {
+              "parameter": "Stromversorgung",
+              "value": "Power over Ethernet: 37V - 57V (DC)"
+            },
+            {
+              "parameter": "Netzwerkstandard",
+              "value": "IEEE 802.3af/at PoE"
+            },
+            {
+              "parameter": "Ethernet-Geschwindigkeit",
+              "value": "2.5 Gbit/s"
+            },
+            {
+              "parameter": "Motor Stellzeit",
+              "value": "0.33 s/60°"
+            },
+            {
+              "parameter": "Getriebe",
+              "value": "Metall"
+            },
+            {
+              "parameter": "Gewicht",
+              "value": "1 kg +-5%"
+            },
+            {
+              "parameter": "Betriebstemperatur",
+              "value": "0°C - 50°C"
+            },
+            {
+              "parameter": "Kamera Sensor",
+              "value": "Sony IMX708"
+            },
+            {
+              "parameter": "Videomodi (Visuell)",
+              "value": "1280x720@30fps"
+            },
+            {
+              "parameter": "IR-Filter (Visuell)",
+              "value": "Ja"
+            },
+            {
+              "parameter": "Pixel Größe (Visuell)",
+              "value": "1.4 µm x 1.4 µm"
+            },
+            {
+              "parameter": "Sehfeldgröße Horizontal",
+              "value": "73°"
+            },
+            {
+              "parameter": "Sehfeldgröße Vertikal",
+              "value": "45°"
+            },
+            {
+              "parameter": "Lichtquelle (ToF)",
+              "value": "940 nm VCSEL"
+            },
+            {
+              "parameter": "Messbereich (ToF)",
+              "value": "3.9 m"
+            },
+            {
+              "parameter": "Videomodi (ToF)",
+              "value": "180x180@30fps"
+            },
+            {
+              "parameter": "IR-Filter (ToF)",
+              "value": "Nein"
+            },
+            {
+              "parameter": "Pixel Größe (ToF)",
+              "value": "14.3 µm x 14.3 µm"
+            },
+            {
+              "parameter": "Sehfeldgröße Horizontal (ToF)",
+              "value": "45°"
+            },
+            {
+              "parameter": "Sehfeldgröße Vertikal (ToF)",
+              "value": "45°"
+            },
+            {
+              "parameter": "Laserklasse",
+              "value": "1"
+            },
+            {
+              "parameter": "Reichweite",
+              "value": "40 m"
+            },
+            {
+              "parameter": "Auflösung",
+              "value": "+/- 1 cm"
+            },
+            {
+              "parameter": "Genauigkeit",
+              "value": "+/- 2.5 cm"
+            },
+            {
+              "parameter": "Wellenlänge",
+              "value": "905 nm"
+            },
+            {
+              "parameter": "Spitzenleistung",
+              "value": "1.3 W"
+            },
+            {
+              "parameter": "Aktualisierungsrate",
+              "value": "180 Hz"
+            },
+            {
+              "parameter": "Strahldivergenz",
+              "value": "8 mrad"
+            }
+          ],
+          "gallery_section":{
+            "media": [
+              {
+                "src": "static/assets/img/DSC00016.JPG",
+                "alt": "Temas 3D-Modell"
+              }, 
+              {
+                "src": "static/assets/img/DSC00022.JPG",
+                "alt": "Temas 3D-Modell"
+              }
+            ]
+          },
+          "view": {
+          },
+          "api": {
+            "description": "Hier finden Sie die umfassende API-Dokumentation, die Ihnen klare Anweisungen zur Funktionsweise von Temas bietet.",
+            "button_text": "Dokumentation"
+          },
+          "pypi": {
+            "button_text": "PyPI"
+          },
+          "manual": {
+            "description": "Um weitere Informationen zu erhalten, laden Sie bitte unser Handbuch herunter.",
+            "button_text": "Herunterladen"
+          }
+        }
+      }
+    ]
+  },
+  "services_section": {
+    "title": "Einsatzgebiete",
+    "description": "Temas verfügt über eine integrierte Multi-Sensor-Architektur, eine Motorsteuerung sowie sowohl eine offene API als auch eine mechanische Schnittstelle zur einfachen Integration in unterschiedlichste Anwendungen – von Robotiksystemen bis hin zu Smart-Home-Projekten.",
+    "sub_description": "",
+    "services": [
+      {
+        "title": "Robotik",
+        "icon": "bi-robot",
+        "description": "Temas kombiniert eine mechanische Schnittstelle mit einer Multi-Sensor-Architektur – bestehend aus visueller Kamera, ToF-Kamera und Laser – sowie schnellen und präzisen Motoren. Die integrierte PoE-Ein-Kabel-Lösung sorgt für effiziente Stromversorgung und Datenübertragung. Die offene API ermöglicht eine nahtlose Integration in mobile Robotersysteme und kollaborative Cobots."
+      },
+      {
+        "title": "3‑D‑Mapping & Kartierung",
+        "icon": "bi-map",
+        "description": "Flexibilität nach Maß: Für die präzise Kartierung stehen zwei leistungsstarke Optionen zur Verfügung – der Laser eignet sich ideal für großflächige Anwendungen, während die ToF-Kamera beeindruckend detailreiche Punktwolken im Live-Stream liefert – perfekt für dynamische Szenarien im Nahbereich."
+      },
+      {
+        "title": "Forschung & Lehre",
+        "icon": "bi-mortarboard",
+        "description": "Digitale Bildung erlebbar machen: Live-Experimente visualisieren, Messdaten nahtlos in Praktika oder Vorlesungen integrieren und physikalische Phänomene – etwa Fall-, Pendel- oder Geschwindigkeitsexperimente – interaktiv und digital greifbar machen."
+      },
+      {
+        "title": "Artificial Intelligence",
+        "icon": "static/assets/img/AI.png",
+        "description": "Das Multi-Sensor-Setup erstellt reichhaltige Trainingsdaten – eine Kombination aus RGB-Bildinformationen, Tiefendaten und Geometrie. Besonders durch die Verschmelzung von ToF- und Laserdaten mit visuellen Kamerabildern lässt sich die Erkennungsgenauigkeit deutlich steigern."
+      },
+      {
+        "title": "Virtual Reality",
+        "icon": "bi-badge-vr",
+        "description": "In Kombination mit einer VR-Brille macht unser Sensorsystem komplexe Umgebungen in Echtzeit immersiv erfahrbar – ideal für interaktive Visualisierung, praxisnahes Training und ortsunabhängige Zusammenarbeit in Forschung, Industrie und Lehre."
+      },
+      {
+        "title": "Smart Home & IoT",
+        "icon": "bi-house-door",
+        "description": "Unser Sensorsystem erfasst Räume, Objekte und Bewegungen im Smart Home präzise in 3D und in Echtzeit. Es erkennt Veränderungen und schafft die Grundlage für intelligente Automatisierung, adaptive Sicherheitssysteme sowie gesteigerten Wohnkomfort. Stromversorgung und Datenübertragung erfolgen effizient über ein einziges Kabel – durch die integrierte Power-over-Ethernet-Technologie (PoE)."
+      }
+
+    ]
+  },
+  "detail_sections": [
+    {
+      "id": "robotics-detection",
+      "title": "Robotik",
+      "icon": "bi-robot",
+      "intro": "Robotische Systeme profitieren von einer Multi-Sensor-Architektur, präziser und schneller Motorsteuerung, offener Hardware-Integration sowie nahtloser Anbindung über PoE und offene API.",
+      "features": [
+        "Offene Hardware-Integration: Über den STL-Download stellen wir ein 3D-Modell zur Verfügung, das eine einfache mechanische Einbindung des Sensorsystems in eigene Projekte ermöglicht.",
+        "Präzise Umfelderkennung: Die integrierte Multi-Sensor-Architektur ermöglicht eine detailreiche 3D-Erfassung der Umgebung in Echtzeit – essenziell für Navigation und Objekterkennung.",
+        "Einfache Integration: Durch die offene API und PoE-Ein-Kabel-Technologie.",
+        "Schnelle Reaktionsfähigkeit: Die Kombination aus schneller Datenverarbeitung und präziser Motorsteuerung ermöglicht eine unmittelbare Reaktion auf Veränderungen in der Umgebung."
+      ],
+      "media": [
+        {
+          "src": "static/assets/img/temas_without_bottom_cover.glb",
+          "alt": "Temas 3D-Modell"
+        },
+        {
+          "src": "static/assets/img/robotic_car.png",
+          "alt": "robotic car"
+
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Mobile Robotersysteme",
+          "description": "Mobile Robotersysteme profitieren von unserer Multi-Sensor-Architektur – bestehend aus ToF-Tiefeninformationen, visueller Kamera und Laser – kombiniert mit schneller Motorsteuerung, um Hindernisse zuverlässig zu erkennen und in Echtzeit sicher sowie autonom zu navigieren."
+        },
+        {
+          "title": "Kollaborative Roboter",
+          "description": "Kollaborative Roboter profitieren von unserer Multi-Sensor-Architektur mit ToF-, visueller Kamera- und Lasertechnologie sowie präziser Motorsteuerung, die eine sichere, flexible und reaktionsschnelle Zusammenarbeit mit Menschen in Echtzeit ermöglicht."
+        }
+      ]
+    },
+    {
+      "id": "mapping",
+      "title": "3-D-Mapping & Kartierung",
+      "icon": "bi-map",
+      "intro": "Für 3D-Mapping bieten sich zwei flexible Optionen: der Laser für großflächige Anwendungen und die ToF-Kamera für detailreiche Live-Punktwolken im Nahbereich.",
+      "features": [
+        "Direkt-Export als farbige .ply-Datei",
+        "Laser-Reichweite bis 40 m",
+        "ToF-Kamera mit dynamischer Reichweite bis zu 3,9 m"
+      ],
+      "media": [
+        {
+          "src": "static/assets/video/laser.mp4",
+          "alt": "video laser",
+          "caption": "Farbige Punktwolke (Laser)"
+        },
+        {
+          "src": "static/assets/video/tof.mp4",
+          "alt": "video tof",
+          "caption": "Live-Punktwolke in Farbe (ToF)"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Großflächige 3D-Erfassung mit hoher Reichweite",
+          "description": "Mit dem Laser lassen sich großflächige Kartierungen realisieren, die durch die nahtlose Überlagerung mit der visuellen Kamera farblich lebendig und detailreich dargestellt werden."
+        },
+        {
+          "title": "Detailliertes 3D-Mapping im Nahbereich",
+          "description": "Die ToF-Kamera ermöglicht detailreiche Nahbereichserfassung mit farbiger Darstellung durch Echtzeit-Überlagerung mit der visuellen Kamera."
+        }
+      ]
+    },
+    {
+      "id": "research-education",
+      "title": "Forschung & Lehre",
+      "icon": "bi-mortarboard",
+      "intro": "Digitale Bildung wird erlebbar durch die interaktive Visualisierung von Live-Experimenten.",
+      "features": [
+        "Positionsauslesung in Kugelkoordinaten (r, θ, φ) für eine exakte räumliche Einordnung",
+        "Ein hochfrequenter Laser liefert umfangreiche Messdaten",
+        "3D-Bewegungsanalyse für anspruchsvolle Lerninhalte und praxisnahe Experimente"
+      ],
+      "media": [
+        {
+          "src": "static/assets/video/animation_ball.mp4",
+          "alt": "video laser",
+          "caption": "Animation"
+        },
+        {
+          "src": "static/assets/video/falling_ball.mp4",
+          "alt": "video tof",
+          "caption": "Fallender Tennisball"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Robotik und IT",
+          "description": "Wenig Code, großer Aha-Effekt: Unsere offene API macht das Programmieren durch direkte, visuelle Rückmeldung zum Erlebnis – ideal für kreative Köpfe und neugierige Einsteiger."
+        },
+        {
+          "title": "Physikalische Experimente",
+          "description": "Vielseitig einsetzbar – von Schule bis Forschung: Ob einfache Messungen geradliniger Bewegungen mit hochfrequentem Laser und CSV-Ausgabe oder komplexe 3D-Bewegungsanalysen via Computer Vision (z. B. Background Subtraction, Feature Matching)."
+        }
+      ]
+    },
+    {
+      "id": "ai-vision",
+      "title": "Artificial Intelligence",
+      "icon": "static/assets/img/AI.png",
+      "intro": "Unsere intelligente Multi-Sensor-Plattform mit visueller Kamera, ToF-Technologie und Abstandssensorik ermöglicht präzise Objekterkennung in Echtzeit – nahtlos integrierbar über eine offene API mit gängigen KI-Bibliotheken.",
+      "features": [
+        "Steigerung der Erkennungsgenauigkeit durch die Kombination aus visueller Kamera, ToF-Sensorik und Abstandsmessung in einer integrierten Multi-Sensor-Plattform.",
+        "Offene API zur einfachen Kombination mit gängigen AI-Frameworks und Bibliotheken.",
+        "Echtzeit-Objekterkennung für schnelle und zuverlässige Analyse dynamischer Szenen."
+      ],
+      "media": [
+        {
+          "src": "static/assets/video/pose.mp4",
+          "alt": "pose",
+          "caption": "KI in Kombination mit Temas"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Intelligente Körper- und Gestenerkennung in Echtzeit",
+          "description": "Nahtlose Einbindung beliebter KI-Frameworks mit automatischer Objektverfolgung über smarte Motorsteuerung."
+        },
+        {
+          "title": "Sprachsteuerung",
+          "description": "Steuern Sie Ihre Systeme und Anwendungen per Spracheingabe – schnell und präzise, mit unserer integrierten offenen API und der Unterstützung moderner KI-Frameworks für eine flexible und intelligente Benutzerinteraktion."
+        }
+      ]
+    },
+    {
+      "id": "rapid-prototyping",
+      "title": "Virtual Reality",
+      "icon": "bi-badge-vr",
+      "intro": "Tauchen Sie mit Ihrem Smartphone in Virtual Reality ein – gesteuert durch unsere integrierte, offene API.",
+      "features": [
+        "Immersive Virtual Reality auf dem Smartphone.",
+        "Integrierte, offene API – auch nahtlos nutzbar mit Python-basierten Mobile Apps.",
+        "Präzise Steuerung und Navigation."
+      ],
+      "media": [
+        {
+          "src": "static/assets/video/vr.mp4",
+          "alt": "video vr",
+          "caption": "Virtual Reality mit Temas"
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Interaktives Training",
+          "description": "Praxisnahe Schulungen in simulierten Umgebungen, die komplexe Situationen realistisch abbilden."
+        },
+        {
+          "title": "Ortsunabhängige Zusammenarbeit",
+          "description": "Virtuelle Meetingräume und gemeinsame Arbeitsumgebungen, die Teams aus verschiedenen Standorten in Forschung, Lehre und Industrie verbinden."
+        }
+      ]
+    },
+    {
+      "id": "smart-home",
+      "title": "Smart Home & IoT",
+      "icon": "bi-house-door",
+      "intro": "Temas revolutioniert Smart Home Projekte mit intelligenter Raumerfassung, intuitiver Gestensteuerung und sicherer PoE-Automation – für nahtlose Integration, mehr Komfort und Energieeffizienz.",
+      "features": [
+        "Intelligente Raumerfassung ermöglicht präzise Erkennung von Raumbelegung und Bewegung für automatisierte Steuerung.",
+        "Intuitive Gestensteuerung erlaubt freihändige Bedienung von Smart-Home-Geräten für mehr Komfort und Hygiene.",
+        "Temas bietet energieeffiziente und zuverlässige Steuerungsfunktionen über Power-over-Ethernet (PoE)."
+      ],
+      "media": [
+        {
+          "src": "static/assets/img/smart_home.jpeg",
+          "alt": "Smart Home"
+
+        }
+      ],
+      "use_cases": [
+        {
+          "title": "Intelligente Raumerfassung",
+          "description": "Automatische Erkennung und Analyse von Raumbelegung und -nutzung für effiziente Steuerung von Licht, Klima und Energie."
+        },
+        {
+          "title": "Steuerung per PoE",
+          "description": "Nutzen Sie unsere offene API für flexible und nahtlose Smart-Home-Lösungen, effizient betrieben über Power-over-Ethernet (PoE)."
+        }
+      ]
+    }
+  ],
+  "about_section": {
+    "title": "Über uns",
+    "content": [
+      {
+        "text": "Die Grundlage für unsere Technologie wurde 2019 gelegt, als wir - Dr. Emre Gürdal und Muhammed Tayar - uns mit einer gemeinsamen Vision für digitale Umwelterfassung zusammenschlossen. 2025 folgte die offizielle Unternehmensgründung – mit dem Ziel, Präzision, Offenheit und Anwendungsvielfalt in einem kompakten System zu vereinen. Unsere Technologie kombiniert eine integrierte Multi-Sensor-Architektur, bestehend aus visueller Kamera, ToF-Kamera und Laser, sowie eine schnelle und präzise Motorbewegung. Ergänzt wird das System durch offene Schnittstellen – mechanisch wie softwareseitig (API) – und ermöglicht so präzise 3D-Kartierung und nahtlose Integration in unterschiedlichste Anwendungen. Ob in der Robotik, im Smart-Home-Bereich, bei mobilen Plattformen oder im Bildungsumfeld: Unser System generiert Punktwolken in Echtzeit, exportiert sie direkt im .ply-Format und unterstützt sowohl Live-Visualisierung als auch sofortige Weiterverarbeitung. Als optoelektronische Komponente ist unser System ideal für Robotik-Anwendungen geeignet und sorgt für hochpräzise, Echtzeit-Umgebungserfassung, die eine sichere und effiziente Navigation ermöglicht."
+      }
+    ],
+    "button_text": "Erfahre mehr"
+  },
+  "why_us_section": {
+    "title": "Temas - Der Startpunkt in die Digitalisierung!",
+    "content": "Wir verwandeln Daten in wertvolle digitale Ressourcen. Begleiten Sie uns auf ein Abenteuer der Objekterkennung.",
+    "accordion_list": [
+      {
+        "title": "Federpendel/Fadenpendel - Mechanische Schwingungen",
+        "content": "Temas kann die mechanische Schwingung bestimmen.",
+        "formula_federpendel": "Schwingungsdauer eines Federpendels:",
+        "formula_fadenpendel": "Schwingungsdauer eines Fadenpendels:"
+      },
+      {
+        "title": "Freier Fall",
+        "content": "Mit dem LiDAR-Sensor kann die Fallbeschleunigung bestimmt werden.",
+        "formula_freier_fall": "Weg-Zeit-Gesetz:"
+      },
+      {
+        "title": "Dreidimensionale Bewegung",
+        "content": "Dreidimensionale Bewegung erstreckt sich in alle drei Dimensionen.",
+        "formula_dreidimensionale": "Dreidimensionale Bewegungsgleichung:"
+      }
+    ]
+  },
+  "skills_section": {
+    "title": "Welche Programmiersprachen wurden verwendet?",
+    "subtitle": "Die verschiedenen Techniken machen Temas einzigartig.",
+    "skills": [
+      {
+        "name": "Python",
+        "percentage": "100"
+      },
+      {
+        "name": "Swift",
+        "percentage": "90"
+      },
+      {
+        "name": "Windows",
+        "percentage": "90"
+      },
+      {
+        "name": "Pandas",
+        "percentage": "55"
+      }
+    ]
+  },
+  "cta_section": {
+    "title": "Sie wollen mehr erfahren?",
+    "description": "Möchten Sie weitere Informationen erhalten oder einen Termin für eine Webpräsentation ausmachen?",
+    "cta_button_text": "Kostenlos Testen"
+  },
+  "faq_section": {
+    "title": "Häufig gestellte Fragen",
+    "description": "Hier finden Sie Antworten auf häufig gestellte Fragen zu Temas.",
+    "faqs": [
+      {
+        "question": "Welche Sensoren sind im Gerät verbaut?",
+        "answer": "Das Gerät verfügt über eine visuelle Kamera, eine ToF-Kamera, einen LiDAR-Laser sowie zwei präzise steuerbare Motoren."
+      },
+      {
+        "question": "Wie kann ich Temas steuern?",
+        "answer": "Temas lässt sich präzise über eine Ethernet-Schnittstelle ansteuern und in bestehende Netzwerke integrieren."
+      },
+      {
+        "question": "Sind Beispielcodes zur API verfügbar?",
+        "answer": "Ja, Beispielcodes zur API-Nutzung finden Sie in unserem GitHub-Repository."
+      },      
+      {
+        "question": "Ist Temas KI fähig?",
+        "answer": "Temas kann über die offene API mit gängigen KI-Frameworks kombiniert werden. Entdecken Sie unsere Beispielcodes und Anwendungen direkt auf GitHub – ideal für einen schnellen Einstieg."
+      },
+      {
+        "question": "Ist das Gerät mit bestehenden Smart-Home-Systemen kompatibel?",
+        "answer": "Ja, die offene API ermöglicht eine flexible Integration des Geräts in gängige Smart-Home-Plattformen."
+      },
+      {
+        "question": "Wie kann das Gerät bedient werden?",
+        "answer": "Temas lässt sich entweder über unsere Software für Windows und macOS oder flexibel über die offene API steuern."
+      },
+      {
+        "question": "Wie wird das Gerät mit Strom versorgt?",
+        "answer": "Temas wird über Power-over-Ethernet (PoE) betrieben – das vereinfacht die Installation und spart zusätzliche Verkabelung."
+      },
+      {
+        "question": "Wird das Gerät mit einem Netzteil ausgeliefert?",
+        "answer": "Ein Netzteil ist nicht im Lieferumfang enthalten. Wir empfehlen das folgende Modell: Hersteller TP-Link, Modell PoE260S."
+      }
+    ]
+  },
+  "contact_section": {
+    "title": "Rubu kontaktieren",
+    "address": {
+      "icon": "bi bi-geo-alt",
+      "heading": "Location:",
+      "content": "Felix-Wankel-Strasse 1, Aalen, 73431"
+    },
+    "email": {
+      "icon": "bi bi-envelope",
+      "heading": "Email:",
+      "content": "info@rubu-tech.de"
+    },
+    "phone": {
+      "icon": "bi bi-phone",
+      "heading": "Call:",
+      "content": "+1 5589 55488 55s"
+    },
+    "customer": {
+      "lastname": "Nachname*",
+      "name": "Vorname*",
+      "organisation": "Organisation",
+      "email": "Geschäftliche Email*",
+      "telefon": "Telefon*",
+      "country": "Land*",
+      "subject": "Betreff",
+      "message": "Nachricht*",
+      "info": "Erforderliche Felder sind markiert mit*",
+      "button_text": "Anfragen"
+    },
+    "form": {
+      "required_fields_message": "Erforderliche Felder sind markiert mit*",
+      "submit_button_text": "Anfragen"
+    }
+  },
+  "team_section": {
+    "title": "Zukünftige Ziele und Teamarbeit",
+    "content": [
+      {
+        "text": "Unsere Vision und Teamkultur."
+      },
+      {
+        "text": "Forschungskooperationen\n\nPartnerschaften mit Instituten und Unternehmen."
+      },
+      {
+        "text": "Neue Anwendungsbereiche\n\nZiel: Erweiterung der Einsatzmöglichkeiten."
+      },
+      {
+        "text": "Kreative Denkansätze\n\nWir schätzen innovative Ideen."
+      },
+      {
+        "text": "Leidenschaft für Fortschritt\n\nGemeinsame Leidenschaft für Technologie."
+      }
+    ]
+  },
+  "timeline_section": {
+    "title": "Projekt-Timeline",
+    "events": [
+      {
+        "year": "2018",
+        "title": "Gründung des Teams",
+        "description": [
+          "Zusammenführung eines dreiköpfigen Teams."
+        ]
+      },
+      {
+        "year": "2020",
+        "title": "F&E-Phase",
+        "description": [
+          "Forschung und Entwicklung in der Experimentierwelt."
+        ]
+      },
+      {
+        "year": "2021",
+        "title": "Festlegung der Werte",
+        "description": [
+          "Betonung der Wichtigkeit menschlicher Werte."
+        ]
+      },
+      {
+        "year": "2023",
+        "title": "Festigung der Kultur",
+        "description": [
+          "Erweiterung der Kompetenz aller Beteiligten."
+        ]
+      },
+      {
+        "year": "2024",
+        "title": "Weiterentwicklung",
+        "description": [
+          "Fokus auf die entwickelten Werte."
+        ]
+      }
+    ]
+  },
+  "klaro": {
+    "privacyPolicyUrl": "/datenschutz",
+    "consentModal": {
+      "title": "Cookies & Services",
+      "description": "Wir verwenden Cookies, um Inhalte und Anzeigen zu personalisieren. Um mehr zu erfahren, lesen Sie bitte unsere <a href='/datenschutz' target='_blank'>Datenschutzerklärung</a>."
+    },
+    "consentNotice": {
+      "description": "Diese Website verwendet Cookies – du kannst selbst entscheiden.",
+      "learnMore": "Mehr erfahren"
+    },
+    "purposes": {
+      "maps": "Google Maps",
+      "security": "Sicherheitsdienste (z. B. reCAPTCHA)"
+    },
+    "buttons": {
+      "ok": "Das ist ok",
+      "acceptAll": "Alle akzeptieren",
+      "acceptSelected": "Ausgewählte akzeptieren",
+      "decline": "Ich lehne ab"
+    }
+  }
+}

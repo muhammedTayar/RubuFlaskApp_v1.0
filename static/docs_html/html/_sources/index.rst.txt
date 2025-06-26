@@ -1,0 +1,21 @@
+Welcome to the TEMAS Documentation
+==================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: API Reference
+
+   modules
+   temas
+
+.. raw:: html
+
+   <div class="extra-nav-links" style="margin-top:1em;">
+     <a href="downloads/TEMAS_Documentation.pdf">📄 Download PDF</a>
+   </div>
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
