@@ -241,8 +241,10 @@ def create_app() -> Flask:
         return ("", 204)  # 204 = No Content
 
     # ─── 10. ERROR‐HANDLER ──────────────────────────────────────────
-    app.register_error_handler(404, lambda e: render_template("errors/404.html"), )
-    app.register_error_handler(500, lambda e: render_template("errors/500.html"), )
+    # Die Templates "errors/404.html" und "errors/500.html" existieren nicht.
+    # Stattdessen nutzen wir die oben definierten Handler-Funktionen.
+    app.register_error_handler(404, page_not_found)
+    app.register_error_handler(500, internal_error)
 
     return app
 
